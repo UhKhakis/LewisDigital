@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neff's Majestic Hair Studio — Hair Salon in Bryan, TX</title>
-  <meta name="description" content="Neff's Majestic Hair Studio — independent hair salon at 4341 Wellborn Rd, Bryan, TX. Call (979) 260-0980 or message on Facebook." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2316130e'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c9a227' font-family='Georgia, serif' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E" />
+  <meta name="description" content="Neff's Majestic Hair Studio — independent hair salon at 4341 Wellborn Rd, Bryan, TX. Call (979) 260-0980 or message us on Facebook." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%2333203a'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='%23f4f0f9' font-family='Georgia, serif' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Top strip ===== -->
-  <div class="top-strip">
-    <div class="container top-strip__inner">
-      <span class="top-strip__item">Independent hair studio · Bryan, TX</span>
-      <a class="top-strip__item top-strip__phone" href="tel:+19792600980">(979) 260-0980</a>
+  <!-- ===== Top ribbon ===== -->
+  <div class="ribbon">
+    <div class="container ribbon__inner">
+      <span class="ribbon__item">Independent hair studio · Bryan, TX</span>
+      <a class="ribbon__item ribbon__phone" href="tel:+19792600980">(979) 260-0980</a>
     </div>
   </div>
 
@@ -35,7 +35,7 @@
         <a href="#services" class="nav__link">Services</a>
         <a href="#about" class="nav__link">About &amp; Hours</a>
         <a href="#reviews" class="nav__link">Reviews</a>
-        <a href="tel:+19792600980" class="nav__link nav__link--cta">Call (979) 260-0980</a>
+        <a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener" class="nav__link nav__link--cta">Message us</a>
       </nav>
     </div>
   </header>
@@ -44,16 +44,22 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <p class="hero__eyebrow">Independent hair studio in Bryan, Texas</p>
-        <h1 class="hero__title">Neff's Majestic<br /><span class="hero__title-accent">Hair Studio</span></h1>
-        <p class="hero__tagline">A friendly neighborhood hair studio in Bryan — where you're treated like family and leave feeling your best.</p>
-        <div class="hero__actions">
-          <a class="btn btn--gold" href="tel:+19792600980">Call (979) 260-0980</a>
-          <a class="btn btn--ghost" href="#services">See what we do</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">A neighborhood hair studio in Bryan, Texas</p>
+          <h1 class="hero__title">Neff's Majestic<br /><em>Hair Studio</em></h1>
+          <p class="hero__tagline">A warm, welcoming studio on Wellborn Road — where the chair is yours, the coffee's on, and you leave feeling like the best version of yourself.</p>
+          <div class="hero__actions">
+            <a class="btn btn--plum" href="tel:+19792600980">Call (979) 260-0980</a>
+            <a class="btn btn--ghost" href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Message us on Facebook</a>
+          </div>
+          <p class="hero__address">4341 Wellborn Rd, Bryan, TX 77801</p>
         </div>
-        <p class="hero__address">4341 Wellborn Rd, Bryan, TX 77801</p>
+        <div class="hero__photo">
+          <div class="arch" aria-hidden="true">
+            <img src="assets/hero-salon.jpg" alt="Inside the salon — warm lights, mirrors, and a cozy chair waiting for you" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -61,81 +67,102 @@
     <section class="services section" id="services">
       <div class="container">
         <p class="section__eyebrow">Services</p>
-        <h2 class="section__title">What a neighborhood hair studio like Neff's Majestic typically offers</h2>
+        <h2 class="section__title">What an independent studio like ours typically offers</h2>
         <p class="section__lede">Every studio has its own specialties — the list below covers the work an independent hair studio usually takes on. Message or call and ask about yours.</p>
-        <ul class="services__grid">
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">C</span>
-            <h3 class="service-card__title">Cuts &amp; Styling</h3>
-            <p class="service-card__text">Haircuts and styling for all lengths and textures — a cut that fits you and your routine.</p>
+        <ol class="services__list">
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">01</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Cuts &amp; Styling</h3>
+              <p class="service-row__text">Haircuts and styling for all lengths and textures — a cut that fits you and your routine.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">H</span>
-            <h3 class="service-card__title">Color &amp; Highlights</h3>
-            <p class="service-card__text">All-over color, highlights and lowlights, toned and finished to look natural.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">02</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Color &amp; Highlights</h3>
+              <p class="service-row__text">All-over color, highlights and lowlights, toned and finished to look natural.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">B</span>
-            <h3 class="service-card__title">Balayage &amp; Ombré</h3>
-            <p class="service-card__text">Hand-painted color that grows out soft — low-maintenance, sun-kissed dimension.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">03</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Balayage &amp; Ombré</h3>
+              <p class="service-row__text">Hand-painted color that grows out soft — low-maintenance, sun-kissed dimension.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">T</span>
-            <h3 class="service-card__title">Treatments &amp; Deep Conditioning</h3>
-            <p class="service-card__text">Restorative treatments to bring shine and strength back to tired hair.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">04</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Treatments &amp; Deep Conditioning</h3>
+              <p class="service-row__text">Restorative treatments to bring shine and strength back to tired hair.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">S</span>
-            <h3 class="service-card__title">Special Occasion Styling</h3>
-            <p class="service-card__text">Updos and finished styles for weddings, events and nights out.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">05</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Special Occasion Styling</h3>
+              <p class="service-row__text">Updos and finished styles for weddings, events and nights out.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">W</span>
-            <h3 class="service-card__title">Waxing &amp; Brow Shaping</h3>
-            <p class="service-card__text">Brow shaping and waxing to keep everything neat between visits.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">06</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Waxing &amp; Brow Shaping</h3>
+              <p class="service-row__text">Brow shaping and waxing to keep everything neat between visits.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">E</span>
-            <h3 class="service-card__title">Extensions &amp; Volume</h3>
-            <p class="service-card__text">Length and fullness added — matched to your hair's color and texture.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">07</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Extensions &amp; Volume</h3>
+              <p class="service-row__text">Length and fullness added — matched to your hair's color and texture.</p>
+            </div>
           </li>
-          <li class="service-card">
-            <span class="service-card__mono" aria-hidden="true">K</span>
-            <h3 class="service-card__title">Kids' Cuts</h3>
-            <p class="service-card__text">Patient, gentle haircuts for the younger crowd — first haircuts included.</p>
+          <li class="service-row">
+            <span class="service-row__num" aria-hidden="true">08</span>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Kids' Cuts</h3>
+              <p class="service-row__text">Patient, gentle haircuts for the younger crowd — first haircuts included.</p>
+            </div>
           </li>
-        </ul>
+        </ol>
         <p class="services__note">Service categories above are examples of what an independent hair studio typically offers. Confirm what Neff's Majestic specializes in — and exactly what you need — when you call <a href="tel:+19792600980">(979) 260-0980</a> or message the studio on <a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Facebook</a>.</p>
       </div>
     </section>
 
     <!-- ===== About & Hours ===== -->
     <section class="about section" id="about">
-      <div class="container">
-        <p class="section__eyebrow">About &amp; Hours</p>
-        <h2 class="section__title">A neighborhood studio in Bryan</h2>
-        <div class="about__grid">
-          <div class="about__block">
-            <h3 class="about__heading">Find us</h3>
-            <p class="about__text">
-              <a href="https://www.google.com/maps/place/Neff%27s+Majestic+Hair+Studio" target="_blank" rel="noopener">4341 Wellborn Rd<br />Bryan, TX 77801</a>
-            </p>
-            <p class="about__text"><a href="tel:+19792600980">(979) 260-0980</a></p>
-            <p class="about__text"><a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Message us on Facebook</a></p>
-            <p class="about__text about__text--muted">LGBTQ+ friendly · Identifies as Latino-owned</p>
-          </div>
-          <div class="about__block">
-            <h3 class="about__heading">Hours</h3>
-            <p class="about__text about__text--big">Call or message for hours</p>
-            <p class="about__text">Reach us at <a href="tel:+19792600980">(979) 260-0980</a> or on <a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Facebook</a> — the surest way to know when the studio is open.</p>
-            <p class="about__text about__text--muted">Our Google listing currently shows Tuesday 11 AM – 5 PM (as of August 2026). Hours can vary, so a quick call or message is always best.</p>
-          </div>
-          <div class="about__block">
-            <h3 class="about__heading">What we're about</h3>
-            <p class="about__text">Neff's Majestic is an independent hair studio in Bryan, TX. A local, welcoming place where clients book appointments and walk-ins alike — currently easiest to reach by direct message on Facebook. If you're not sure what you need, just ask: we'll point you in the right direction.</p>
+      <div class="container about__grid">
+        <div class="about__photo">
+          <div class="arch" aria-hidden="true">
+            <img src="assets/stylist.jpg" alt="A stylist putting the finishing touch on a client's hair" />
           </div>
         </div>
-        <p class="about__note">Business details shown here come from Neff's Majestic Hair Studio's public Google listing, verified August 2026.</p>
+        <div class="about__content">
+          <p class="section__eyebrow">About &amp; Hours</p>
+          <h2 class="section__title">A neighborhood studio in Bryan</h2>
+          <p class="section__lede">Neff's Majestic is an independent hair studio in Bryan, TX — a local, welcoming place where clients book appointments and walk-ins alike. If you're not sure what you need, just ask: we'll point you in the right direction.</p>
+
+          <div class="about__blocks">
+            <div class="about__block">
+              <h3 class="about__heading">Find us</h3>
+              <p class="about__text">
+                <a href="https://www.google.com/maps/place/Neff%27s+Majestic+Hair+Studio" target="_blank" rel="noopener">4341 Wellborn Rd<br />Bryan, TX 77801</a>
+              </p>
+              <p class="about__text"><a href="tel:+19792600980">(979) 260-0980</a></p>
+              <p class="about__text"><a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Message us on Facebook</a></p>
+              <p class="about__text about__text--muted">LGBTQ+ friendly · Identifies as Latino-owned</p>
+            </div>
+            <div class="about__block">
+              <h3 class="about__heading">Hours</h3>
+              <p class="about__text about__text--big">Call or message for hours</p>
+              <p class="about__text">Reach us at <a href="tel:+19792600980">(979) 260-0980</a> or on <a href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Facebook</a> — the surest way to know when the studio is open.</p>
+              <p class="about__text about__text--muted">Our Google listing currently shows Tuesday 11 AM – 5 PM (as of August 2026). Hours can vary, so a quick call or message is always best.</p>
+            </div>
+          </div>
+          <p class="about__note">Business details shown here come from Neff's Majestic Hair Studio's public Google listing, verified August 2026.</p>
+        </div>
       </div>
     </section>
 
@@ -143,10 +170,10 @@
     <section class="reviews section" id="reviews">
       <div class="container reviews__inner">
         <div class="reviews__rating">
-          <span class="reviews__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p class="reviews__score">Rated <strong>4.6</strong> on Google</p>
+          <span class="reviews__score">4.6</span>
+          <p class="reviews__score-label">out of 5 on Google</p>
           <p class="reviews__source">As shown on Neff's Majestic Hair Studio's public Google listing — verified August 2026.</p>
-          <a class="btn btn--outline" href="https://www.google.com/maps/place/Neff%27s+Majestic+Hair+Studio" target="_blank" rel="noopener">See us on Google</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/place/Neff%27s+Majestic+Hair+Studio" target="_blank" rel="noopener">See us on Google</a>
         </div>
         <div class="reviews__placeholder">
           <h2 class="section__title">Customer reviews</h2>
@@ -161,9 +188,9 @@
       <div class="container contact__inner">
         <h2 class="contact__title">Ready for a fresh look?</h2>
         <p class="contact__text">Call the studio — or send a quick message on Facebook — and ask about an appointment. We'll take good care of you.</p>
-        <div class="hero__actions" style="justify-content:center;">
-          <a class="btn btn--gold btn--big" href="tel:+19792600980">Call now: (979) 260-0980</a>
-          <a class="btn btn--ghost btn--big" href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener" style="border-color: rgba(22,19,14,0.5); color: var(--charcoal);">Message on Facebook</a>
+        <div class="contact__actions">
+          <a class="btn btn--plum btn--big" href="tel:+19792600980">Call now: (979) 260-0980</a>
+          <a class="btn btn--ghost btn--big" href="https://www.facebook.com/Neffs.Majestic.Hair.Studio/" target="_blank" rel="noopener">Message on Facebook</a>
         </div>
         <p class="contact__directions"><a href="https://www.google.com/maps/place/Neff%27s+Majestic+Hair+Studio" target="_blank" rel="noopener">Get directions — 4341 Wellborn Rd, Bryan, TX</a></p>
       </div>
