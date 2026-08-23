@@ -1,0 +1,20 @@
+{
+  "name": "lewis-digital-receptionist",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lewis Digital AI Receptionist — Cloudflare Worker. One shared agent core (website chat, SMS, voice, social DMs) that answers only from a client's verified facts.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "sync:widget": "node scripts/sync-widget.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8",
+    "wrangler": "^3.99.0"
+  }
+}

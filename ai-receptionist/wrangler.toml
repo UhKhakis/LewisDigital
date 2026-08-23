@@ -1,0 +1,44 @@
+# Lewis Digital AI Receptionist — Cloudflare Worker
+# ---------------------------------------------------------------------------
+# Secrets (API keys, tokens) are NEVER committed. They are provided at
+# deploy/runtime as Cloudflare secrets or environment variables. See README.md
+# for the full setup. The placeholders below are the only things the owner must
+# fill in once their Cloudflare account exists.
+
+name = "lewis-digital-receptionist"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# --- Deployment account -----------------------------------------------------
+# account_id can be set two ways (pick one):
+#   1. Uncomment the line below and paste the account id from the dashboard.
+#   2. Export it in the shell before deploying:
+#        export CLOUDFLARE_ACCOUNT_ID=<id>
+#        export CLOUDFLARE_API_TOKEN=<scoped token with Workers edit perms>
+# The API token is a business secret and should never appear in this file.
+# account_id = "REPLACE_WITH_CLOUDFLARE_ACCOUNT_ID"
+
+# --- KV store for per-client config, encrypted LLM keys, and usage ledger ----
+[[kv_namespaces]]
+binding = "RECEPTIONIST_KV"
+# Create the real namespace once with:
+#   wrangler kv namespace create RECEPTIONIST_KV
+# then paste the returned id here (it looks like 32 hex characters). A
+# placeholder is fine for local `wrangler dev`, which simulates KV locally.
+id = "00000000000000000000000000000000"
+
+# --- Optional D1 database (atomic/queryable metering upgrade path) ----------
+# The first slice meters usage via KV (read-modify-write). If atomic increments
+# or SQL queries are later required, create a D1 database and uncomment:
+# [[d1_databases]]
+# binding = "RECEPTIONIST_DB"
+# database_name = "receptionist"
+# database_id = "REPLACE_WITH_D1_ID"
+
+# --- Secrets the worker reads at runtime (set via `wrangler secret put`) -----
+#   RECEPTIONIST_MASTER_SECRET — 32+ random chars; encrypts/decrypts each
+#       client's LLM API key at rest in KV (AES-256-GCM).
+#   ADMIN_TOKEN — bearer token required to call the /admin/* routes.
+#   FORWARD_WEBHOOK_URL — (optional) endpoint that receives forwarded
+#       (unanswerable) messages so they can be emailed to the business.
+# For local dev, copy .dev.vars.example -> .dev.vars.
