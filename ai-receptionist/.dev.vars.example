@@ -1,0 +1,13 @@
+# Local development secrets — copy this file to `.dev.vars` (which is
+# gitignored). These are ONLY for `wrangler dev` on your machine.
+# In production, set the same names with `wrangler secret put <NAME>`.
+
+# 32+ random characters. Encrypts/decrypts client LLM keys at rest.
+RECEPTIONIST_MASTER_SECRET=dev-only-master-secret-change-me
+
+# Bearer token required for /admin/* routes (register/update clients).
+ADMIN_TOKEN=dev-only-admin-token-change-me
+
+# Optional: endpoint that receives forwarded (unanswerable) chat messages so
+# they can be emailed to the business. Leave unset to just queue in KV.
+# FORWARD_WEBHOOK_URL=https://example.com/forward
