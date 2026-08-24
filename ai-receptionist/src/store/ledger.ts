@@ -33,6 +33,11 @@ export async function getLedger(kv: KVLike, clientId: string): Promise<LedgerRec
   };
 }
 
+/** Remove a client's ledger key (used by full client cleanup). */
+export async function deleteLedger(kv: KVLike, clientId: string): Promise<void> {
+  await kv.delete(ledgerKey(clientId));
+}
+
 export async function addUsage(
   kv: KVLike,
   clientId: string,

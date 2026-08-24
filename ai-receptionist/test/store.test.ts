@@ -1,9 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import { MemoryKV } from './kvMock';
-import { registerClient, getClient, decryptClientKey, sanitizeClient } from '../src/store/clientStore';
+import {
+  registerClient,
+  getClient,
+  deleteClient,
+  decryptClientKey,
+  decryptMetaPageToken,
+  findClientByTwilio,
+  findClientByMetaPage,
+  sanitizeClient,
+} from '../src/store/clientStore';
 import { getLedger, addUsage, isOverLimit } from '../src/store/ledger';
 import { recordForward, readForwardQueue } from '../src/store/forward';
-import { TEST_MASTER_SECRET, sampleInput } from './fixtures';
+import { TEST_MASTER_SECRET, sampleInput, sampleChannels } from './fixtures';
 
 describe('client store', () => {
   it('encrypts the LLM key at rest and decrypts it back', async () => {
@@ -64,5 +73,66 @@ describe('forwarding', () => {
     const q = await readForwardQueue(kv, 'bos-garage');
     expect(q).toContain('How much is an oil change?');
     expect(q).toContain('out_of_scope');
+  });
+});
+
+describe('channel wiring + full client cleanup (bug fix)', () => {
+  it('maintains reverse indexes and encrypts the Meta page token', async () => {
+    const kv = new MemoryKV();
+    const record = await registerClient(
+      kv,
+      { ...sampleInput, channels: sampleChannels },
+      TEST_MASTER_SECRET,
+    );
+    expect(record.channels?.meta_page_access_token).not.toContain(sampleChannels.meta_page_access_token);
+
+    expect(await findClientByTwilio(kv, '+1 (979) 555-0123')).toMatchObject({ client_id: 'bos-garage' });
+    expect(await findClientByMetaPage(kv, '112233445566')).toMatchObject({ client_id: 'bos-garage' });
+    expect(await decryptMetaPageToken(record, TEST_MASTER_SECRET)).toBe(sampleChannels.meta_page_access_token);
+
+    const safe = sanitizeClient(record);
+    expect('meta_page_access_token' in (safe.channels ?? {})).toBe(false);
+    expect(safe.channels?.has_meta_page_access_token).toBe(true);
+  });
+
+  it('deleteClient removes the client, ledger, forward queue, and timestamped copies', async () => {
+    const kv = new MemoryKV();
+    await registerClient(kv, { ...sampleInput, channels: sampleChannels }, TEST_MASTER_SECRET);
+
+    // Produce ledger + forward state (including timestamped copies).
+    await addUsage(kv, 'bos-garage', { promptTokens: 10, completionTokens: 5 });
+    await recordForward(kv, {
+      client_id: 'bos-garage',
+      message: 'How much is an oil change?',
+      reason: 'out_of_scope',
+      at: new Date().toISOString(),
+    });
+    await recordForward(kv, {
+      client_id: 'bos-garage',
+      message: 'Do you do engine swaps?',
+      reason: 'out_of_scope',
+      at: new Date().toISOString(),
+    });
+
+    // Sanity: keys exist before cleanup.
+    expect((await getLedger(kv, 'bos-garage')).requests).toBe(1);
+    expect(await readForwardQueue(kv, 'bos-garage')).toContain('oil change');
+    expect(await findClientByTwilio(kv, '+19795550123')).not.toBeNull();
+
+    await deleteClient(kv, 'bos-garage');
+
+    // Client record gone.
+    expect(await getClient(kv, 'bos-garage')).toBeNull();
+    // Ledger reset (key removed -> fresh zeroed record).
+    expect(await getLedger(kv, 'bos-garage')).toMatchObject({ requests: 0 });
+    // Forward queue emptied.
+    expect(await readForwardQueue(kv, 'bos-garage')).toBe('');
+    // Reverse indexes gone.
+    expect(await findClientByTwilio(kv, '+19795550123')).toBeNull();
+    expect(await findClientByMetaPage(kv, '112233445566')).toBeNull();
+
+    // No leftover keys for this client at all (incl. timestamped copies).
+    const leftover = kv.keys().filter((k) => k.includes('bos-garage'));
+    expect(leftover).toEqual([]);
   });
 });

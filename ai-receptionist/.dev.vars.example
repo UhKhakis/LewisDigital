@@ -11,3 +11,20 @@ ADMIN_TOKEN=dev-only-admin-token-change-me
 # Optional: endpoint that receives forwarded (unanswerable) chat messages so
 # they can be emailed to the business. Leave unset to just queue in KV.
 # FORWARD_WEBHOOK_URL=https://example.com/forward
+
+# ---------------------------------------------------------------------------
+# Twilio (SMS + voice channels) — needed only when you provision a Twilio
+# account + number. Leave unset for chat-only / local logic tests.
+# TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# TWILIO_AUTH_TOKEN=your-twilio-auth-token
+# TWILIO_PHONE_NUMBER=+15555550123
+# TWILIO_MESSAGING_SERVICE_SID=MGxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# VOICE_FROM_NUMBER=+15555550123
+
+# ---------------------------------------------------------------------------
+# Meta (Messenger / Instagram DM channel) — needed only after you create a Meta
+# app and complete business verification. Leave unset for local logic tests.
+# META_APP_ID=1234567890
+# META_APP_SECRET=your-app-secret
+# META_PAGE_ACCESS_TOKEN=EAAG... (global fallback; per-client tokens in KV win)
+# META_WEBHOOK_VERIFY_TOKEN=some-random-verification-token

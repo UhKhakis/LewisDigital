@@ -37,8 +37,17 @@ id = "00000000000000000000000000000000"
 
 # --- Secrets the worker reads at runtime (set via `wrangler secret put`) -----
 #   RECEPTIONIST_MASTER_SECRET — 32+ random chars; encrypts/decrypts each
-#       client's LLM API key at rest in KV (AES-256-GCM).
+#       client's LLM API key (and Meta page token) at rest in KV (AES-256-GCM).
 #   ADMIN_TOKEN — bearer token required to call the /admin/* routes.
 #   FORWARD_WEBHOOK_URL — (optional) endpoint that receives forwarded
 #       (unanswerable) messages so they can be emailed to the business.
+#
+#   Twilio (SMS + voice channels) — see README "SMS / Voice" for setup:
+#     TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER,
+#     TWILIO_MESSAGING_SERVICE_SID, VOICE_FROM_NUMBER
+#
+#   Meta (social DM channel) — see README "Social DMs" for setup:
+#     META_APP_ID, META_APP_SECRET, META_PAGE_ACCESS_TOKEN,
+#     META_WEBHOOK_VERIFY_TOKEN
+#
 # For local dev, copy .dev.vars.example -> .dev.vars.

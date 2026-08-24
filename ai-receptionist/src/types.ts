@@ -45,6 +45,26 @@ export interface ClientTheme {
   launcher_label?: string;
 }
 
+/**
+ * Optional per-client channel wiring for the non-widget channels. Phone numbers
+ * and page IDs are not secrets (they're public-facing); the Meta page access
+ * token IS a secret and is stored AES-256-GCM encrypted at rest (like the LLM
+ * key — see `crypto.ts`).
+ */
+export interface ChannelConfig {
+  /** Client's Twilio phone number (E.164, e.g. +19795550123). Inbound SMS/voice
+   *  arrive at this number ("To"); outbound replies come from it ("From"). */
+  twilio_phone_number?: string;
+  /** Optional Twilio Messaging Service SID (overrides a single From number). */
+  twilio_messaging_service_sid?: string;
+  /** Client's Meta page ID (Messenger). Inbound DM events carry this id. */
+  meta_page_id?: string;
+  /** Client's Instagram business account ID (Instagram DMs). */
+  meta_instagram_id?: string;
+  /** Client's Meta page access token — AES-256-GCM ENCRYPTED at rest. */
+  meta_page_access_token?: string;
+}
+
 export interface ClientRecord {
   client_id: string;
   business_name: string;
@@ -56,6 +76,7 @@ export interface ClientRecord {
   forwarding?: Forwarding;
   limits?: ClientLimits;
   theme?: ClientTheme;
+  channels?: ChannelConfig;
   active: boolean;
   created_at: string;
   updated_at: string;
@@ -119,6 +140,6 @@ export interface ForwardPayload {
   email?: string;
   message: string;
   session_id?: string;
-  reason: 'out_of_scope' | 'llm_error' | 'guard' | 'over_limit';
+  reason: 'out_of_scope' | 'llm_error' | 'guard' | 'over_limit' | 'delivery_pending';
   at: string;
 }
