@@ -25,7 +25,7 @@ binding = "RECEPTIONIST_KV"
 #   wrangler kv namespace create RECEPTIONIST_KV
 # then paste the returned id here (it looks like 32 hex characters). A
 # placeholder is fine for local `wrangler dev`, which simulates KV locally.
-id = "00000000000000000000000000000000"
+id = "1b920c627e4949c7b2b3827faeafcb9f"
 
 # --- Optional D1 database (atomic/queryable metering upgrade path) ----------
 # The first slice meters usage via KV (read-modify-write). If atomic increments
