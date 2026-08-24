@@ -25,6 +25,37 @@ export async function readForwardQueue(kv: KVLike, clientId: string): Promise<st
   return typeof raw === 'string' ? raw : '';
 }
 
+/**
+ * Remove a client's entire forward queue: the aggregate `forward_queue:<id>`
+ * key plus every timestamped `forward_queue:<id>:<ts>` copy. Used by full
+ * client cleanup.
+ */
+export async function deleteForwardQueue(kv: KVLike, clientId: string): Promise<void> {
+  const deletes: Promise<void>[] = [kv.delete(`${PREFIX}${clientId}`)];
+  if (kv.list) {
+    for (const key of await listAllKeys(kv, `${PREFIX}${clientId}:`)) {
+      deletes.push(kv.delete(key));
+    }
+  }
+  await Promise.all(deletes);
+}
+
+async function listAllKeys(kv: KVLike, prefix: string): Promise<string[]> {
+  if (!kv.list) return [];
+  const names: string[] = [];
+  let cursor: string | undefined;
+  do {
+    const result = (await kv.list({ prefix, cursor })) as {
+      keys?: { name: string }[];
+      list_complete?: boolean;
+      cursor?: string;
+    };
+    for (const k of result.keys ?? []) names.push(k.name);
+    cursor = result.list_complete === false ? result.cursor : undefined;
+  } while (cursor);
+  return names;
+}
+
 /** POST a forwarded item to the client-specific or global webhook (best effort). */
 export async function notifyForward(
   env: Env,

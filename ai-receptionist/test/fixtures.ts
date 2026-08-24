@@ -1,7 +1,7 @@
 // Shared test fixtures — a deterministic client record with VERIFIED facts.
 
 import type { ClientRecord } from '../src/types';
-import type { ClientInput } from '../src/store/clientStore';
+import type { ClientInput, ChannelInput } from '../src/store/clientStore';
 
 export const TEST_MASTER_SECRET = 'test-master-secret-0123456789abcdef';
 export const TEST_ADMIN_TOKEN = 'test-admin-token';
@@ -35,4 +35,12 @@ export const sampleRecord: ClientRecord = {
   active: true,
   created_at: '2026-08-23T00:00:00.000Z',
   updated_at: '2026-08-23T00:00:00.000Z',
+};
+
+/** Channel wiring used by the channel-handler tests. */
+export const sampleChannels: ChannelInput = {
+  twilio_phone_number: '+19795550123',
+  meta_page_id: '112233445566',
+  meta_instagram_id: '17841400000000001',
+  meta_page_access_token: 'EAAG-secret-page-token',
 };

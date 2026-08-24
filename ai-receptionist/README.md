@@ -1,9 +1,10 @@
 # Lewis Digital AI Receptionist
 
 A standalone, multi-channel AI receptionist running on **Cloudflare Workers**
-(free tier). This is the first build slice: the **website chat widget channel**
-and the **shared agent core** are implemented; SMS, voice, and social DMs are
-scaffolded and point at the same core.
+(free tier). All four channels — **website chat, SMS, voice, and social DMs** —
+are implemented against one shared agent core. SMS/voice (Twilio) and social
+DMs (Meta) are fully wired in code but **require live provider credentials to
+send/receive real messages**; those are provisioned separately (see below).
 
 > **Product context (owner-set):** the AI Receptionist is a **standalone
 > add-on** ($199/mo) — never bundled into or offered during the website
@@ -24,7 +25,10 @@ scaffolded and point at the same core.
 | Forward queue (unanswerable → email the business) | ✅ | `src/store/forward.ts` |
 | Admin routes (register/update client, read ledger) | ✅ | `src/routes/admin.ts` |
 | Embeddable chat widget (brand-agnostic) | ✅ | `public/widget.js`, `public/widget.css` |
-| SMS / voice / social DM connectors | 🧱 scaffolded | `src/routes/channels.ts` |
+| SMS channel (Twilio webhook → shared core) | ✅ code; needs Twilio creds | `src/routes/channels.ts`, `src/channels/twilio.ts` |
+| Voice channel (TwiML `<Gather speech>` → shared core) | ✅ code; needs Twilio creds | `src/routes/channels.ts`, `src/channels/twilio.ts` |
+| Social DM channel (Meta webhook → shared core) | ✅ code; needs Meta app | `src/routes/channels.ts`, `src/channels/meta.ts` |
+| Full client cleanup (ledger + forward keys removed on delete) | ✅ | `src/store/clientStore.ts`, `ledger.ts`, `forward.ts` |
 | Unit + end-to-end tests (stub key, no network) | ✅ | `test/` |
 
 ## Honesty / guard model (non-negotiable)
@@ -155,7 +159,12 @@ curl -X POST https://<your-worker>/admin/client \
     },
     "forwarding": { "email": "owner@bosgarage.com" },
     "limits": { "max_monthly_requests": 5000 },
-    "theme": { "primary": "#0b3d2e", "title": "Chat with Bos Garage" }
+    "theme": { "primary": "#0b3d2e", "title": "Chat with Bos Garage" },
+    "channels": {
+      "twilio_phone_number": "+19795550123",
+      "meta_page_id": "112233445566",
+      "meta_page_access_token": "EAAG..."   // encrypted at rest
+    }
   }'
 ```
 
@@ -163,6 +172,10 @@ curl -X POST https://<your-worker>/admin/client \
 - `facts` is the **verified fact set** — only what the bot may say. Leave fields
   absent when unknown; the bot forwards those questions instead of guessing.
 - `theme.primary` is the **client's own** brand color (never Lewis Digital gold).
+- `channels` (optional) wires the SMS/voice/social connectors: the client's
+  Twilio number, Meta page ID, and (optionally) their Meta page access token —
+  which is **encrypted at rest** like the LLM key. See "The four channels"
+  below.
 
 Other admin routes:
 
@@ -172,6 +185,124 @@ curl -H "Authorization: Bearer $ADMIN_TOKEN" https://<worker>/admin/ledger/bos-g
 curl -H "Authorization: Bearer $ADMIN_TOKEN" https://<worker>/admin/queue/bos-garage
 curl -X DELETE -H "Authorization: Bearer $ADMIN_TOKEN" https://<worker>/admin/client/bos-garage
 ```
+
+> `DELETE /admin/client/:id` performs a **full cleanup**: it removes the client
+> record, its usage `ledger:<id>` key, its `forward_queue:<id>` key **and** every
+> timestamped `forward_queue:<id>:<ts>` copy, plus any Twilio/Meta reverse-index
+> keys. (This was the client-cleanup bug — previously only the client record was
+> removed.)
+
+---
+
+## The four channels (one brain)
+
+All four channels call the **same shared agent core**
+(`src/agent/core.ts` → `answerQuestion`) and the same channel glue
+(`src/channels/shared.ts` → `runChannelTurn`), which enforces the honesty guard,
+the forward queue, and the usage ledger identically across channels. Each
+connector only differs in transport + how the client is resolved.
+
+| Channel | Endpoint | Client resolved by |
+| --- | --- | --- |
+| Website chat | `POST /chat` | `client_id` in the JSON body |
+| SMS | `POST /channels/sms` | inbound `To` number → `twilio:<digits>` index |
+| Voice | `POST /channels/voice` | inbound `To` number → `twilio:<digits>` index |
+| Social DMs | `GET`/`POST /channels/social` | page/IG id → `meta_page:<id>` / `meta_ig:<id>` index |
+
+Reverse indexes are maintained by `src/store/clientStore.ts` when a client is
+registered (and removed on delete). Each client's channel wiring lives in the
+`channels` field of its KV record.
+
+### SMS — `POST /channels/sms`
+
+- Twilio posts form-encoded `From` (customer), `To` (client's number), `Body`.
+- The worker verifies `X-Twilio-Signature` (HMAC-SHA1) when `TWILIO_AUTH_TOKEN`
+  is set, resolves the client from `To`, runs `runChannelTurn`, and replies.
+- **Reply path:** primary is the Twilio **Messages API** (`sendTwilioSms`,
+  Basic-auth, wired to `TWILIO_ACCOUNT_SID`/`TWILIO_AUTH_TOKEN` and the client's
+  number / a Messaging Service SID); if outbound creds are missing the handler
+  falls back to a synchronous TwiML `<Message>` reply so the customer still gets
+  the answer.
+- Out-of-scope items forward (fallback message to the customer + email to the
+  business via `FORWARD_WEBHOOK_URL`), and every interaction is ledged.
+
+### Voice — `POST /channels/voice`
+
+A TwiML state machine (Twilio sends the transcript back via `<Gather input="speech">`):
+
+1. `?step=greet` (default) — greet and `<Gather>` the caller's question.
+2. `?step=answer` — the `SpeechResult` transcript goes through `runChannelTurn`;
+   a grounded answer is spoken with `<Say>`. An out-of-scope item is answered
+   with "I'll have someone get back to you" and the caller is prompted for a
+   name/number.
+3. `?step=callback` — the collected name/number is queued for the business.
+
+Twilio handles speech-to-text and telephony (metered per-minute on Twilio's
+side — pass-through, not in our KV ledger); the LLM interaction is ledged like
+any other channel. `GET /channels/voice` returns an empty ack for Twilio's URL
+validation.
+
+### Social DMs — `GET` / `POST /channels/social`
+
+- `GET` verifies the Meta webhook (`hub.mode`/`hub.verify_token`/`hub.challenge`)
+  against `META_WEBHOOK_VERIFY_TOKEN`.
+- `POST` receives message events (Messenger `object:"page"` or Instagram
+  `object:"instagram"`), verifies `X-Hub-Signature-256` when `META_APP_SECRET`
+  is set, resolves the client from the page/IG id, runs `runChannelTurn`, and
+  replies via the Meta Send API (`POST /me/messages`) using the client's
+  (decrypted) page token or the global `META_PAGE_ACCESS_TOKEN` fallback.
+- Replies that cannot be delivered yet (no token / send failed) are **queued**
+  (`reason: "delivery_pending"`) so nothing is lost; they can be replayed once
+  Meta credentials are provisioned. Echoed messages (our own sends) are ignored.
+
+### What is fully working vs. what still needs provider credentials
+
+**Fully working now (no external creds):** the chat channel; the shared agent
+core + honesty guard; per-client encrypted config; the ledger; the forward
+queue; admin routes incl. full cleanup; and the complete code paths for SMS,
+voice, and social DMs (verified by unit tests that mock the shared core and
+external HTTP).
+
+**Needs live credentials to activate (code is correct + wiring-based, but
+cannot be end-to-end tested without them):**
+
+- **SMS / Voice** — a Twilio account + a phone number per client. Set
+  `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, and (optionally)
+  `TWILIO_PHONE_NUMBER` / `TWILIO_MESSAGING_SERVICE_SID` / `VOICE_FROM_NUMBER`.
+  Point the Twilio number's **Messaging webhook** at
+  `https://<worker>/channels/sms` and its **Voice webhook** at
+  `https://<worker>/channels/voice` (HTTP POST).
+- **Social DMs** — a Meta developer app (see below). Real DM delivery requires
+  Meta **business verification** and the `pages_messaging` (and, for Instagram,
+  `instagram_manage_messages`) permissions, plus a page access token. This is
+  gated by Meta policy and is the slowest to activate.
+
+### Provider setup steps
+
+**Twilio**
+1. Create a Twilio account and buy a number (one per client, or a Messaging
+   Service).
+2. Put `TWILIO_ACCOUNT_SID` / `TWILIO_AUTH_TOKEN` (and the fallback numbers) in
+   as Cloudflare secrets.
+3. Configure the number's webhook URLs to point at the worker (above).
+
+**Meta (Messenger / Instagram)**
+1. Create a Meta app in the developers console (`META_APP_ID` + `META_APP_SECRET`).
+2. Add the **Messenger** product, connect the client's Facebook page, and
+   subscribe to the `messages` webhook field. Generate a page access token
+   (`pages_messaging` permission) — store it per-client in the KV `channels`
+   field (encrypted) or set the global `META_PAGE_ACCESS_TOKEN`.
+3. For Instagram DMs, connect the Instagram business account and request
+   `instagram_manage_messages`; the webhook `object` will be `"instagram"` and
+   the entry id is the IG business account id (map via `channels.meta_instagram_id`).
+4. Set `META_WEBHOOK_VERIFY_TOKEN` to any random string and use the same value
+   when Meta verifies the webhook; point the webhook at
+   `https://<worker>/channels/social`.
+5. Complete Meta **business verification** (required for production messaging).
+
+> None of these credentials are committed or hardcoded — they are Cloudflare
+> secrets (or `.dev.vars` locally) and per-client KV fields. Do not fabricate
+> tokens.
 
 ## Embedding the widget on a client's site
 
@@ -200,7 +331,7 @@ forwarded items.
 no Cloudflare account and no real LLM key needed:
 
 ```bash
-npm test          # vitest: crypto, guard, core, store/ledger, chat end-to-end
+npm test          # vitest: crypto, guard, core, store/ledger, chat + SMS/voice/social + cleanup
 npm run typecheck # tsc --noEmit
 ```
 
@@ -239,12 +370,21 @@ clients use their own `openai` / `anthropic` / `gemini` key.
 | --- | --- | --- |
 | `CLOUDFLARE_ACCOUNT_ID` | deploy | Cloudflare account |
 | `CLOUDFLARE_API_TOKEN` | deploy | scoped token (Workers + KV edit) |
-| `RECEPTIONIST_MASTER_SECRET` | runtime | encrypts/decrypts client LLM keys at rest |
+| `RECEPTIONIST_MASTER_SECRET` | runtime | encrypts/decrypts client LLM keys (and Meta page tokens) at rest |
 | `ADMIN_TOKEN` | runtime | protects `/admin/*` |
 | `FORWARD_WEBHOOK_URL` | optional | endpoint to email forwarded messages |
+| `TWILIO_ACCOUNT_SID` | SMS/voice | Twilio account |
+| `TWILIO_AUTH_TOKEN` | SMS/voice | signs/verifies webhooks + outbound API auth |
+| `TWILIO_PHONE_NUMBER` | optional | fallback outbound From number |
+| `TWILIO_MESSAGING_SERVICE_SID` | optional | outbound Messaging Service SID |
+| `VOICE_FROM_NUMBER` | optional | fallback voice caller ID |
+| `META_APP_ID` | social | Meta app id |
+| `META_APP_SECRET` | social | verifies `X-Hub-Signature-256` |
+| `META_PAGE_ACCESS_TOKEN` | optional | global fallback page token (per-client tokens in KV win) |
+| `META_WEBHOOK_VERIFY_TOKEN` | social | matches `hub.verify_token` on subscription |
 
-Per-client LLM keys are **not** our secrets — each client supplies their own,
-stored encrypted in KV.
+Per-client LLM keys and Meta page tokens are **not** our secrets — each client
+supplies their own, stored encrypted in KV.
 
 ## Usage ledger & margin
 
@@ -269,12 +409,16 @@ ai-receptionist/
     agent/prompt.ts        # system-prompt builder
     agent/providers.ts     # OpenAI/Anthropic/Gemini/stub adapters
     store/crypto.ts        # AES-256-GCM for client keys
-    store/clientStore.ts   # per-client KV record
-    store/ledger.ts        # usage ledger
-    store/forward.ts       # forward queue + webhook
+    store/clientStore.ts   # per-client KV record + channel reverse indexes
+    store/ledger.ts        # usage ledger (+ deleteLedger)
+    store/forward.ts       # forward queue + webhook (+ deleteForwardQueue)
+    channels/shared.ts     # runChannelTurn — shared glue for non-widget channels
+    channels/twilio.ts     # Twilio signature verify + TwiML + Messages API
+    channels/meta.ts       # Meta signature verify + Send API
+    channels/util.ts       # timing-safe compare, base64/hex, XML escape
     routes/chat.ts         # POST /chat
-    routes/admin.ts        # /admin/* (register/update, ledger, queue)
-    routes/channels.ts     # SMS/voice/social scaffolds
+    routes/admin.ts        # /admin/* (register/update, ledger, queue, delete)
+    routes/channels.ts     # SMS/voice/social handlers
     widget/constants.ts    # GENERATED (from public/) — run `npm run sync:widget`
   public/widget.js         # canonical embed script (served at /widget.js)
   public/widget.css        # optional standalone stylesheet
