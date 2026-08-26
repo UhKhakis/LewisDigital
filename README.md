@@ -12,6 +12,9 @@
 | **Demos gallery** (public) | [uhkhakis.github.io/LewisDigital](https://uhkhakis.github.io/LewisDigital/) |
 | **Bos Garage** demo + pitch | [demos/bos-garage/](https://uhkhakis.github.io/LewisDigital/demos/bos-garage/) |
 | **Neff's Majestic** demo + pitch | [demos/neffs-majestic-hair-studio/](https://uhkhakis.github.io/LewisDigital/demos/neffs-majestic-hair-studio/) |
+| **Brazos Valley Automotive** demo + pitch | [demos/brazos-valley-automotive/](https://uhkhakis.github.io/LewisDigital/demos/brazos-valley-automotive/) |
+| **Bryan Muffler & Performance** demo + pitch | [demos/bryan-muffler-performance/](https://uhkhakis.github.io/LewisDigital/demos/bryan-muffler-performance/) |
+| **Limitless Diesel & Offroad** demo + pitch | [demos/limitless-diesel-offroad/](https://uhkhakis.github.io/LewisDigital/demos/limitless-diesel-offroad/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 ---
@@ -32,6 +35,9 @@
 - `index.html` — Demos gallery (served at the Pages root)
 - `demos/bos-garage/` — Demo site + pitch sheet for Bos Garage Auto Repair (Bryan, TX)
 - `demos/neffs-majestic-hair-studio/` — Demo site + pitch sheet for Neff's Majestic Hair Studio (Bryan, TX)
+- `demos/brazos-valley-automotive/` — Demo site + pitch sheet for Brazos Valley Automotive (College Station, TX)
+- `demos/bryan-muffler-performance/` — Demo site + pitch sheet for Bryan Muffler & Performance (Bryan, TX)
+- `demos/limitless-diesel-offroad/` — Demo site + pitch sheet for Limitless Diesel & Offroad (College Station, TX)
 - `ai-receptionist/` — AI Receptionist (Cloudflare Worker: website chat, SMS, voice, social DMs + per-client encrypted keys, usage ledger, honesty guard)
 
 Each demo folder is self-contained static HTML/CSS (relative asset paths) with its own README listing exactly what is verified vs. placeholder.
