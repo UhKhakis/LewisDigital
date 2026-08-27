@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  LEWIS DIGITAL — LIVE-CLIENT SITE TEMPLATE
+  ============================================================================
+  This is the PRODUCTION one-page template that a paying client goes live on.
+  It ships with a NEUTRAL, GENERIC, PROFESSIONAL theme (slate + blue) that is
+  NOT the Lewis Digital gold brand and NOT any client's brand.
+
+  Per-client delivery, you will OVERRIDE this neutral theme with the client's
+  OWN brand (colors, typography, imagery drawn from their real branding) — see
+  the team skill "client-demo-site" for the brand-system rules. The neutral
+  theme below is only the starting point; it is intentionally anonymous.
+
+  WHAT TO SWAP FOR EACH CLIENT (grep for "TODO"):
+    - <title> and meta description
+    - business name, tagline, phone (all tel: links), address, hours, city
+    - Google Maps search URL (hero + about + contact "directions" links)
+    - services cards (replace placeholder categories with the client's real
+      services — see the on-page note, same honesty rules as demos)
+    - Google rating / reviews section (connect to the real GBP, never invent)
+    - contact.php CONFIG block ($to, $business_name, $from_email)
+
+  This file is plain HTML + CSS. No frameworks, no build step, no JS framework.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Business Name — Local Business in Your City, TX</title>
+  <!-- TODO: replace with the client's real one-line description -->
+  <meta name="description" content="Your Business Name — a local business in Your City, TX. Call (555) 555-0123." />
+  <!-- Neutral favicon (a plain monogram square) — TODO: swap for the client's logo/initial -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f2937'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='%23ffffff' font-family='Arial, sans-serif' font-weight='bold'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Top strip ===== -->
+  <div class="top-strip">
+    <div class="container top-strip__inner">
+      <span class="top-strip__item">Local business serving Your City, TX</span>
+      <a class="top-strip__item top-strip__phone" href="tel:+15555550123">(555) 555-0123</a>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand">
+        <span class="brand__mark" aria-hidden="true">B</span>
+        <span class="brand__text">
+          <span class="brand__name">Your Business</span>
+          <span class="brand__sub">Name</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About &amp; Hours</a>
+        <a href="#reviews" class="nav__link">Reviews</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Local business in Your City, Texas</p>
+        <h1 class="hero__title">Your Business<br /><span class="hero__title-accent">Name</span></h1>
+        <!-- TODO: replace with the client's real, honest tagline (no hype) -->
+        <p class="hero__tagline">Friendly, dependable service in Your City — here when you need us.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="tel:+15555550123">Call (555) 555-0123</a>
+          <a class="btn btn--ghost" href="#contact">Send us a message</a>
+        </div>
+        <p class="hero__address">123 Main St, Your City, TX 00000</p>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <p class="section__eyebrow">Services</p>
+        <h2 class="section__title">What we do</h2>
+        <p class="section__lede">Every business is different — the list below is a template. Swap these for the client's real services, and keep the same honesty note underneath.</p>
+        <ul class="services__grid">
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">S</span>
+            <h3 class="service-card__title">Service One</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">E</span>
+            <h3 class="service-card__title">Service Two</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">R</span>
+            <h3 class="service-card__title">Service Three</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">V</span>
+            <h3 class="service-card__title">Service Four</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">I</span>
+            <h3 class="service-card__title">Service Five</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__tag" aria-hidden="true">C</span>
+            <h3 class="service-card__title">Service Six</h3>
+            <p class="service-card__text">Replace with a real service and a plain-language description of what it includes.</p>
+          </li>
+        </ul>
+        <p class="services__note">Service categories above are placeholders. Confirm the client's actual services — and any questions about yours — by calling <a href="tel:+15555550123">(555) 555-0123</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== About & Hours ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <p class="section__eyebrow">About &amp; Hours</p>
+        <h2 class="section__title">Your local business, close to home</h2>
+        <div class="about__grid">
+          <div class="plate">
+            <h3 class="plate__heading">Find us</h3>
+            <!-- TODO: replace with the real Maps search URL -->
+            <p class="plate__text"><a href="https://www.google.com/maps/search/Your+Business+Name+Your+City+TX" target="_blank" rel="noopener">123 Main St<br />Your City, TX 00000</a></p>
+            <p class="plate__text"><a href="tel:+15555550123">(555) 555-0123</a></p>
+          </div>
+          <div class="plate">
+            <h3 class="plate__heading">Hours</h3>
+            <p class="plate__text plate__text--big">Mon–Fri: 9 AM – 5 PM</p>
+            <p class="plate__text">Sat: 10 AM – 2 PM · Sun: Closed</p>
+            <p class="plate__text plate__text--muted">TODO: use the client's verified hours — or "Call for hours" if they aren't confirmed.</p>
+          </div>
+          <div class="plate">
+            <h3 class="plate__heading">What we're about</h3>
+            <p class="plate__text">TODO: a short, warm, plain-language paragraph about the business — written from the owner's own words, no invented claims.</p>
+          </div>
+        </div>
+        <p class="about__note">Business details shown here come from the client's public Google listing, verified at delivery time.</p>
+      </div>
+    </section>
+
+    <!-- ===== Google rating & reviews ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container reviews__inner">
+        <div class="reviews__rating">
+          <p class="reviews__score-label">Google rating</p>
+          <p class="reviews__coming">Rating will appear here once connected</p>
+          <p class="reviews__source">TODO: show the client's real Google rating only — never invent a number or a review count.</p>
+          <!-- TODO: replace with the real Maps search URL -->
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/Your+Business+Name+Your+City+TX" target="_blank" rel="noopener">See us on Google</a>
+        </div>
+        <div class="reviews__placeholder">
+          <h2 class="section__title">Customer reviews</h2>
+          <p class="section__lede">Real reviews from real customers will appear here once connected. We'll display exactly what customers have said on Google — nothing invented, nothing edited.</p>
+          <p class="reviews__coming">Google reviews will appear here once connected.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__intro">
+          <h2 class="contact__title">Get in touch</h2>
+          <p class="contact__text">Call us, or send a quick message with the form and we'll get back to you.</p>
+          <a class="btn btn--dark btn--big" href="tel:+15555550123">Call (555) 555-0123</a>
+          <p class="contact__directions"><a href="https://www.google.com/maps/search/Your+Business+Name+Your+City+TX" target="_blank" rel="noopener">Get directions — 123 Main St, Your City, TX</a></p>
+        </div>
+
+        <!-- The working contact form. Posts to contact.php (PHP mail handler).
+             Set the recipient email in the CONFIG block at the top of contact.php. -->
+        <form class="contact-form" action="contact.php" method="post" novalidate>
+          <!-- Honeypot: hidden from humans, tempting to bots. Leave empty. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- Bot time-trap: filled by a tiny inline script; must be > a few seconds old. -->
+          <input type="hidden" name="form_time" id="form_time" value="" />
+
+          <div class="field">
+            <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-0123" />
+          </div>
+
+          <div class="field">
+            <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--big">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__business">Your Business Name · 123 Main St, Your City, TX 00000 · <a href="tel:+15555550123">(555) 555-0123</a></p>
+      <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> — a DBA of Lewis Tech Services LLC</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sets the hidden timestamp used by contact.php to reject ultra-fast bot submissions.
+    document.getElementById('form_time').value = Math.floor(Date.now() / 1000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* ============================================================================
+   LEWIS DIGITAL — LIVE-CLIENT SITE TEMPLATE STYLES
+   NEUTRAL, GENERIC, PROFESSIONAL theme (slate + blue + off-white).
+   NOT the Lewis Digital gold brand, NOT any client's brand — this is the
+   anonymous starting point that gets overridden per client in production.
+
+   Neutral palette used here (deliberately NOT Lewis gold #C9A227 / #16130e /
+   #FBF8F1):
+     ink      #1f2430   (headings / dark sections)
+     body     #3c4350   (paragraphs)
+     muted    #6b7280   (fine print)
+     accent   #2563eb   (buttons / links)  — generic professional blue
+     accent-d #1d4ed8   (button hover)
+     base     #ffffff
+     soft     #f5f7fa   (section backgrounds)
+     line     #e5e9f0   (borders)
+   Font: Inter (single neutral sans), via Google Fonts.
+   ============================================================================ */
+
+:root {
+  --ink: #1f2430;
+  --body: #3c4350;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-d: #1d4ed8;
+  --accent-soft: #eef3fe;
+  --base: #ffffff;
+  --soft: #f5f7fa;
+  --line: #e5e9f0;
+  --hero-bg: #18202e;
+  --hero-bg2: #263244;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--body);
+  background: var(--base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-d); text-decoration: underline; }
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Top strip ---------- */
+.top-strip {
+  background: var(--ink);
+  color: #cbd2de;
+  font-size: 13px;
+}
+.top-strip__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+.top-strip__phone { color: #ffffff; font-weight: 600; }
+.top-strip__phone:hover { color: #dbe3f0; }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  height: 68px;
+}
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+.brand:hover { text-decoration: none; }
+.brand__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand__name { font-weight: 800; font-size: 17px; }
+.brand__sub { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; }
+
+.nav { display: flex; align-items: center; gap: 20px; }
+.nav__link { color: var(--body); font-size: 15px; font-weight: 500; }
+.nav__link:hover { color: var(--ink); text-decoration: none; }
+.nav__link--cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.nav__link--cta:hover { background: var(--accent-d); color: #fff; text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-bg2) 100%);
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.hero__inner {
+  position: relative;
+  padding: 88px 24px 96px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  font-weight: 600;
+  color: #aeb9cc;
+  margin: 0 0 16px;
+}
+.hero__title {
+  font-size: clamp(40px, 7vw, 64px);
+  line-height: 1.04;
+  font-weight: 800;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+.hero__title-accent { color: #7ea4f4; }
+.hero__tagline {
+  font-size: 19px;
+  color: #d7deea;
+  margin: 0 auto 32px;
+  max-width: 520px;
+}
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero__address { margin: 28px 0 0; color: #aeb9cc; font-size: 14px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+}
+.btn:hover { text-decoration: none; }
+.btn--accent { background: var(--accent); color: #fff; }
+.btn--accent:hover { background: var(--accent-d); color: #fff; }
+.btn--ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+.btn--ghost:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.btn--outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn--outline:hover { background: var(--accent-soft); color: var(--accent-d); }
+.btn--dark { background: var(--ink); color: #fff; }
+.btn--dark:hover { background: #000; color: #fff; }
+.btn--big { padding: 15px 30px; font-size: 16px; }
+
+/* ---------- Sections ---------- */
+.section { padding: 72px 0; }
+.section__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+.section__title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+.section__lede { font-size: 17px; color: var(--body); max-width: 680px; margin: 0 0 40px; }
+
+/* ---------- Services ---------- */
+.services { background: var(--soft); }
+.services__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.service-card {
+  background: var(--base);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+}
+.service-card__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+.service-card__title { font-size: 17px; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+.service-card__text { font-size: 15px; color: var(--body); margin: 0; }
+.services__note { margin: 26px 0 0; font-size: 14px; color: var(--muted); }
+
+/* ---------- About ---------- */
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.plate {
+  background: var(--base);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.plate__heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+.plate__text { margin: 0 0 10px; font-size: 15px; color: var(--body); }
+.plate__text:last-child { margin-bottom: 0; }
+.plate__text--big { font-size: 18px; font-weight: 700; color: var(--ink); }
+.plate__text--muted { color: var(--muted); font-size: 14px; }
+.about__note { margin: 24px 0 0; font-size: 13px; color: var(--muted); }
+
+/* ---------- Reviews ---------- */
+.reviews { background: var(--soft); }
+.reviews__inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+.reviews__rating {
+  background: var(--base);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+}
+.reviews__score { font-size: 54px; font-weight: 800; color: var(--ink); margin: 0; line-height: 1; }
+.reviews__score-label { font-size: 16px; color: var(--body); margin: 6px 0 12px; font-weight: 600; }
+.reviews__source { font-size: 13px; color: var(--muted); margin: 0 0 18px; }
+.reviews__coming {
+  font-size: 15px;
+  color: var(--muted);
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0 0 16px;
+}
+.reviews__placeholder .section__lede { margin-bottom: 16px; }
+
+/* ---------- Contact ---------- */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact__title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.contact__text { font-size: 17px; color: var(--body); margin: 0 0 24px; }
+.contact__directions { margin-top: 20px; font-size: 15px; }
+
+.contact-form {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px;
+}
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.req { color: var(--accent); }
+.opt { color: var(--muted); font-weight: 400; }
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--base);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.field textarea { resize: vertical; }
+
+/* Honeypot: visually hidden but present in the DOM for bots. */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--ink);
+  color: #cbd2de;
+  padding: 36px 0;
+}
+.footer__inner { text-align: center; }
+.footer__business { margin: 0 0 8px; font-size: 14px; }
+.footer__business a { color: #fff; }
+.footer__credit { margin: 0; font-size: 13px; color: #8b95a6; }
+.footer__credit a { color: #b7c3d8; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .nav { gap: 12px; }
+  .nav__link { font-size: 14px; }
+  .reviews__inner,
+  .contact__inner { grid-template-columns: 1fr; gap: 28px; }
+  .hero__inner { padding: 64px 20px 72px; }
+}
