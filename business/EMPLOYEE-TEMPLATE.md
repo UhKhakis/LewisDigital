@@ -1,6 +1,11 @@
 # Lewis Digital — Employee System Template
 *Full role definitions, system prompts, parameters, guidelines, and thinking frameworks for every team member. Built to be reused as a template when spinning up the same team structure + tools in another business.*
 
+> **Implemented as Claude Code subagents.** This file is now the canonical role
+> reference; the working implementation is the repo root `CLAUDE.md` (Lead) and
+> `.claude/agents/*.md` (the other five roles). If you change a role's rules
+> here, update the matching `.claude/agents/` file too.
+
 **How to use this file:** For each role below you get (1) the system **identity/purpose**, (2) the **way of thinking**, (3) the **parameters** (tools/abilities/skills it's granted), (4) the **system prompt**, (5) **durable guidelines**, (6) a **delegation brief template**, and (7) **definition of done**. Swap the business-specific facts (name, niche, city, prices, brand) for the new business's own; keep the structure and the reusable rules as-is.
 
 ---

@@ -2,6 +2,11 @@
 
 **Purpose:** A complete reference explaining every role in the Lewis Digital team, what they do, and how to set them up / brief them. Written so you could clone this business as a fresh team. *This is a working operations document, not strategy — the authoritative plan stays in the business plan.*
 
+> **Implemented as Claude Code subagents.** This file is now the canonical role
+> reference; the working implementation is the repo root `CLAUDE.md` (Lead) and
+> `.claude/agents/*.md` (the other five roles). If you change a role's rules
+> here, update the matching `.claude/agents/` file too.
+
 **Business model in one line:** Find local businesses with no website → build them a bespoke client-branded demo → pitch (email/phone) → close → collect setup + recurring via Stripe → deliver on the client's own domain/cPanel. Primary goal: **$5,000 MRR** (~20–30 recurring clients, ~6–14 months).
 
 **Two operating truths that shape every role:**
