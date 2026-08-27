@@ -2,20 +2,37 @@
 
 One-page demo website for **Limitless Diesel & Offroad** (College Station, TX),
 built in a **fitting diesel/offroad brand**. Contains **ZERO Lewis Digital
-gold** — the client-facing page uses only the derived forest-green + sand +
-rust system below.
+gold** — the client-facing page uses only the derived brand system below.
 
-Lightweight static site: plain HTML + CSS, no frameworks, no build step —
-deployable as-is to any static host.
+Lightweight static site: plain HTML + CSS, no frameworks, no build step.
+
+## Design direction (owner-assigned)
+
+**"Rugged field manual / outpost."** Deep olive/khaki + rust + cream, chunky
+industrial display (Bebas Neue) + monospace accents (Space Mono) + humanist body
+(Karla). Distinctive architecture:
+
+- **Fixed left rail** with the brand, a numbered "field index" nav, and shop
+  meta — NOT a conventional top nav.
+- **No conventional centered hero** — instead an "Opening Log" split panel with
+  a stamped code line, a photo with a **topographic contour overlay**, and a
+  caption bar.
+- **Index-style service rows** — large numbered field-log entries in
+  double-bordered stamped panels.
+- **Stamped/bordered panels** throughout (dashed inner borders), heavy paper
+  grain background, monospace "SECTION 01–04" labels.
+
+This layout is deliberately unlike Brazos Valley (light editorial split hero)
+and Bryan Muffler (dark, skewed, full-bleed motion).
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Complete one-page site (hero, services, about/hours, reviews, contact, footer) |
-| `styles.css` | All styling — derived client brand (deep forest green + warm sand/tan + burnt rust, Bebas Neue + Work Sans, topographic/ridge motif) |
-| `assets/hero-limitless.png` | AI-generated illustrative hero photo (lifted offroad truck on a forest-green/sand trail) |
-| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — deliberately left in Lewis Digital brand) |
+| `index.html` | Complete one-page site (left rail, opening log, index services, the outfit, report in, word from the field, footer) |
+| `styles.css` | All styling — derived client brand (olive/khaki/rust/cream, Bebas Neue/Space Mono/Karla) |
+| `assets/hero-limitless.png` | AI-generated **illustrative** hero photo (diesel truck on dirt with topographic overlay) |
+| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 
 ## Preview
 
@@ -31,7 +48,7 @@ Do NOT use port 3000 — that serves the agency site.
 **Limitless Diesel & Offroad has no usable brand imagery to draw from** (its
 place page shows "Google Maps listing only" and no social links), so the
 palette/typography below is a designer derivation fit to the shop's name,
-category, and trail-ready vibe — NOT lifted from the business:
+category, and regional feel — NOT lifted from the business:
 
 | Check | Result |
 |---|---|
@@ -43,12 +60,10 @@ category, and trail-ready vibe — NOT lifted from the business:
 
 | Token | Value | Reasoning |
 |---|---|---|
-| **Deep forest green** `#26311f` (hero, footer, dark sections) | Trail / outdoors | Rugged offroad + outdoors identity; deliberately NOT the warm Lewis charcoal `#16130e` |
-| **Burnt rust** `#c0562b` (primary CTA/accent) | Trail dust / patina | Earthy, rugged accent; clearly rust (not Lewis gold `#c9a227`) |
-| **Warm sand** `#f3edde` (base) / `#e2d9c6` (lines) | Desert terrain | Light warm base; deliberately a sand tone, NOT the Lewis cream `#fbf8f1` |
-| **Olive-gray** `#6b6a55` / `#34412a` | Weathered metal | Secondary support tone for card tops and dark-section plates |
-| **Mountain-ridge motif** (jagged clip-path edges + terrain band) | Topography / trail | Reinforces the offroad/trail identity; used on the top bar, hero, and footer |
-| **Typography: Bebas Neue (display) + Work Sans (body)** | Tall, bold adventure signage + clean sans | Bebas Neue reads like offroad/outdoor branding. Deliberately a fifth distinct pairing (vs. Bos Oswald/Barlow, Neff's Cormorant/Jost, Brazos Montserrat/Source Sans, Bryan Muffler Anton/Roboto) |
+| Deep olive `#3a3a2c` + khaki `#8a8266` | Earthy, gritty, outpost | Rugged field feel; deliberately NOT Lewis charcoal `#16130e` or gold |
+| Rust `#b5542f` | Gritty accent | Warm rust, NOT Lewis gold `#c9a227` |
+| Cream `#ece4d0` | Paper/field-log base | Earthy cream, NOT Lewis cream `#fbf8f1` |
+| Bebas Neue (industrial display) + Space Mono (mono accents) + Karla (humanist body) | Stencil/manual | Deliberately unlike the other demos (Fraunces/Inter; Anton/Oswald) |
 
 ## What is REAL (verified & traceable)
 
@@ -58,8 +73,8 @@ for this batch ("use EXACTLY these facts and nothing more"):
 - Business name: **Limitless Diesel & Offroad**
 - Category: **auto repair** (diesel repair and offroad shop)
 - Town: **College Station, TX**
-- Address: **4011 Hicks Ln, College Station, TX** (ZIP not provided in the leads
-  file — deliberately omitted rather than guessed)
+- Address: **4011 Hicks Ln, College Station, TX** (ZIP not provided in the
+  leads file — deliberately omitted rather than guessed)
 - Phone: **(979) 209-9668**
 - Presence: **Google Maps listing only** (no website, no socials)
 
@@ -68,20 +83,22 @@ Directions links point to the real Google Maps search URL from the leads file.
 ## What is PLACEHOLDER / ILLUSTRATIVE (do NOT present as sourced from the business)
 
 - **Google rating & reviews**: the leads file carries **no rating or review
-  count** for this business, so the page claims **none**. The reviews section is
-  an explicit placeholder ("Google rating & reviews will appear here once
-  connected") — no fake stars, no invented score, no fabricated quotes.
+  count**, so the page claims **none**. The reviews section is an explicit
+  placeholder — no fake stars, no invented score, no fabricated quotes.
 - **Hours**: shown as **"Call for hours"** (hours were not in the leads file).
-- **Service categories** (diesel engine repair, lift kits/suspension, performance
-  tuning, 4x4/drivetrain, turbo/fuel systems, offroad accessories, brakes,
-  diagnostics): generic list of what a diesel & offroad shop typically offers —
-  NOT sourced from Limitless Diesel & Offroad. The page itself carries an
-  on-page note saying services are examples and to confirm by phone.
-- **Hero photo** (`assets/hero-limitless.png`): AI-generated atmospheric truck
-  image for layout/feel — NOT a photo of the shop.
-- **Copy voice** (e.g., "we'll talk it through with you"): warm small-business
-  tone per Lewis Digital voice direction — general marketing language, no
-  invented facts, testimonials, or stats.
+- **Service categories** (diesel engine repair/diagnostics, suspension/lift,
+  offroad accessories, transmission/drivetrain, turbo/fuel system, preventive
+  maintenance): generic list of what a diesel & offroad shop typically offers —
+  NOT sourced from Limitless Diesel & Offroad. The page carries an on-page note
+  saying services are examples and to confirm by phone.
+- **"EST. SECTOR: COLLEGE STATION" / "LOG ENTRY NO. 001"**: decorative
+  field-manual framing, NOT real establishment dates or claims.
+- **Hero photo** (`assets/hero-limitless.png`): AI-generated atmospheric diesel
+  truck image for layout/feel — **illustrative, NOT a photo of the shop**.
+  Marked "Illustrative" in the figure caption on the page itself.
+- **Copy voice** ("bring your rig by"): warm small-business tone per Lewis
+  Digital voice direction — general marketing language, no invented facts,
+  testimonials, or stats.
 
 ## Brand-rule compliance
 
@@ -91,10 +108,6 @@ Directions links point to the real Google Maps search URL from the leads file.
 - Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
   Tech Services LLC".
 - `pitch-sheet.html` is in Lewis Digital brand (it is OUR sales tool).
-- This demo is visually distinct from Bos Garage (slate + red, hazard stripes),
-  Neff's (lavender/plum, Cormorant/Jost), Brazos Valley (navy + copper,
-  Montserrat/Source Sans), and Bryan Muffler (carbon black + torch orange,
-  Anton/Roboto).
 
 ## Notes for the close call with the owner
 
