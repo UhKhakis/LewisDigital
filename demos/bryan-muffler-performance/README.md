@@ -1,21 +1,35 @@
 # Bryan Muffler & Performance — Demo Site (DERIVED CLIENT BRAND)
 
 One-page demo website for **Bryan Muffler & Performance** (Bryan, TX), built in
-a **fitting muffler/performance-shop brand**. Contains **ZERO Lewis Digital
-gold** — the client-facing page uses only the derived carbon-black + torch-orange
-system below.
+a **fitting muffler/performance brand**. Contains **ZERO Lewis Digital gold** —
+the client-facing page uses only the derived brand system below.
 
-Lightweight static site: plain HTML + CSS, no frameworks, no build step —
-deployable as-is to any static host.
+Lightweight static site: plain HTML + CSS, no frameworks, no build step.
+
+## Design direction (owner-assigned)
+
+**"Performance/racing energy."** Near-black carbon + electric orange, condensed
+ALL-CAPS display (Anton/Oswald). Distinctive architecture:
+
+- **Scrolling keyword ticker** at the very top.
+- **Full-bleed motion-capture hero** with oversized, aggressive ALL-CAPS title.
+- **Oversized numeric index band** (01 / 02 / 03 — decorative section numerals,
+  NOT business stats).
+- **Skewed/clipped section dividers** and sharp chevron marks.
+- **Asymmetric service grid** (cells of varying height), not a uniform card grid.
+- **Condensed nav** with clipped CTA.
+
+This layout is deliberately unlike Brazos Valley (light editorial split hero)
+and Limitless Diesel (field-manual index with a fixed left rail).
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Complete one-page site (hero, services, about/hours, reviews, contact, footer) |
-| `styles.css` | All styling — derived client brand (matte carbon black + torch orange + off-white, Anton + Roboto, checkered/speed-stripe motif) |
-| `assets/hero-muffler.png` | AI-generated illustrative hero photo (dark performance shop with orange work lights) |
-| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — deliberately left in Lewis Digital brand) |
+| `index.html` | Complete one-page site (ticker, nav, full-bleed hero, index band, asymmetric services, reviews, about/hours, contact, footer) |
+| `styles.css` | All styling — derived client brand (carbon + electric orange, Anton/Oswald/Roboto Condensed) |
+| `assets/hero-muffler.png` | AI-generated **illustrative** hero photo (exhaust with motion blur and glow) |
+| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 
 ## Preview
 
@@ -31,7 +45,7 @@ Do NOT use port 3000 — that serves the agency site.
 **Bryan Muffler & Performance has no usable brand imagery to draw from** (its
 place page shows "Google Maps listing only" and no social links), so the
 palette/typography below is a designer derivation fit to the shop's name,
-category, and performance vibe — NOT lifted from the business:
+category, and regional feel — NOT lifted from the business:
 
 | Check | Result |
 |---|---|
@@ -43,12 +57,9 @@ category, and performance vibe — NOT lifted from the business:
 
 | Token | Value | Reasoning |
 |---|---|---|
-| **Matte carbon black** `#161619` (hero, footer, dark sections) | Race-black | High-performance / custom-exhaust look; deliberately NOT the warm Lewis charcoal `#16130e` |
-| **Torch orange** `#f97316` (primary CTA/accent) | Hot-rod orange | Vivid, loud, performance energy; clearly orange, deliberately NOT Lewis gold `#c9a227` |
-| **Gunmetal** `#3a3d44` / `#222227` | Metal + exhaust pipe | Secondary support tone for card edges and dark-section plates |
-| **Warm off-white** `#f7f7f5` (base) | Clean showroom wall | Light base; deliberately NOT the warm Lewis cream `#fbf8f1` |
-| **Checkered-flag / speed-stripe motif** | Racing finish line | Reinforces the performance/custom identity; used on the top bar, hero, and footer |
-| **Typography: Anton (display) + Roboto (body)** | Tall, bold racing lettering + sturdy sans | Anton reads like a performance/speed shop sign. Deliberately a fourth distinct pairing (vs. Bos Oswald/Barlow, Neff's Cormorant/Jost, Brazos Montserrat/Source Sans) |
+| Near-black carbon `#0b0b0c` | Dark, loud, kinetic | Performance/racing feel; clearly black, NOT Lewis charcoal `#16130e` |
+| Electric orange `#ff5a00` | Aggressive accent | Racing/energy; clearly orange, NOT Lewis gold `#c9a227` |
+| Anton (condensed ALL-CAPS display) + Oswald (subheads) + Roboto Condensed (body) | Loud, kinetic | Deliberately unlike the other demos (Fraunces/Inter; Bebas Neue/mono) |
 
 ## What is REAL (verified & traceable)
 
@@ -68,20 +79,21 @@ Directions links point to the real Google Maps search URL from the leads file.
 ## What is PLACEHOLDER / ILLUSTRATIVE (do NOT present as sourced from the business)
 
 - **Google rating & reviews**: the leads file carries **no rating or review
-  count** for this business, so the page claims **none**. The reviews section is
-  an explicit placeholder ("Google rating & reviews will appear here once
-  connected") — no fake stars, no invented score, no fabricated quotes.
+  count**, so the page claims **none**. The reviews section is an explicit
+  placeholder — no fake stars, no invented score, no fabricated quotes.
 - **Hours**: shown as **"Call for hours"** (hours were not in the leads file).
-- **Service categories** (custom exhaust, performance tuning, catalytic
-  converters, exhaust repair/welding, headers, suspension/lowering, brakes,
-  diagnostics): generic list of what a muffler & performance shop typically
-  offers — NOT sourced from Bryan Muffler & Performance. The page itself
-  carries an on-page note saying services are examples and to confirm by phone.
-- **Hero photo** (`assets/hero-muffler.png`): AI-generated atmospheric shop
-  image for layout/feel — NOT a photo of the shop.
-- **Copy voice** (e.g., "we'll talk it through with you"): warm small-business
-  tone per Lewis Digital voice direction — general marketing language, no
-  invented facts, testimonials, or stats.
+- **Service categories** (muffler/exhaust repair, custom exhaust, performance
+  upgrades, catalytic converters, welding/fabrication, sound/flow tuning):
+  generic list of what a muffler & performance shop typically offers — NOT
+  sourced from Bryan Muffler & Performance. The page carries an on-page note
+  saying services are examples and to confirm by phone.
+- **Oversized index band** (01/02/03): decorative section numerals, NOT
+  business statistics or performance claims.
+- **Hero photo** (`assets/hero-muffler.png`): AI-generated atmospheric exhaust
+  image for layout/feel — **illustrative, NOT a photo of the shop**.
+- **Copy voice** ("LOUDER. FASTER. DONE RIGHT."): warm small-business tone per
+  Lewis Digital voice direction — general marketing language, no invented
+  facts, testimonials, or stats.
 
 ## Brand-rule compliance
 
@@ -91,10 +103,6 @@ Directions links point to the real Google Maps search URL from the leads file.
 - Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
   Tech Services LLC".
 - `pitch-sheet.html` is in Lewis Digital brand (it is OUR sales tool).
-- This demo is visually distinct from Bos Garage (slate + red, hazard stripes),
-  Neff's (lavender/plum, Cormorant/Jost), Brazos Valley (navy + copper,
-  Montserrat/Source Sans), and Limitless Diesel (forest green + sand,
-  Bebas Neue/Work Sans).
 
 ## Notes for the close call with the owner
 

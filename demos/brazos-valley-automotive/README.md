@@ -2,20 +2,35 @@
 
 One-page demo website for **Brazos Valley Automotive** (College Station, TX),
 built in a **fitting independent auto-repair brand**. Contains **ZERO Lewis
-Digital gold** — the client-facing page uses only the derived navy + copper
-system below.
+Digital gold** — the client-facing page uses only the derived brand system below.
 
-Lightweight static site: plain HTML + CSS, no frameworks, no build step —
-deployable as-is to any static host.
+Lightweight static site: plain HTML + CSS, no frameworks, no build step.
+
+## Design direction (owner-assigned)
+
+**"Modern trustworthy shop" — LIGHT editorial aesthetic.** Warm paper/cream
+base, deep navy + copper, Fraunces (serif display) + Inter (clean sans body).
+Distinctive architecture:
+
+- **Split/asymmetric hero** — left text, right framed photo, generous
+  whitespace, fine hairline rules.
+- **Horizontal fact strip** — four thin columns (where / kind of shop / hours /
+  reach us), separated by hairline rules.
+- **Service list styled as an elegant editorial index** — numbered rows
+  (01–08) with hairline dividers, not cards.
+- **Minimal sticky masthead** with a pill CTA.
+
+This layout is deliberately unlike Bryan Muffler (dark, skewed, full-bleed
+motion) and Limitless Diesel (field-manual index with a fixed left rail).
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Complete one-page site (hero, services, about/hours, reviews, contact, footer) |
-| `styles.css` | All styling — derived client brand (deep navy + copper-orange + cool light gray, Montserrat + Source Sans 3) |
-| `assets/hero-brazos.png` | AI-generated illustrative hero photo (clean modern shop bay with navy + copper lighting) |
-| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — deliberately left in Lewis Digital brand) |
+| `index.html` | Complete one-page site (split hero, fact strip, index services, about/hours, reviews, contact, footer) |
+| `styles.css` | All styling — derived client brand (cream + navy + copper, Fraunces + Inter) |
+| `assets/hero-brazos.png` | AI-generated **illustrative** hero photo (bright, light-filled shop bay) |
+| `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 
 ## Preview
 
@@ -43,11 +58,10 @@ category, and regional feel — NOT lifted from the business:
 
 | Token | Value | Reasoning |
 |---|---|---|
-| **Deep navy** `#17344f` (hero, footer, dark sections) | Trust + stability | Established, dependable regional shop; a cool navy (deliberately NOT the warm Lewis charcoal `#16130e`) |
-| **Copper-orange** `#d9772e` (primary CTA/accent) | Warm, approachable work-light glow | Friendly "local shop" energy; clearly orange, deliberately NOT Lewis gold `#c9a227` |
-| **Steel blue-gray** `#5a7188` / `#1e4466` | Machined steel | Secondary support tone for card tops and dark-section plates |
-| **Cool off-white** `#f4f6f8` (base) | Clean workshop wall | Light base; deliberately NOT the warm Lewis cream `#fbf8f1` |
-| **Typography: Montserrat (display) + Source Sans 3 (body)** | Modern, legible, friendly-geometric | Cleaner and rounder than the Bos Garage condensed industrial look and unlike the Neff's serif look — deliberately a third distinct pairing |
+| Warm cream `#f6f1e6` base | Light, calm, premium editorial paper | Light aesthetic, NOT the warm Lewis cream `#fbf8f1` |
+| Deep navy `#122338` | Trust + stability | Established, dependable regional shop; cool navy, deliberately NOT Lewis charcoal `#16130e` |
+| Copper `#b8783a` | Warm, approachable accent | Friendly "local shop" energy; clearly copper, NOT Lewis gold `#c9a227` |
+| Fraunces (serif display) + Inter (sans body) | Editorial + clean | Deliberately unlike the other demos (Anton/Oswald; Bebas Neue/mono) |
 
 ## What is REAL (verified & traceable)
 
@@ -67,18 +81,18 @@ Directions links point to the real Google Maps search URL from the leads file.
 ## What is PLACEHOLDER / ILLUSTRATIVE (do NOT present as sourced from the business)
 
 - **Google rating & reviews**: the leads file carries **no rating or review
-  count** for this business, so the page claims **none**. The reviews section is
-  an explicit placeholder ("Google rating & reviews will appear here once
-  connected") — no fake stars, no invented score, no fabricated quotes.
+  count**, so the page claims **none**. The reviews section is an explicit
+  placeholder ("Google rating & reviews will appear here once connected") — no
+  fake stars, no invented score, no fabricated quotes.
 - **Hours**: shown as **"Call for hours"** (hours were not in the leads file).
 - **Service categories** (brakes, oil changes, diagnostics, engine repair, AC,
   tires, electrical, belts): generic list of what an independent auto repair
   shop typically offers — NOT sourced from Brazos Valley Automotive. The page
-  itself carries an on-page note saying services are examples and to confirm by
-  phone.
+  carries an on-page note saying services are examples and to confirm by phone.
 - **Hero photo** (`assets/hero-brazos.png`): AI-generated atmospheric garage
-  image for layout/feel — NOT a photo of the shop.
-- **Copy voice** (e.g., "we'll tell you straight"): warm small-business tone per
+  image for layout/feel — **illustrative, NOT a photo of the shop**. Marked
+  "Illustrative" in the figure caption on the page itself.
+- **Copy voice** ("we'll tell you straight"): warm small-business tone per
   Lewis Digital voice direction — general marketing language, no invented
   facts, testimonials, or stats.
 
@@ -90,10 +104,6 @@ Directions links point to the real Google Maps search URL from the leads file.
 - Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
   Tech Services LLC".
 - `pitch-sheet.html` is in Lewis Digital brand (it is OUR sales tool).
-- This demo is visually distinct from Bos Garage (slate + red, Oswald/Barlow,
-  hazard stripes), Neff's (lavender/plum, Cormorant/Jost), Bryan Muffler
-  (matte black + torch orange, Anton/Roboto, speed motif), and Limitless
-  Diesel (forest green + sand, Bebas Neue/Work Sans).
 
 ## Notes for the close call with the owner
 
