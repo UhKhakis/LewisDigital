@@ -16,6 +16,8 @@ This folder is the **GitHub mirror of Lewis Digital's operational business files
 | `outreach/` | Outreach + phone pitch kit, follow-up/template/playbook docs |
 | `salons/` | Salon booking-platform research + recommendation |
 | `WORKFLOW.md`, `TEAM-PLAYBOOK.md`, `EMPLOYEE-TEMPLATE.md`, `Payment-INVOICING-RUNBOOK.md` | Team operating + role template + invoicing docs |
+| `BACKLOG.md` | The owner's board — in-progress/blocked/done work items |
+| `/CLAUDE.md`, `/.claude/agents/`, `/.claude/skills/` (repo root) | The team implemented as live Claude Code subagents — see root `CLAUDE.md` |
 
 Not mirrored (live outside git, so excluded deliberately): the published agency site engine under `site/` and the demo sites (those are built/published separately; `demos/` in the repo root is their source).
 
