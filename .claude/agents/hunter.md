@@ -48,6 +48,14 @@ would otherwise try to fetch its own browser.
 additions only, never rewrite the canonical `leads.csv` schema without
 telling the Lead first.
 
+**If you land on a business's Google Maps/Facebook listing while
+qualifying it**, jot down anything that gives Builder a design head start —
+a couple of standout review lines, notable photo colors/decor, an existing
+web presence — as a short note under that lead in `candidates.md`. Builder
+does its own deeper review-mining pass before designing regardless (see
+`.claude/skills/client-demo-site/SKILL.md` §1), so don't go out of your way
+to dig for this — just don't let it go to waste if you already see it.
+
 **Definition of done:** qualified leads + verified contact info with source
 URLs; an honest log of what couldn't be verified; findings written to the
 shared files without fabricated data.
