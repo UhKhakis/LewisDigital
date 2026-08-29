@@ -1,4 +1,4 @@
-# Brazos Valley Automotive — Demo Site (Rebuild v2 — CLIENT BRAND FROM REAL RESEARCH)
+# Brazos Valley Automotive — Demo Site (Rebuild v2.1 — CLIENT BRAND + real hero photo)
 
 One-page demo website for **Brazos Valley Automotive** (1702 Ponderosa Dr,
 College Station, TX 77845 · (979) 680-1234), **rebuilt from scratch** using
@@ -25,6 +25,34 @@ fetch. This rebuild replaces every derived-guess decision with a
 research-grounded one and corrects the v1 README's now-inaccurate "no rating,
 no reviews, no photos" claims.
 
+## Hero photo: v2.1 update, 2026-08-29 — real stock photo replaces the SVG illustration
+
+The v2 rebuild (below) used an inline SVG/CSS illustration for the hero,
+reasoning that an illustration directly reflecting the researched siding/roof/
+sign-board evidence was a better honesty fit than a generic stock photo. The
+owner reviewed the live Bos Garage demo with the same approach and said
+plainly it needed a real photo, not an illustration — a flat vector graphic
+reads as *no image* regardless of how well-researched its details are. That
+feedback applies here too. No AI image-generation tool is available in this
+environment (confirmed 2026-08-29), so this update uses a real, free-license
+stock photo instead.
+
+**Source:** [pexels.com/photo/6870324](https://www.pexels.com/photo/smiling-man-in-blue-coveralls-standing-beside-an-orange-car-having-conversation-over-the-phone-6870324/)
+("Smiling Man in Blue Coveralls Standing Beside an Orange Car Having
+Conversation Over the Phone"), photographer **Gustavo Fring**, downloaded
+2026-08-29. Licensed under the [Pexels License](https://www.pexels.com/license/)
+— free for commercial use, no attribution legally required (credited here
+anyway). The Lead sourced two candidates via a live Chrome session — this one
+(a mechanic reviewing paperwork on the phone beside a car, in a clean
+multi-bay shop) and an alternate showing an old pickup truck getting worked
+on — and sent both to the owner. The owner picked this one; it also happens
+to echo real review themes ("good communication," "very thorough and document
+with pics") better than the alternate did.
+
+This is a **stock photo of a generic mechanic, not a photo of Brazos Valley
+Automotive, its building, or its staff.** The page's `alt` text and
+`figcaption` say so explicitly, and so does this README.
+
 ## Files
 
 | File | Purpose |
@@ -32,10 +60,7 @@ no reviews, no photos" claims.
 | `index.html` | Complete one-page site (nav, trust-forward hero, verified-facts strip, services, about/crew, visit, reviews, contact, footer) |
 | `styles.css` | All styling — researched client brand (galvanized-gray + charcoal-brown + rustic sign tan/green, Roboto Slab + Work Sans) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
-
-No `assets/` folder in this rebuild: the hero's signature graphic is an
-inline SVG + CSS illustration (see "Signature element" below), not a raster
-photo — see the honesty note in the placeholder table for why.
+| `assets/hero-mechanic.jpg` | Hero photo — free-license stock photo, NOT a photo of Brazos Valley Automotive (see "Hero photo" below) |
 
 ## Preview
 
@@ -127,8 +152,8 @@ above come from the real photo/review research instead.
   badges, a combined 3-plate about+hours grid, reviews shown as a horizontal
   rating-block/placeholder split. This demo instead: plain sticky nav (no
   top-strip), a **trust-forward hero** that leads with the real 4.7★/156
-  numeral before the headline, an inline-SVG illustrated signboard (no photo
-  asset at all) as the signature element, a 3-tile verified-fact strip styled
+  numeral before the headline, a real hero photo framed in the shop's own
+  roofline/siding motif as the signature element, a 3-tile verified-fact strip styled
   as light-on-dark cards (not hairline columns), thin-top-rule service panels
   (no letter badges), a separate single-plate Visit Us section, and a
   vertically-stacked centered reviews block (not a horizontal split). A
@@ -184,16 +209,9 @@ demo in `demos/` uses this order or count).
   connected" placeholder — no fabricated quotes, no invented tag counts,
   even though real tag chips and review texts were read during research (see
   above — that reading stays internal per `client-demo-site` §3).
-- **Hero visual**: this rebuild deliberately uses an **inline SVG/CSS
-  illustration** of the researched building (gray corrugated-ridge texture,
-  a dark charcoal roof-apex shape, and a simplified rendering of the real
-  rustic sign board) instead of an AI-generated photo-style hero image. This
-  is marked "Illustrative" in an on-page caption. The choice was made because
-  a stock/AI photo of a generic garage would be a *weaker* fit for the
-  honesty rule than an illustration that directly and legibly reflects what
-  the photo research actually found (specific siding material, roof color,
-  and sign style) — but it is still not a photograph of the real shop, and
-  the caption says so.
+- **Hero photo** (`assets/hero-mechanic.jpg`): a free-license stock photo, not
+  a photo of Brazos Valley Automotive. See "Hero photo" below for the full
+  story of why this replaced the original inline-SVG illustration.
 - **"About the shop" narrative and "values" list** (straight answers, fair
   pricing, thorough diagnosis, same crew every visit): original marketing
   copy in Lewis Digital's warm small-business voice, informed by the
@@ -222,9 +240,9 @@ demo in `demos/` uses this order or count).
   footer reviews section) is the single strongest asset this rebuild adds —
   it's real, verifiable, and was invisible to the tooling that built v1.
 - If the owner confirms real hours, provides a real building/sign photo, or
-  names the actual owner/manager, swap the illustrated signboard for a real
-  photo and add the confirmed name/hours — the current SVG illustration and
-  "Call or message for hours" primary are both explicitly placeholders for
-  those, not final answers.
+  names the actual owner/manager, swap the stock hero photo for a real one
+  and add the confirmed name/hours — the current stock photo and "Call or
+  message for hours" primary are both explicitly placeholders for those, not
+  final answers.
 - This folder is a standalone deliverable; nothing is pushed live to a real
   domain without the owner's approval.
