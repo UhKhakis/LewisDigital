@@ -1,4 +1,4 @@
-# Limitless Diesel & Offroad — Demo Site (v2, REAL BRAND REBUILD)
+# Limitless Diesel & Offroad — Demo Site (v2.1, REAL BRAND + real photos)
 
 One-page demo website for **Limitless Diesel & Offroad** (4011 Hicks Ln,
 College Station, TX 77845), rebuilt from scratch on **real research** gathered
@@ -60,10 +60,35 @@ Distinctive architecture vs. the other three same-trade demos:
 | `index.html` | Complete one-page site (HUD nav, hero, the work, about, hours, reviews, contact, footer) |
 | `styles.css` | All styling — sourced client brand (near-black/cyan/magenta/chrome, Barlow Condensed/Barlow/Share Tech Mono) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
+| `assets/about-truck.jpg` | About-section photo — free-license stock photo (see "Photos" below) |
+| `assets/work-lifted-truck.jpg` | Work-section photo — free-license stock photo (see "Photos" below) |
 
-No `assets/` folder: the hero uses an original inline-SVG gauge graphic
-(clearly marked illustrative) instead of a raster photo, so nothing needed
-to be AI-generated or downloaded — see the brand-sources section for why.
+## Photos: v1.1 update, 2026-08-29
+
+The hero's original-artwork gauge graphic stays — it's this demo's signature
+element, directly tied to the real sourced Instagram logo colors (chrome
+ring, cyan/magenta), and keeping a distinct hero shape from the other three
+auto-shop demos was a deliberate structural choice, not the "no images"
+problem the owner flagged elsewhere. What the page genuinely lacked was any
+real photo, anywhere. Per the owner's standing instruction (decide directly,
+no candidate-approval round), two free-license Pexels photos were added:
+
+- **About section** (`assets/about-truck.jpg`): [pexels.com/photo/32104658](https://www.pexels.com/photo/white-pickup-truck-in-scenic-forest-landscape-32104658/)
+  ("White Pickup Truck in Scenic Forest Landscape"), photographer **JBC
+  Media Company** — a pickup on an offroad mountain trail, backing up the
+  "diesel and offroad shop" identity without claiming to show a real
+  customer or truck.
+- **Work section** (`assets/work-lifted-truck.jpg`): [pexels.com/photo/30547331](https://www.pexels.com/photo/lifted-off-road-truck-driving-down-urban-street-30547331/)
+  ("Lifted Off Road Truck Driving Down Urban Street"), photographer **Sam
+  McCool** — a heavily lifted truck with oversized tires, ties directly to
+  the real "lift kit installation" review tag; its teal color grade happens
+  to echo the shop's real cyan brand accent.
+
+Both licensed under the [Pexels License](https://www.pexels.com/license/)
+(free commercial use, no attribution required, credited here anyway) and
+labeled as illustrative stock photos in their `alt` text/`figcaption` — not
+photos of Limitless Diesel & Offroad, its shop, its staff, or any customer's
+truck.
 
 ## Preview
 
@@ -208,8 +233,9 @@ borrows only the color system, not the artwork.
 - Client-facing page uses ONLY the sourced brand colors/fonts above. **No
   Lewis gold (#C9A227 family), no Lewis charcoal #16130e, no Lewis cream
   #fbf8f1** anywhere in `index.html`/`styles.css`.
-- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of
-  Lewis Tech Services LLC."
+- Footer keeps a single small credit: "Designed by Lewis Tech," linked to
+  lewistechservices.com (owner instruction 2026-08-29: never say "Lewis
+  Digital" on client-facing pages).
 - `pitch-sheet.html` is untouched and stays in Lewis Digital's own brand (it
   is OUR sales tool) — including its own unrelated "LD" initials used for
   *Lewis Digital*, which is a coincidental overlap with this client's real

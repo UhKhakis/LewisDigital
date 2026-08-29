@@ -425,6 +425,18 @@ a:focus-visible, button:focus-visible {
 }
 .work__note a { color: var(--cyan); text-decoration: underline; }
 
+.work__photo { margin-top: 42px; max-width: 420px; }
+.work__photo img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 3/4; object-fit: cover;
+  border: 1px solid var(--line-bright); border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--cyan-dim);
+}
+.work__photo figcaption {
+  margin-top: 8px; font-family: var(--font-mono); font-size: 0.74rem;
+  color: var(--muted-2);
+}
+
 /* ============================================================
    About — split story + vertical HUD stat strip
    ============================================================ */
@@ -442,6 +454,18 @@ a:focus-visible, button:focus-visible {
 .about__source {
   margin-top: 18px;
   font-size: 0.85rem;
+  color: var(--muted-2);
+}
+
+.about__side { display: flex; flex-direction: column; gap: 24px; }
+.about__photo img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 3/2; object-fit: cover;
+  border: 1px solid var(--line-bright); border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--cyan-dim);
+}
+.about__photo figcaption {
+  margin-top: 8px; font-family: var(--font-mono); font-size: 0.74rem;
   color: var(--muted-2);
 }
 
