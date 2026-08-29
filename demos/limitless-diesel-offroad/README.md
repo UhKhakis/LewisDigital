@@ -1,118 +1,233 @@
-# Limitless Diesel & Offroad — Demo Site (DERIVED CLIENT BRAND)
+# Limitless Diesel & Offroad — Demo Site (v2, REAL BRAND REBUILD)
 
-One-page demo website for **Limitless Diesel & Offroad** (College Station, TX),
-built in a **fitting diesel/offroad brand**. Contains **ZERO Lewis Digital
-gold** — the client-facing page uses only the derived brand system below.
+One-page demo website for **Limitless Diesel & Offroad** (4011 Hicks Ln,
+College Station, TX 77845), rebuilt from scratch on **real research** gathered
+via a live, non-headless Chrome browser on 2026-08-28 (Google Maps listing +
+photos + reviews, and the shop's real Instagram profile). This replaces the
+v1 demo, which was built with **no** brand imagery available and used a
+fully **derived** olive/khaki/rust "field manual" system. v2 uses the shop's
+own sourced brand signal (its real Instagram logo) and contains **ZERO Lewis
+Digital gold**.
 
 Lightweight static site: plain HTML + CSS, no frameworks, no build step.
 
-## Design direction (owner-assigned)
+## Design direction
 
-**"Rugged field manual / outpost."** Deep olive/khaki + rust + cream, chunky
-industrial display (Bebas Neue) + monospace accents (Space Mono) + humanist body
-(Karla). Distinctive architecture:
+**"Instrument cluster."** Near-black background, electric cyan-blue,
+neon magenta, and a chrome highlight — anchored directly to the shop's real
+Instagram logo (a chrome-ringed "LD" badge with cyan-gradient lettering on
+black). The signature element is an original circular boost-gauge/dial
+graphic (chrome ring, cyan-to-magenta arc, magenta needle) used three times:
+small as the nav logomark, large and animated in the hero, and as a literal
+data visualization of the 4.9/5 Google rating in the Reviews section — a
+nod to the diesel-performance gauge culture the shop's own reviews and
+Instagram content are full of (boost gauges, turbo work, lift kits).
 
-- **Fixed left rail** with the brand, a numbered "field index" nav, and shop
-  meta — NOT a conventional top nav.
-- **No conventional centered hero** — instead an "Opening Log" split panel with
-  a stamped code line, a photo with a **topographic contour overlay**, and a
-  caption bar.
-- **Index-style service rows** — large numbered field-log entries in
-  double-bordered stamped panels.
-- **Stamped/bordered panels** throughout (dashed inner borders), heavy paper
-  grain background, monospace "SECTION 01–04" labels.
+Typography is Barlow Condensed (bold condensed display, validated by the
+`ui-ux-pro-max` skill's typography search for "bold condensed technical
+racing display" — an automotive/high-energy-brand pairing) + Barlow (body)
++ Share Tech Mono (HUD/gauge readout accents — validated by the same skill's
+"technical HUD industrial automotive" search).
 
-This layout is deliberately unlike Brazos Valley (light editorial split hero)
-and Bryan Muffler (dark, skewed, full-bleed motion).
+Distinctive architecture vs. the other three same-trade demos:
+
+- **HUD top nav** with a circular gauge logomark (not a plain wordmark or
+  scrolling ticker) — none of the other three use this.
+- **Centered, emblem-first hero** (large animated gauge dial above the
+  headline, inline HUD stat readout row built into the hero itself) — not a
+  split image+copy layout (Brazos Valley), not a plain centered-copy layout
+  with a bottom illustration (Bos Garage), not a full-bleed dark
+  no-image hero (Bryan Muffler).
+- **"The Work" service section is a bordered tile grid** with circular icon
+  badges and HUD corner-bracket hover accents — not a ticket-list with
+  2-letter codes (Bos Garage), not a numbered index list (Brazos Valley),
+  not an asymmetric chevron grid (Bryan Muffler).
+- **Section order**: hero → services → about (with a vertical stat-strip,
+  not a photo swatch or a two-card grid) → hours/location as its own
+  console-style panel (not folded into "about") → reviews (rendered as a
+  literal rating-gauge dial, not a stamp or plain text) → contact → footer.
+  This order and the standalone hours section differ from all three
+  siblings.
+- **Palette**: black + electric cyan + neon magenta + chrome — none of the
+  other three use blue/cyan or magenta; Bryan Muffler owns
+  near-black-and-orange, Bos Garage owns warm cream/barn-red/stone, Brazos
+  Valley owns galvanized-gray/navy/copper-and-cream.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Complete one-page site (left rail, opening log, index services, the outfit, report in, word from the field, footer) |
-| `styles.css` | All styling — derived client brand (olive/khaki/rust/cream, Bebas Neue/Space Mono/Karla) |
-| `assets/hero-limitless.png` | AI-generated **illustrative** hero photo (diesel truck on dirt with topographic overlay) |
+| `index.html` | Complete one-page site (HUD nav, hero, the work, about, hours, reviews, contact, footer) |
+| `styles.css` | All styling — sourced client brand (near-black/cyan/magenta/chrome, Barlow Condensed/Barlow/Share Tech Mono) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
+
+No `assets/` folder: the hero uses an original inline-SVG gauge graphic
+(clearly marked illustrative) instead of a raster photo, so nothing needed
+to be AI-generated or downloaded — see the brand-sources section for why.
 
 ## Preview
 
 ```bash
-cd /home/agent-lead/LewisDigital/demos/limitless-diesel-offroad
-python3 -m http.server 8090 --bind 127.0.0.1   # preview on localhost:8090
+cd demos/limitless-diesel-offroad
+python -m http.server 8095 --bind 127.0.0.1   # preview on localhost:8095
 ```
 
-Do NOT use port 3000 — that serves the agency site.
+Do NOT use port 3000 — that serves the agency site. Verified locally on
+2026-08-28 at 375px, 768px, 1024px and 1440px with no horizontal overflow
+and no console errors.
 
-## BRAND SOURCES — this brand is DERIVED, not sourced
+## BRAND SOURCES — real research, gathered via live Chrome browser, 2026-08-28
 
-**Limitless Diesel & Offroad has no usable brand imagery to draw from** (its
-place page shows "Google Maps listing only" and no social links), so the
-palette/typography below is a designer derivation fit to the shop's name,
-category, and regional feel — NOT lifted from the business:
+### Google Maps listing (search: "Limitless Diesel & Offroad TX")
 
-| Check | Result |
-|---|---|
-| Facebook / socials | **None** (per `leads/leads.csv`) |
-| Website | **None** — no-website lead |
-| Owner-supplied logo / colors | **None** available at build time |
+- Business name: **Limitless Diesel & Offroad**. Google's own one-line
+  category description: *"Shop offering wheel alignment, brake service, oil
+  changes, diesel performance work and window tinting."*
+- **Rating: 4.9 stars, 58 Google reviews.**
+- Live status at check time read **"Open · Closes 5 PM."**
+- A Google AI Overview synthesizing reviews highlighted: fast/helpful
+  service (including helping out-of-town visitors in a pinch) and quality
+  diesel upgrades (fuel pump replacements, leveling kits, large auxiliary
+  fuel tank installs) — used only to inform the generic services list
+  below, not published as a review quote.
+- Minor history footnote (not headlined on the page): a 2008-era Cummins
+  Diesel Forum post notes "Aggieland Diesel changed names to Limitless
+  Diesel," and a 4-years-ago owner reply on Google says *"It's a new
+  venture for us, so we're trying our best to hold a great reputation with
+  it"* — suggesting Limitless is a newer identity on a longer-running
+  diesel operation. Kept as internal context only; not stated as fact on
+  the page.
 
-### Derived brand system
+### Google Maps reviews (read live, 2026-08-28)
 
-| Token | Value | Reasoning |
-|---|---|---|
-| Deep olive `#3a3a2c` + khaki `#8a8266` | Earthy, gritty, outpost | Rugged field feel; deliberately NOT Lewis charcoal `#16130e` or gold |
-| Rust `#b5542f` | Gritty accent | Warm rust, NOT Lewis gold `#c9a227` |
-| Cream `#ece4d0` | Paper/field-log base | Earthy cream, NOT Lewis cream `#fbf8f1` |
-| Bebas Neue (industrial display) + Space Mono (mono accents) + Karla (humanist body) | Stencil/manual | Deliberately unlike the other demos (Fraunces/Inter; Anton/Oswald) |
+Review tag chips seen: "lift kit installation" (3), "wheel alignment" (2),
+"quick turnaround" (4), "diesel work" (2). Five full review texts were read
+for tone/vocabulary research only — **not published on the page** per
+`client-demo-site` §1/§3:
+
+- Gary Konvicka (5★, "Reasonable price"): steering-wobble repair on a 2015
+  F250, names mechanic "Jason."
+- Danny Schultea (Local Guide, 5★, "Great price"): "Jason is an incredible
+  diesel mechanic... a solid diesel mechanic that I can trust."
+- Marshal Jones (5★): exhaust leak/turbo repair on an '03 6.0 F250,
+  "completed the repair right, and ahead of schedule."
+- John Adams (Local Guide, 5★, 4 years ago): names an earlier mechanic
+  "Ben," ceramic window tint work; owner's reply is the "new venture"
+  quote above.
+- Houston Tomlinson (5★): "best service I have gotten from a shop... quick."
+
+Two different named mechanics across years (Ben, then Jason) point to a
+real pattern — a personal, trusted-mechanic relationship — reflected on the
+page only as general "same person start to finish" language, never as a
+named-individual claim.
+
+### Google Maps photos (viewed live, 2026-08-28)
+
+White/light-gray corrugated metal building with an open garage bay; a white
+banner hanging inside the bay reading "LIMITLESS" + "4x4/OFFROAD" in bold
+black lettering; predominantly black lifted trucks (a black GMC Sierra
+prominently) plus a dark blue lifted Ford Super Duty with a black brush
+guard. Overall: modern, rugged, high-contrast black/white truck aesthetic —
+informed the decision to go dark-background rather than light.
+
+### Instagram — @limitlessdieseloffroad, 2.2K followers (viewed live, 2026-08-28)
+
+**This is the strongest sourced brand signal found across all 4 demos in
+this batch.** The account's profile photo is a real, current logo: a
+circular "LD" monogram badge — chrome/silver metallic ring, "LD" lettering
+in an electric cyan-blue gradient with a white highlight, on a black
+background. Bio: *"🔧 Limitless Diesel & Offroad 🔧 Specializing in all
+diesel repairs/upgrades ⚡ Lift kits ⚡ Wheels/tires, and more! Call/text to
+schedule!"* Story highlight covers show an off-road mud-truck event, a
+wheel/tire close-up, a mechanic mid-engine-work, a hot-pink/magenta
+powder-coated wheel, and a bright orange finished truck. A visible feed post
+shows a neon magenta "LIMITLESS TINT[ING]" sign glowing on a garage wall
+behind a teal car — real physical signage advertising the tint service.
+
+**Per the task's honesty rule, none of this Instagram imagery is reproduced
+or fabricated on the page.** The site's colors (near-black background,
+electric cyan-blue, neon magenta, chrome highlight) are drawn directly from
+the logo/bio/highlights described above — that's an explicit, permitted use
+of a sourced palette. The page's own gauge-badge graphic is an **original**
+circular-dial design (chrome ring + cyan/magenta arc + needle), not a
+reproduction of the real "LD" monogram's letterforms or composition — it
+borrows only the color system, not the artwork.
 
 ## What is REAL (verified & traceable)
 
-Source: `leads/leads.csv` (row 5) — used verbatim per the owner's instruction
-for this batch ("use EXACTLY these facts and nothing more"):
-
 - Business name: **Limitless Diesel & Offroad**
-- Category: **auto repair** (diesel repair and offroad shop)
-- Town: **College Station, TX**
-- Address: **4011 Hicks Ln, College Station, TX** (ZIP not provided in the
-  leads file — deliberately omitted rather than guessed)
+- Address: **4011 Hicks Ln, College Station, TX 77845**
 - Phone: **(979) 209-9668**
-- Presence: **Google Maps listing only** (no website, no socials)
-
-Directions links point to the real Google Maps search URL from the leads file.
+- Category / one-line description: **"wheel alignment, brake service, oil
+  changes, diesel performance work and window tinting"** — Limitless Diesel
+  & Offroad's own public Google Maps listing, checked August 28, 2026.
+- **Google rating: 4.9 out of 5, from 58 reviews** — same listing, same
+  date. Shown on the page as a plain numeral and as the rating-gauge dial
+  (no fabricated star glyphs, no invented count).
+- **Hours**: not published as a full weekly schedule on the listing, so the
+  page shows **"Call or message for hours"** as primary, with the single
+  verified live-status fact ("Open · Closes 5 PM," read August 28, 2026)
+  attributed and dated.
+- **Color palette** (near-black + electric cyan + neon magenta + chrome):
+  sourced from the shop's real Instagram profile photo (logo), bio, and
+  story highlights — see brand-sources above.
+- Directions/"See us on Google" links point to a real Google Maps search
+  URL built from the verified name + address.
 
 ## What is PLACEHOLDER / ILLUSTRATIVE (do NOT present as sourced from the business)
 
-- **Google rating & reviews**: the leads file carries **no rating or review
-  count**, so the page claims **none**. The reviews section is an explicit
-  placeholder — no fake stars, no invented score, no fabricated quotes.
-- **Hours**: shown as **"Call for hours"** (hours were not in the leads file).
-- **Service categories** (diesel engine repair/diagnostics, suspension/lift,
-  offroad accessories, transmission/drivetrain, turbo/fuel system, preventive
-  maintenance): generic list of what a diesel & offroad shop typically offers —
-  NOT sourced from Limitless Diesel & Offroad. The page carries an on-page note
-  saying services are examples and to confirm by phone.
-- **"EST. SECTOR: COLLEGE STATION" / "LOG ENTRY NO. 001"**: decorative
-  field-manual framing, NOT real establishment dates or claims.
-- **Hero photo** (`assets/hero-limitless.png`): AI-generated atmospheric diesel
-  truck image for layout/feel — **illustrative, NOT a photo of the shop**.
-  Marked "Illustrative" in the figure caption on the page itself.
-- **Copy voice** ("bring your rig by"): warm small-business tone per Lewis
-  Digital voice direction — general marketing language, no invented facts,
-  testimonials, or stats.
+- **Service tiles** (diesel diagnostics, lift kits/suspension, wheel
+  alignment, turbo & fuel systems, brakes & oil changes, window tinting,
+  auxiliary fuel tanks, offroad accessories): the first five map to
+  Google's own one-line description (real); the rest are generic examples
+  of what a diesel & offroad shop typically offers, informed loosely by the
+  Google AI Overview's mention of leveling kits and auxiliary fuel tanks.
+  The page carries an on-page note that services are examples to confirm
+  by phone — none of this is an itemized, owner-confirmed service menu.
+- **Reviews section**: only the real 4.9/58 numbers are shown (as text and
+  as the gauge dial). No review text, no named customers, no named
+  mechanics appear on the page — the reviews read during research
+  (Jason, Ben, the "new venture" owner reply, etc.) stayed internal to this
+  README per `client-demo-site` §1/§3.
+- **Hero gauge graphic** and all gauge/dial artwork: an original,
+  AI-authored illustrative SVG graphic inspired by the shop's real
+  logo colors — explicitly marked illustrative in its `aria-label`, not a
+  photo of the shop and not a reproduction of the real Instagram logo
+  artwork.
+- **About-section copy** ("the same person who diagnoses your truck is the
+  one who hands you the keys back," "steering wobbles, turbo trouble, lift
+  kits"): general marketing language in the diesel/offroad vocabulary this
+  business's own reviews use — not a quote from any specific review, not an
+  invented testimonial or stat.
+- **"New venture" / Aggieland Diesel history**: intentionally left off the
+  page entirely (kept in this README only) — it's a minor, dated footnote,
+  not something to present to a prospective visitor as current fact.
 
 ## Brand-rule compliance
 
-- Client-facing page uses ONLY the derived brand colors/fonts above. **No Lewis
-  gold (#C9A227 family), no Lewis charcoal #16130e, no Lewis cream #fbf8f1**
-  anywhere in `index.html`/`styles.css`.
-- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
-  Tech Services LLC".
-- `pitch-sheet.html` is in Lewis Digital brand (it is OUR sales tool).
+- Client-facing page uses ONLY the sourced brand colors/fonts above. **No
+  Lewis gold (#C9A227 family), no Lewis charcoal #16130e, no Lewis cream
+  #fbf8f1** anywhere in `index.html`/`styles.css`.
+- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of
+  Lewis Tech Services LLC."
+- `pitch-sheet.html` is untouched and stays in Lewis Digital's own brand (it
+  is OUR sales tool) — including its own unrelated "LD" initials used for
+  *Lewis Digital*, which is a coincidental overlap with this client's real
+  initials and not a brand crossover.
+- Structurally and visually distinct from `demos/bos-garage/`,
+  `demos/brazos-valley-automotive/`, and `demos/bryan-muffler-performance/`
+  — diffed against their current `main`-branch `index.html`/`styles.css`
+  before building (see "Design direction" above for the specific
+  differences in hero, nav, section order, type pairing, and signature
+  element).
 
 ## Notes for the close call with the owner
 
-- If the owner provides real hours, their Google rating, real review text, or a
-  real shop photo/logo, swap them into `index.html`/`assets/` and re-publish —
-  and if they have an actual logo/sign color, restyle the derived palette to
-  match it. The current palette is explicitly a DERIVED placeholder brand, not
-  the shop's own.
+- If the owner provides real hours, real review permission to publish, or a
+  real shop/logo photo, swap them into `index.html` and re-publish — and if
+  they can share their actual logo file, consider using it directly instead
+  of the original gauge graphic.
+- The Instagram account (2.2K followers) is a strong, active channel —
+  worth mentioning in the pitch: their own content already has a bold,
+  cohesive visual identity that this build extends onto the web rather than
+  fights.
