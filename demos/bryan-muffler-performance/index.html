@@ -3,140 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bryan Muffler &amp; Performance — Muffler &amp; Performance in Bryan, TX</title>
-  <meta name="description" content="Bryan Muffler & Performance — muffler and performance shop at 1309 S College Ave, Bryan, TX. Call (979) 822-2612." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0b0c'/%3E%3Ctext x='50' y='72' font-size='58' text-anchor='middle' fill='%23ff5a00' font-family='Arial, sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E" />
+  <title>Bryan Muffler &amp; Performance — Custom Exhaust &amp; Performance Shop in Bryan, TX</title>
+  <meta name="description" content="Bryan Muffler & Performance — custom exhaust, catalytic converter service, and performance work at 1309 S College Ave, Bryan, TX. 4.4 stars on Google. Call (979) 822-2612." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23c9202b'/%3E%3Cpath d='M18 60 L40 60 Q46 60 46 54 L46 46 Q46 40 52 40 L74 40' stroke='%23f2ead8' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='80' cy='40' r='8' fill='%23f2ead8'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Scrolling keyword ticker ===== -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>EXHAUST</span><i>///</i><span>MUFFLERS</span><i>///</i><span>PERFORMANCE</span><i>///</i><span>CUSTOM PIPES</span><i>///</i><span>CAT-BACK</span><i>///</i><span>SOUND &amp; FLOW</span><i>///</i><span>BRYAN, TX</span><i>///</i>
-      <span>EXHAUST</span><i>///</i><span>MUFFLERS</span><i>///</i><span>PERFORMANCE</span><i>///</i><span>CUSTOM PIPES</span><i>///</i><span>CAT-BACK</span><i>///</i><span>SOUND &amp; FLOW</span><i>///</i><span>BRYAN, TX</span><i>///</i>
+  <!-- ===== Header: two-tier, echoing the shop's own red phone-band + sign ===== -->
+  <div class="phoneband">
+    <div class="container phoneband__row">
+      <span class="phoneband__addr">1309 S College Ave &middot; Bryan, TX</span>
+      <a class="phoneband__phone" href="tel:+19798222612">
+        <span class="phoneband__phone-label">Call the shop</span>
+        <span class="phoneband__phone-num">(979) 822-2612</span>
+      </a>
     </div>
   </div>
 
-  <!-- ===== Condensed nav ===== -->
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="brand" href="#top"><span class="brand__slash">/</span><span class="brand__name">BRYAN <em>MUFFLER</em></span></a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#services">Services</a>
+  <header class="site-header">
+    <div class="container header__row">
+      <a href="#top" class="wordmark">
+        <svg class="wordmark__mark" viewBox="0 0 60 60" role="img" aria-label="Bryan Muffler and Performance pipe mark">
+          <rect x="1" y="1" width="58" height="58" rx="10" fill="var(--sign-red)" stroke="var(--cream)" stroke-width="2"/>
+          <path d="M12 38 L26 38 Q33 38 33 31 L33 27 Q33 20 40 20 L48 20" stroke="var(--cream)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="50" cy="20" r="5.5" fill="var(--cream)"/>
+        </svg>
+        <span class="wordmark__text">
+          <span class="wordmark__name">Bryan Muffler</span>
+          <span class="wordmark__tag">&amp; Performance</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#contact" class="nav__cta">Call (979) 822-2612</a>
+        <a href="#craft">Custom Exhaust</a>
+        <a href="#services">Services</a>
+        <a href="#hours">Hours</a>
+        <a href="#reviews">Reviews</a>
+        <a class="site-nav__cta" href="tel:+19798222612">Call (979) 822-2612</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
 
-    <!-- ===== Full-bleed motion hero ===== -->
+    <!-- ===== Hero: headline rendered AS the shop's red sign board ===== -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <p class="hero__kicker">Muffler &amp; performance · Bryan, Texas</p>
-        <h1 class="hero__title">LOUDER.<br /><span>FASTER.</span><br />DONE RIGHT.</h1>
-        <p class="hero__tagline">Bryan Muffler &amp; Performance is an independent muffler and performance shop on S College Avenue. Bring your truck or car by — we&rsquo;ll sort the sound and the flow.</p>
-        <div class="hero__actions">
-          <a class="btn btn--orange" href="tel:+19798222612">CALL (979) 822-2612</a>
-          <a class="btn btn--ghost" href="#services">SEE THE WORK</a>
-        </div>
-        <p class="hero__address">1309 S College Ave · Bryan, TX</p>
-      </div>
-    </section>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Muffler &amp; performance shop &middot; Bryan, Texas</p>
 
-    <!-- ===== Oversized index band ===== -->
-    <section class="band" aria-label="Shop index">
-      <div class="band__row"><span class="band__num">01</span><span class="band__label">EXHAUST</span></div>
-      <div class="band__row"><span class="band__num">02</span><span class="band__label">MUFFLERS</span></div>
-      <div class="band__row"><span class="band__num">03</span><span class="band__label">PERFORMANCE</span></div>
-    </section>
-
-    <!-- ===== Services — asymmetric grid ===== -->
-    <section class="services" id="services">
-      <div class="services__head">
-        <h2 class="services__title">WHAT WE<br /><span>HANDLE</span></h2>
-        <p class="services__lede">Every shop has its strengths. These are the jobs a muffler and performance shop like Bryan Muffler typically takes on — call to ask about yours.</p>
-      </div>
-      <ul class="grid">
-        <li class="cell cell--tall">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Muffler &amp; Exhaust Repair</h3>
-          <p class="cell__text">Rusted-out mufflers, leaks and rattles — fixed or replaced for the right sound.</p>
-        </li>
-        <li class="cell">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Custom Exhaust &amp; Pipes</h3>
-          <p class="cell__text">Bent and fitted to your vehicle for tone and flow that suits the build.</p>
-        </li>
-        <li class="cell">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Performance Upgrades</h3>
-          <p class="cell__text">Headers, cat-backs and intake work to wake up the drivetrain.</p>
-        </li>
-        <li class="cell">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Catalytic Converters</h3>
-          <p class="cell__text">Replacement and repair, from stock to performance-fit cats.</p>
-        </li>
-        <li class="cell">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Welding &amp; Fabrication</h3>
-          <p class="cell__text">Brackets, flanges and one-off pieces welded to hold up to real use.</p>
-        </li>
-        <li class="cell cell--tall">
-          <span class="cell__chev">&#9654;</span>
-          <h3 class="cell__title">Sound &amp; Flow Tuning</h3>
-          <p class="cell__text">Dial in the note you want — a low rumble or a full-throated roar — without guessing.</p>
-        </li>
-      </ul>
-      <p class="services__note">These categories are examples of what a muffler &amp; performance shop typically offers. Confirm what Bryan Muffler works on — and your exact job — when you call <a href="tel:+19798222612">(979) 822-2612</a>.</p>
-    </section>
-
-    <!-- ===== Reviews placeholder ===== -->
-    <section class="reviews" id="reviews">
-      <div class="reviews__inner">
-        <h2 class="reviews__title">WHAT THEY<br /><span>SAY</span></h2>
-        <p class="reviews__text">Real reviews from real customers will appear here once connected — exactly what people have said on Google, nothing invented, nothing edited.</p>
-        <p class="reviews__coming">Google rating &amp; reviews will appear here once connected.</p>
-        <a class="btn btn--ghost btn--orange-line" href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+TX" target="_blank" rel="noopener">SEE US ON GOOGLE</a>
-      </div>
-    </section>
-
-    <!-- ===== About & Hours ===== -->
-    <section class="about" id="about">
-      <div class="about__inner">
-        <div class="about__intro">
-          <h2 class="about__title">THE<br /><span>SHOP</span></h2>
-          <p class="about__text">Bryan Muffler &amp; Performance is an independent muffler and performance shop in Bryan, TX. Not sure what you need? Bring it by or call — we&rsquo;ll tell you straight.</p>
-          <p class="about__source">Business details from Bryan Muffler &amp; Performance&rsquo;s public Google listing, verified August 2026.</p>
-        </div>
-        <div class="about__facts">
-          <div class="fact">
-            <h3 class="fact__label">FIND US</h3>
-            <p class="fact__big"><a href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+TX" target="_blank" rel="noopener">1309 S College Ave<br />Bryan, TX</a></p>
+          <div class="signboard" role="img" aria-label="Illustration of the shop's actual red sign board reading BRYAN MUFFLER, with the phone number 822-2612 in a red band below it — based on a real Google Maps photo, not a photograph itself.">
+            <span class="signboard__rivet signboard__rivet--tl" aria-hidden="true"></span>
+            <span class="signboard__rivet signboard__rivet--tr" aria-hidden="true"></span>
+            <span class="signboard__rivet signboard__rivet--bl" aria-hidden="true"></span>
+            <span class="signboard__rivet signboard__rivet--br" aria-hidden="true"></span>
+            <h1 class="signboard__title">BRYAN<br />MUFFLER</h1>
+            <p class="signboard__sub">&amp; PERFORMANCE</p>
           </div>
-          <div class="fact">
-            <h3 class="fact__label">HOURS</h3>
-            <p class="fact__big">Call for hours</p>
-            <p class="fact__small">The surest way to know when we&rsquo;re at the shop is to call <a href="tel:+19798222612">(979) 822-2612</a>.</p>
+
+          <p class="hero__tagline">&ldquo;Experienced mechanics rebuild entire vehicles for fun, and perform exhaust work.&rdquo;</p>
+          <p class="hero__tagline-source">&mdash; Bryan Muffler &amp; Performance&rsquo;s own description on its Google Business listing, verified Aug 28, 2026</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--red" href="tel:+19798222612">Call (979) 822-2612</a>
+            <a class="btn btn--line" href="#craft">See the custom exhaust work</a>
           </div>
+        </div>
+
+        <figure class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 420 300" width="420" height="300" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="mustangBody" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="var(--steel)"/>
+                <stop offset="1" stop-color="var(--steel-deep)"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="210" cy="255" rx="180" ry="14" fill="#000" opacity="0.28"/>
+            <!-- simplified retro fastback silhouette, evoking a classic Mustang -->
+            <path d="M35 205
+                     Q40 165 90 150
+                     L120 118 Q150 96 205 94
+                     Q262 94 292 122
+                     L316 150
+                     Q372 156 386 190
+                     L386 205
+                     Q386 214 376 214
+                     L346 214
+                     Q342 232 320 232
+                     Q298 232 294 214
+                     L138 214
+                     Q134 232 112 232
+                     Q90 232 86 214
+                     L46 214
+                     Q35 214 35 205 Z"
+                  fill="url(#mustangBody)" stroke="var(--asphalt)" stroke-width="3"/>
+            <path d="M130 116 Q158 100 205 99 Q252 100 282 120 L296 148 L146 148 Z" fill="var(--asphalt-raised)" opacity="0.55"/>
+            <circle cx="112" cy="214" r="26" fill="var(--asphalt)"/>
+            <circle cx="112" cy="214" r="11" fill="var(--steel)"/>
+            <circle cx="320" cy="214" r="26" fill="var(--asphalt)"/>
+            <circle cx="320" cy="214" r="11" fill="var(--steel)"/>
+            <rect x="382" y="196" width="20" height="8" rx="4" fill="var(--asphalt)"/>
+            <path d="M402 200 h14" stroke="var(--sign-red)" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+            <path d="M400 190 q22 4 26 10" stroke="var(--cream)" stroke-width="2" fill="none" opacity="0.5"/>
+            <path d="M400 210 q24 -2 30 4" stroke="var(--cream)" stroke-width="2" fill="none" opacity="0.35"/>
+          </svg>
+          <figcaption class="visually-hidden">Illustrative line art of a classic fastback coupe — a nod to the vintage Mustang parked in front of the shop in its real Google Maps photo. Not a photograph.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Spec plate: verified facts, styled like a vehicle ID plate ===== -->
+    <section class="specplate" aria-label="Verified shop facts">
+      <div class="container specplate__panel">
+        <span class="rivet rivet--tl" aria-hidden="true"></span>
+        <span class="rivet rivet--tr" aria-hidden="true"></span>
+        <span class="rivet rivet--bl" aria-hidden="true"></span>
+        <span class="rivet rivet--br" aria-hidden="true"></span>
+        <div class="specplate__field">
+          <span class="specplate__label">Google rating</span>
+          <span class="specplate__value">4.4 <span class="specplate__unit">/ 5</span></span>
+        </div>
+        <div class="specplate__field">
+          <span class="specplate__label">Reviews</span>
+          <span class="specplate__value">108</span>
+        </div>
+        <div class="specplate__field">
+          <span class="specplate__label">Category</span>
+          <span class="specplate__value specplate__value--text">Muffler &amp; performance shop</span>
+        </div>
+        <div class="specplate__field">
+          <span class="specplate__label">Location</span>
+          <span class="specplate__value specplate__value--text">Bryan, TX</span>
+        </div>
+      </div>
+      <p class="specplate__source">Rating, review count, and category shown on Bryan Muffler &amp; Performance&rsquo;s public Google Business listing &mdash; verified Aug 28, 2026.</p>
+    </section>
+
+    <!-- ===== About: hobbyist / performance-culture story ===== -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__copy">
+          <p class="eyebrow">About the shop</p>
+          <h2 class="section__title">Car people, working on car people&rsquo;s cars</h2>
+          <p>Google's own listing doesn't describe Bryan Muffler &amp; Performance as a routine repair counter &mdash; it describes mechanics who <em>rebuild entire vehicles for fun</em> and specialize in exhaust work. That's a shop built around people who care how a car sounds and runs, not just whether it passes.</p>
+          <p>Reviews of this shop are mixed, like most independent garages with a long history &mdash; and the honest pattern in the most recent ones is a shop that owns it when a job doesn't go right the first time and makes it right rather than arguing about it.</p>
+          <p class="about__source">Description sourced from Bryan Muffler &amp; Performance&rsquo;s public Google Business listing, verified Aug 28, 2026. The "mixed reviews, made right" note reflects the general tone Lewis Digital found across this shop's public review history during research &mdash; see the README for the full, honest accounting (including the less flattering reviews) &mdash; and is not a quote from any single customer.</p>
+        </div>
+        <div class="about__plate">
+          <h3 class="about__plate-title">Read from the real sign</h3>
+          <ul class="about__plate-list">
+            <li><span class="swatch swatch--steel" aria-hidden="true"></span>Gray-blue corrugated metal building</li>
+            <li><span class="swatch swatch--red" aria-hidden="true"></span>Bold red sign board, cream lettering</li>
+            <li><span class="swatch swatch--cream" aria-hidden="true"></span>Phone number in its own red band</li>
+            <li><span class="swatch swatch--asphalt" aria-hidden="true"></span>A classic Mustang parked out front</li>
+          </ul>
+          <p class="about__plate-note">Colors read from Bryan Muffler &amp; Performance&rsquo;s own Google Maps photo, verified Aug 28, 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Craft / custom exhaust + sound tuning spotlight (signature section) ===== -->
+    <section class="craft" id="craft">
+      <div class="container craft__grid">
+        <div class="craft__copy">
+          <p class="eyebrow eyebrow--onred">The specialty</p>
+          <h2 class="craft__title">Exhaust, tuned by ear</h2>
+          <p class="craft__text">Custom exhaust work &mdash; not just bolt-on repairs &mdash; is what this shop is known for: building a system that sounds the way a customer wants it to, on their specific car.</p>
+          <p class="craft__text">A Google-generated AI Overview of this listing&rsquo;s public reviews (checked Aug 28, 2026) describes staff steering customers away from a simple, unwanted exhaust "delete" and toward custom options that sound better <em>and</em> stay within Texas legal requirements &mdash; a specific, credible detail about how this shop handles modification requests, not a generic claim we're making up.</p>
+          <p class="craft__note">General information, not legal advice &mdash; confirm current requirements for your vehicle when you call.</p>
+        </div>
+        <div class="craft__waveform" aria-hidden="true">
+          <div class="waveform">
+            <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:44%"></span>
+            <span style="--h:80%"></span><span style="--h:52%"></span><span style="--h:96%"></span>
+            <span style="--h:58%"></span><span style="--h:70%"></span><span style="--h:40%"></span>
+            <span style="--h:86%"></span><span style="--h:50%"></span><span style="--h:64%"></span>
+          </div>
+          <div class="waveform__tags">
+            <span>X-PIPE</span><span>CAT-BACK</span><span>AXLE-BACK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services: verified tag chips + illustrative hang-tag grid ===== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <p class="eyebrow">What we handle</p>
+        <h2 class="section__title">Services</h2>
+
+        <div class="verified-tags">
+          <p class="verified-tags__label">What Google reviewers actually tag this shop for:</p>
+          <ul class="verified-tags__list">
+            <li>Catalytic converter repair <span>(6)</span></li>
+            <li>Exhaust work <span>(6)</span></li>
+            <li>Exhaust leak repair <span>(5)</span></li>
+            <li>Custom exhaust <span>(2)</span></li>
+          </ul>
+          <p class="verified-tags__source">Real topic tags &amp; counts from Bryan Muffler &amp; Performance&rsquo;s public Google reviews, read Aug 28, 2026.</p>
+        </div>
+
+        <p class="section__lede">Beyond those, here's what a muffler &amp; performance shop like this typically also takes on. These are general examples &mdash; not a confirmed menu &mdash; so confirm your exact job by phone.</p>
+
+        <ul class="tagboard">
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">EXH&#8209;01</span><h3 class="tag__title">Muffler &amp; Exhaust Repair</h3><p class="tag__text">Leaks, rattles, and full systems replaced.</p></li>
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">EXH&#8209;02</span><h3 class="tag__title">Custom Exhaust &amp; Sound Tuning</h3><p class="tag__text">Built and tuned for how you want your car to sound.</p></li>
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">CAT&#8209;03</span><h3 class="tag__title">Catalytic Converter Service</h3><p class="tag__text">Diagnosed and replaced to meet legal requirements.</p></li>
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">PRF&#8209;04</span><h3 class="tag__title">Performance Upgrades</h3><p class="tag__text">Parts and tuning for a car built for fun, not just commuting.</p></li>
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">WLD&#8209;05</span><h3 class="tag__title">Welding &amp; Fabrication</h3><p class="tag__text">Custom metalwork when an off-the-shelf part won't do.</p></li>
+          <li class="tag"><span class="tag__hole" aria-hidden="true"></span><span class="tag__code">GEN&#8209;06</span><h3 class="tag__title">General Auto Repair</h3><p class="tag__text">Everyday repair work alongside the exhaust specialty.</p></li>
+        </ul>
+        <p class="services__note">Service categories above (except the verified tags noted separately) are general examples of what a muffler &amp; performance shop typically offers &mdash; not Bryan Muffler &amp; Performance&rsquo;s confirmed menu. Confirm what they handle &mdash; and your exact job &mdash; when you call <a href="tel:+19798222612">(979) 822-2612</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== Hours & location: work-order form motif ===== -->
+    <section class="hours section" id="hours">
+      <div class="container">
+        <p class="eyebrow">Find us</p>
+        <h2 class="section__title">Where &amp; when</h2>
+        <div class="workorder">
+          <div class="workorder__row">
+            <span class="workorder__label">Shop</span>
+            <span class="workorder__value">Bryan Muffler &amp; Performance</span>
+          </div>
+          <div class="workorder__row">
+            <span class="workorder__label">Address</span>
+            <span class="workorder__value"><a href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+1309+S+College+Ave+Bryan+TX+77801" target="_blank" rel="noopener">1309 S College Ave, Bryan, TX 77801</a></span>
+          </div>
+          <div class="workorder__row">
+            <span class="workorder__label">Phone</span>
+            <span class="workorder__value"><a href="tel:+19798222612">(979) 822-2612</a></span>
+          </div>
+          <div class="workorder__row">
+            <span class="workorder__label">Hours</span>
+            <span class="workorder__value">Call or message for hours</span>
+          </div>
+          <p class="workorder__note">When Lewis Digital checked Bryan Muffler &amp; Performance&rsquo;s Google listing on the afternoon of Aug 28, 2026, it read &ldquo;Open &middot; Closes 5 PM.&rdquo; Hours can vary day to day, so a quick call is always the surest bet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews: gauge dial + honest placeholder ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container reviews__grid">
+        <div class="gauge" role="img" aria-label="Gauge showing a 4.4 out of 5 rating">
+          <svg viewBox="0 0 200 120">
+            <path d="M14 106 A86 86 0 0 1 186 106" fill="none" stroke="var(--asphalt-raised)" stroke-width="16" stroke-linecap="round"/>
+            <path d="M14 106 A86 86 0 0 1 186 106" fill="none" stroke="var(--sign-red)" stroke-width="16" stroke-linecap="round" stroke-dasharray="270" stroke-dashoffset="27.5"/>
+            <line x1="100" y1="106" x2="158" y2="52" stroke="var(--cream)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="106" r="7" fill="var(--cream)"/>
+          </svg>
+          <p class="gauge__num">4.4</p>
+          <p class="gauge__label">out of 5</p>
+        </div>
+        <div class="reviews__copy">
+          <p class="eyebrow">Reviews</p>
+          <h2 class="section__title">What customers say</h2>
+          <p class="section__lede">Real reviews from real customers will appear here once connected. We&rsquo;ll show exactly what people have said on Google &mdash; the good and the mixed &mdash; nothing invented, nothing edited.</p>
+          <p class="reviews__coming">Google reviews will appear here once connected.</p>
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+1309+S+College+Ave+Bryan+TX+77801" target="_blank" rel="noopener">See us on Google</a>
+          <p class="reviews__source">4.4 rating &middot; 108 reviews, as shown on Bryan Muffler &amp; Performance&rsquo;s public Google listing &mdash; verified Aug 28, 2026.</p>
         </div>
       </div>
     </section>
 
     <!-- ===== Contact CTA ===== -->
-    <section class="contact" id="contact">
-      <div class="contact__inner">
-        <h2 class="contact__title">READY TO<br /><span>ROLL?</span></h2>
-        <p class="contact__text">Call us — we&rsquo;ll tell you straight what&rsquo;s going on and what it&rsquo;ll take before any work begins.</p>
-        <a class="btn btn--orange btn--big" href="tel:+19798222612">CALL NOW: (979) 822-2612</a>
-        <p class="contact__directions"><a href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+TX" target="_blank" rel="noopener">Get directions — 1309 S College Ave, Bryan, TX</a></p>
+    <section class="contact">
+      <div class="container contact__inner">
+        <h2 class="contact__title">Got something that needs to sound right?</h2>
+        <p class="contact__text">Call and tell us what it&rsquo;s doing &mdash; or what you want it to sound like &mdash; and we&rsquo;ll tell you straight what it&rsquo;ll take.</p>
+        <a class="btn btn--red btn--big" href="tel:+19798222612">Call now: (979) 822-2612</a>
+        <p class="contact__directions"><a href="https://www.google.com/maps/search/Bryan+Muffler+%26+Performance+1309+S+College+Ave+Bryan+TX+77801" target="_blank" rel="noopener">Get directions &mdash; 1309 S College Ave, Bryan, TX</a></p>
       </div>
     </section>
 
@@ -144,9 +286,9 @@
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
-    <div class="footer__inner">
-      <p class="footer__business">Bryan Muffler &amp; Performance · 1309 S College Ave, Bryan, TX · <a href="tel:+19798222612">(979) 822-2612</a></p>
-      <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> — a DBA of Lewis Tech Services LLC</p>
+    <div class="container footer__inner">
+      <p class="footer__business">Bryan Muffler &amp; Performance &middot; 1309 S College Ave, Bryan, TX 77801 &middot; <a href="tel:+19798222612">(979) 822-2612</a></p>
+      <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> &mdash; a DBA of Lewis Tech Services LLC</p>
     </div>
   </footer>
 
