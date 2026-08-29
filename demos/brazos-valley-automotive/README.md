@@ -258,8 +258,8 @@ demo in `demos/` uses this order or count).
 - Client-facing page uses ONLY the researched brand colors/fonts above. **No
   Lewis gold (#C9A227 family), no Lewis charcoal #16130e, no Lewis cream
   #fbf8f1** anywhere in `index.html`/`styles.css`.
-- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
-  Tech Services LLC."
+- Footer keeps a single small credit: "Designed by Lewis Tech" (owner
+  instruction 2026-08-29: never say "Lewis Digital" on client-facing pages).
 - `pitch-sheet.html` is untouched — it stays in Lewis Digital brand (it is
   OUR sales tool).
 
