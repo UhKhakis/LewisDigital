@@ -1,170 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Limitless Diesel &amp; Offroad — Diesel Repair &amp; Offroad in College Station, TX</title>
-  <meta name="description" content="Limitless Diesel & Offroad — diesel repair and offroad shop at 4011 Hicks Ln, College Station, TX. Call (979) 209-9668." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%233a3a2c'/%3E%3Ctext x='50' y='70' font-size='52' text-anchor='middle' fill='%23b5542f' font-family='Arial, sans-serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Limitless Diesel &amp; Offroad — Diesel Repair &amp; Offroad Shop in College Station, TX</title>
+<meta name="description" content="Limitless Diesel & Offroad — diesel repair, lift kits, wheel alignment and offroad work at 4011 Hicks Ln, College Station, TX. 4.9 stars on Google. Call (979) 209-9668." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2306070b'/%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%237c8798' stroke-width='2'/%3E%3Ctext x='50' y='66' font-size='48' text-anchor='middle' fill='%232fe0ff' font-family='Arial, sans-serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Fixed left rail (field-log index) ===== -->
-  <aside class="rail">
-    <a class="rail__brand" href="#top">
-      <span class="rail__stamp">LD</span>
-      <span class="rail__name">LIMITLESS<br /><em>DIESEL &amp; OFFROAD</em></span>
-    </a>
-    <nav class="rail__nav" aria-label="Field index">
-      <a href="#intro"><span class="rail__num">00</span>OPENING LOG</a>
-      <a href="#services"><span class="rail__num">01</span>SERVICES</a>
-      <a href="#about"><span class="rail__num">02</span>THE OUTFIT</a>
-      <a href="#contact"><span class="rail__num">03</span>REPORT IN</a>
-      <a href="#reviews"><span class="rail__num">04</span>WORD FROM THE FIELD</a>
-    </nav>
-    <div class="rail__meta">
-      <p class="rail__meta-line">4011 HICKS LN</p>
-      <p class="rail__meta-line">COLLEGE STATION, TX</p>
-      <a class="rail__meta-line rail__meta-link" href="tel:+19792099668">(979) 209-9668</a>
+  <!-- ===== HUD nav ===== -->
+  <header class="hud-nav">
+    <div class="container hud-nav__inner">
+      <a class="hud-mark" href="#top">
+        <svg class="hud-mark__dial" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Limitless Diesel & Offroad gauge mark">
+          <defs>
+            <linearGradient id="navRing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eef3f8" />
+              <stop offset="0.5" stop-color="#7c8798" />
+              <stop offset="1" stop-color="#eef3f8" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="#0a0c12" stroke="url(#navRing)" stroke-width="6" />
+          <circle cx="100" cy="100" r="72" fill="none" stroke="#202838" stroke-width="8" transform="rotate(150 100 100)" stroke-dasharray="301 452" />
+          <circle cx="100" cy="100" r="72" fill="none" stroke="#2fe0ff" stroke-width="8" stroke-linecap="round" transform="rotate(150 100 100)" stroke-dasharray="180 452" />
+          <line x1="100" y1="100" x2="100" y2="42" stroke="#ff35c8" stroke-width="7" stroke-linecap="round" transform="rotate(-40 100 100)" />
+          <circle cx="100" cy="100" r="14" fill="#2fe0ff" />
+        </svg>
+        <span class="hud-mark__text">
+          <span class="hud-mark__name">Limitless</span>
+          <span class="hud-mark__tag">Diesel &amp; Offroad</span>
+        </span>
+      </a>
+      <nav class="hud-nav__links" aria-label="Primary">
+        <a href="#work">The Work</a>
+        <a href="#about">About</a>
+        <a href="#hours">Hours</a>
+        <a href="#reviews">Reviews</a>
+        <a class="hud-nav__cta" href="tel:+19792099668">Call (979) 209-9668</a>
+      </nav>
     </div>
-  </aside>
+  </header>
 
-  <!-- ===== Main content ===== -->
-  <main class="main" id="top">
+  <main id="top">
 
-    <!-- ===== Opening log (no conventional centered hero) ===== -->
-    <section class="opening" id="intro">
-      <div class="opening__panel">
-        <p class="opening__code">LOG ENTRY — NO. 001 · EST. SECTOR: COLLEGE STATION</p>
-        <h1 class="opening__title">LIMITLESS<br /><span>DIESEL</span> &amp; <span>OFFROAD</span></h1>
-        <p class="opening__text">Limitless Diesel &amp; Offroad is an independent diesel repair and offroad shop on Hicks Lane in College Station, TX. Bring your rig by or call — we&rsquo;ll give it to you straight.</p>
-        <div class="opening__actions">
-          <a class="btn btn--rust" href="tel:+19792099668">CALL (979) 209-9668</a>
-          <a class="btn btn--ghost" href="#services">SEE THE SERVICES</a>
+    <!-- ===== Hero: centered emblem-first layout ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+
+        <svg class="hero__dial-wrap" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative boost-gauge graphic">
+          <defs>
+            <linearGradient id="heroRing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eef3f8" />
+              <stop offset="0.5" stop-color="#7c8798" />
+              <stop offset="1" stop-color="#eef3f8" />
+            </linearGradient>
+            <linearGradient id="heroArc" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#2fe0ff" />
+              <stop offset="1" stop-color="#ff35c8" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="#0a0c12" stroke="url(#heroRing)" stroke-width="5" />
+          <circle cx="100" cy="100" r="76" fill="none" stroke="#202838" stroke-width="9" transform="rotate(150 100 100)" stroke-dasharray="318 478" />
+          <circle cx="100" cy="100" r="76" fill="none" stroke="url(#heroArc)" stroke-width="9" stroke-linecap="round" transform="rotate(150 100 100)" stroke-dasharray="311 478" />
+          <g stroke="#5d6779" stroke-width="2">
+            <line x1="100" y1="28" x2="100" y2="16" transform="rotate(-120 100 100)" />
+            <line x1="100" y1="28" x2="100" y2="16" transform="rotate(-60 100 100)" />
+            <line x1="100" y1="28" x2="100" y2="16" transform="rotate(0 100 100)" />
+            <line x1="100" y1="28" x2="100" y2="16" transform="rotate(60 100 100)" />
+            <line x1="100" y1="28" x2="100" y2="16" transform="rotate(120 100 100)" />
+          </g>
+          <line class="gauge__needle" x1="100" y1="100" x2="100" y2="30" stroke="#ff35c8" stroke-width="5" stroke-linecap="round" />
+          <circle cx="100" cy="100" r="12" fill="#2fe0ff" />
+          <circle cx="100" cy="100" r="5" fill="#06070b" />
+        </svg>
+
+        <p class="hero__eyebrow">Diesel repair &amp; offroad &middot; College Station, Texas</p>
+        <h1 class="hero__title">LIMITLESS<span class="sub">DIESEL <span class="accent">&amp; OFFROAD</span></span></h1>
+        <p class="hero__tagline">A diesel and offroad shop built around one thing: the same person who diagnoses your truck is the one who hands you the keys back. Steering wobbles, turbo trouble, lift kits, tint &mdash; bring it by.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--cyan" href="tel:+19792099668">Call (979) 209-9668</a>
+          <a class="btn btn--line" href="#work">See the work</a>
+        </div>
+
+        <div class="hero__readout">
+          <div class="hero__readout-item">
+            <span class="hero__readout-value">4.9 / 5</span>
+            <span class="hero__readout-label">Google rating</span>
+          </div>
+          <div class="hero__readout-item">
+            <span class="hero__readout-value">58</span>
+            <span class="hero__readout-label">Google reviews</span>
+          </div>
+          <div class="hero__readout-item">
+            <span class="hero__readout-value">Hicks Ln</span>
+            <span class="hero__readout-label">College Station, TX</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== The Work: bordered tile grid ===== -->
+    <section class="work section" id="work">
+      <div class="container">
+        <div class="work__head">
+          <p class="eyebrow">What we handle</p>
+          <h2 class="section__title">The Work</h2>
+          <p class="section__lede">Limitless Diesel &amp; Offroad's own Google listing describes the shop as offering wheel alignment, brake service, oil changes, diesel performance work and window tinting.</p>
+          <p class="work__source">Source: Limitless Diesel &amp; Offroad's public Google Maps listing, checked August 28, 2026.</p>
+        </div>
+
+        <ul class="tile-grid">
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
+            </span>
+            <h3 class="tile__title">Diesel Diagnostics &amp; Repair</h3>
+            <p class="tile__text">Engine, turbo and driveline issues found and fixed &mdash; not just guessed at.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v10M8 10l4-4 4 4" /><path d="M4 20h16" /></svg>
+            </span>
+            <h3 class="tile__title">Lift Kits &amp; Suspension</h3>
+            <p class="tile__text">Leveling kits and lift kits set up to ride right, not just sit tall.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="2" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg>
+            </span>
+            <h3 class="tile__title">Wheel Alignment</h3>
+            <p class="tile__text">Dialed in so a lifted or stock truck tracks straight and wears tires evenly.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 1 0 9 9" /><path d="M12 3v6l4-2" /></svg>
+            </span>
+            <h3 class="tile__title">Turbo &amp; Fuel Systems</h3>
+            <p class="tile__text">Turbo, injector and fuel pump work &mdash; including auxiliary fuel tank installs.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="4.2" /><path d="M8.4 12.2 5 21M15.6 12.2 19 21" /></svg>
+            </span>
+            <h3 class="tile__title">Brakes &amp; Oil Changes</h3>
+            <p class="tile__text">Stopping power and scheduled maintenance for daily-driven diesel trucks.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="14" rx="1.4" /><path d="M8 5v14M13 5v14M17 5v14" opacity="0.6" /></svg>
+            </span>
+            <h3 class="tile__title">Window Tinting</h3>
+            <p class="tile__text">Ceramic and standard film for glare, heat and UV &mdash; listed on their own Google page.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="7" width="14" height="12" rx="1.4" /><path d="M10 7V5h4v2" /></svg>
+            </span>
+            <h3 class="tile__title">Auxiliary Fuel Tanks</h3>
+            <p class="tile__text">Long-haul range for work trucks that live off the highway.</p>
+          </li>
+          <li class="tile">
+            <span class="tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8" /><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M6.3 17.7l1.4-1.4M16.3 7.7l1.4-1.4" /></svg>
+            </span>
+            <h3 class="tile__title">Offroad Accessories</h3>
+            <p class="tile__text">Wheels, tires and the extras that turn a truck into a rig.</p>
+          </li>
+        </ul>
+
+        <p class="work__note">These categories describe the general work a diesel &amp; offroad shop like Limitless takes on. Confirm exact services and pricing by calling <a href="tel:+19792099668">(979) 209-9668</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== About: split story + HUD stat strip ===== -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__copy">
+          <p class="eyebrow">About the shop</p>
+          <h2 class="section__title">A trusted mechanic, not a ticket number</h2>
+          <p class="about__text">Limitless Diesel &amp; Offroad is an independent diesel repair and offroad shop on Hicks Lane in College Station. It's the kind of place regulars come back to because the person who looks at their truck is the same person who calls them when it's ready &mdash; not a different face every visit.</p>
+          <p class="about__text">Diesel work brings its own vocabulary: steering wobbles, turbo leaks, boost problems, lift geometry. It's a trade that rewards a shop that's seen your specific truck's specific issue before.</p>
+          <p class="about__source">Business details and rating from Limitless Diesel &amp; Offroad's public Google listing, verified August 28, 2026. Read more in this demo's README.</p>
+        </div>
+        <div class="stat-strip" aria-label="At a glance">
+          <div class="stat-strip__row">
+            <span class="stat-strip__label">Google rating</span>
+            <span class="stat-strip__value">4.9 / 5</span>
+          </div>
+          <div class="stat-strip__row">
+            <span class="stat-strip__label">Google reviews</span>
+            <span class="stat-strip__value">58</span>
+          </div>
+          <div class="stat-strip__row">
+            <span class="stat-strip__label">Category</span>
+            <span class="stat-strip__value stat-strip__value--magenta">Diesel &amp; offroad</span>
+          </div>
+          <div class="stat-strip__row">
+            <span class="stat-strip__label">Location</span>
+            <span class="stat-strip__value">College Station, TX</span>
+          </div>
         </div>
       </div>
-      <figure class="opening__photo">
-        <img src="assets/hero-limitless.png" alt="Illustrative image of a diesel truck on a dirt offroad trail." />
-        <figcaption>Illustrative — a rig on the dirt, with topographic overlay.</figcaption>
-      </figure>
     </section>
 
-    <!-- ===== Services — indexed field-log rows ===== -->
-    <section class="services" id="services">
-      <header class="section-head">
-        <p class="section-head__code">SECTION 01</p>
-        <h2 class="section-head__title">SERVICES</h2>
-      </header>
-      <ol class="log">
-        <li class="log__row">
-          <span class="log__num">01</span>
-          <div class="log__body">
-            <h3 class="log__name">Diesel Engine Repair &amp; Diagnostics</h3>
-            <p class="log__desc">From hard starts to full teardowns — diesel engines read and repaired.</p>
+    <!-- ===== Hours & location: console/data-plate panel ===== -->
+    <section class="console section" id="hours">
+      <div class="container">
+        <p class="eyebrow">Find us</p>
+        <h2 class="section__title">Where &amp; when</h2>
+        <div class="console__panel">
+          <div class="console__panel-inner">
+            <div class="console__col">
+              <p class="console__label">Address</p>
+              <p class="console__value"><a href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+College+Station+TX" target="_blank" rel="noopener">4011 Hicks Ln<br />College Station, TX 77845</a></p>
+              <p class="console__meta"><a href="tel:+19792099668">(979) 209-9668</a></p>
+            </div>
+            <div class="console__col">
+              <p class="console__label">Hours</p>
+              <p class="console__value">Call or message for hours</p>
+              <p class="console__meta">Google's listing read &ldquo;Open &middot; Closes 5 PM&rdquo; when checked on August 28, 2026. Hours can shift day to day &mdash; a call is the surest bet.</p>
+            </div>
           </div>
-        </li>
-        <li class="log__row">
-          <span class="log__num">02</span>
-          <div class="log__body">
-            <h3 class="log__name">Suspension, Lift &amp; Leveling</h3>
-            <p class="log__desc">Kits, springs and shocks to set your truck up for the trail or the job.</p>
-          </div>
-        </li>
-        <li class="log__row">
-          <span class="log__num">03</span>
-          <div class="log__body">
-            <h3 class="log__name">Offroad Accessories &amp; Fitment</h3>
-            <p class="log__desc">Bumpers, winches, lighting and more — fitted right the first time.</p>
-          </div>
-        </li>
-        <li class="log__row">
-          <span class="log__num">04</span>
-          <div class="log__body">
-            <h3 class="log__name">Transmission &amp; Drivetrain</h3>
-            <p class="log__desc">Gearboxes, axles and 4WD systems serviced and rebuilt.</p>
-          </div>
-        </li>
-        <li class="log__row">
-          <span class="log__num">05</span>
-          <div class="log__body">
-            <h3 class="log__name">Turbo &amp; Fuel System Service</h3>
-            <p class="log__desc">Turbos, injectors and fuel systems tuned and repaired.</p>
-          </div>
-        </li>
-        <li class="log__row">
-          <span class="log__num">06</span>
-          <div class="log__body">
-            <h3 class="log__name">Preventive Maintenance</h3>
-            <p class="log__desc">Fluids, filters and inspections to keep a working rig working.</p>
-          </div>
-        </li>
-      </ol>
-      <p class="services__note">These categories are examples of what a diesel &amp; offroad shop typically offers. Confirm what Limitless works on — and your exact job — when you call <a href="tel:+19792099668">(979) 209-9668</a>.</p>
-    </section>
-
-    <!-- ===== About / the outfit ===== -->
-    <section class="about" id="about">
-      <header class="section-head">
-        <p class="section-head__code">SECTION 02</p>
-        <h2 class="section-head__title">THE OUTFIT</h2>
-      </header>
-      <div class="about__grid">
-        <div class="stamp">
-          <h3 class="stamp__label">FIND US</h3>
-          <p class="stamp__big"><a href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+TX" target="_blank" rel="noopener">4011 Hicks Ln<br />College Station, TX</a></p>
-        </div>
-        <div class="stamp">
-          <h3 class="stamp__label">HOURS</h3>
-          <p class="stamp__big">Call for hours</p>
-          <p class="stamp__small">The surest way to know when we&rsquo;re in the shop is to call <a href="tel:+19792099668">(979) 209-9668</a>.</p>
-        </div>
-        <div class="stamp">
-          <h3 class="stamp__label">WHO WE ARE</h3>
-          <p class="stamp__big stamp__big--text">Limitless Diesel &amp; Offroad is an independent diesel repair and offroad shop in College Station, TX. Not sure what&rsquo;s wrong? Bring it by or call — we&rsquo;ll tell you straight.</p>
         </div>
       </div>
-      <p class="about__source">Business details from Limitless Diesel &amp; Offroad&rsquo;s public Google listing, verified August 2026.</p>
     </section>
 
-    <!-- ===== Contact / report in ===== -->
-    <section class="contact" id="contact">
-      <header class="section-head">
-        <p class="section-head__code">SECTION 03</p>
-        <h2 class="section-head__title">REPORT IN</h2>
-      </header>
-      <div class="contact__panel">
-        <p class="contact__text">Need your rig looked at? Call us — we&rsquo;ll tell you straight what&rsquo;s going on and what it&rsquo;ll take before any work begins.</p>
-        <a class="btn btn--rust btn--big" href="tel:+19792099668">CALL NOW: (979) 209-9668</a>
-        <p class="contact__directions"><a href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+TX" target="_blank" rel="noopener">Get directions — 4011 Hicks Ln, College Station, TX</a></p>
+    <!-- ===== Reviews: rating dial ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container reviews__grid">
+        <div>
+          <svg class="rating-dial" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gauge showing a 4.9 out of 5 Google rating">
+            <defs>
+              <linearGradient id="ratingRing" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#eef3f8" />
+                <stop offset="0.5" stop-color="#7c8798" />
+                <stop offset="1" stop-color="#eef3f8" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="92" fill="#0e121a" stroke="url(#ratingRing)" stroke-width="5" />
+            <circle cx="100" cy="100" r="76" fill="none" stroke="#202838" stroke-width="9" transform="rotate(150 100 100)" stroke-dasharray="318 478" />
+            <circle cx="100" cy="100" r="76" fill="none" stroke="#2fe0ff" stroke-width="9" stroke-linecap="round" transform="rotate(150 100 100)" stroke-dasharray="312 478" />
+            <line x1="100" y1="100" x2="100" y2="30" stroke="#ff35c8" stroke-width="5" stroke-linecap="round" transform="rotate(115 100 100)" />
+            <circle cx="100" cy="100" r="12" fill="#2fe0ff" />
+            <circle cx="100" cy="100" r="5" fill="#06070b" />
+            <text x="100" y="150" text-anchor="middle" font-family="Share Tech Mono, monospace" font-size="22" fill="#eef3f8">4.9</text>
+          </svg>
+          <p class="rating-dial__caption">58 Google reviews</p>
+        </div>
+        <div class="reviews__copy">
+          <p class="eyebrow">Reviews</p>
+          <h2 class="section__title">What customers say</h2>
+          <p class="section__lede reviews__text">Real reviews from real customers will appear here once connected. We&rsquo;ll show exactly what people have said on Google &mdash; nothing invented, nothing edited.</p>
+          <p class="reviews__coming">Google reviews will appear here once connected.</p>
+          <div style="margin-top:20px;">
+            <a class="btn btn--line" href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+College+Station+TX" target="_blank" rel="noopener">See us on Google</a>
+          </div>
+          <p class="reviews__source">4.9 rating &middot; 58 reviews, as shown on Limitless Diesel &amp; Offroad's public Google listing &mdash; verified August 28, 2026.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ===== Reviews / word from the field ===== -->
-    <section class="reviews" id="reviews">
-      <header class="section-head">
-        <p class="section-head__code">SECTION 04</p>
-        <h2 class="section-head__title">WORD FROM THE FIELD</h2>
-      </header>
-      <div class="reviews__panel">
-        <p class="reviews__text">Real reviews from real customers will appear here once connected — exactly what people have said on Google, nothing invented, nothing edited.</p>
-        <p class="reviews__coming">Google rating &amp; reviews will appear here once connected.</p>
-        <a class="btn btn--ghost" href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+TX" target="_blank" rel="noopener">SEE US ON GOOGLE</a>
+    <!-- ===== Contact CTA ===== -->
+    <section class="contact">
+      <div class="container">
+        <h2 class="contact__title">Got a truck that needs looking at?</h2>
+        <p class="contact__text">Call and tell us what it's doing. We'll tell you straight what it'll take to fix it before any work starts.</p>
+        <div class="contact__actions">
+          <a class="btn btn--cyan btn--big" href="tel:+19792099668">Call now: (979) 209-9668</a>
+        </div>
+        <p class="contact__directions"><a href="https://www.google.com/maps/search/Limitless+Diesel+%26+Offroad+College+Station+TX" target="_blank" rel="noopener">Get directions &mdash; 4011 Hicks Ln, College Station, TX 77845</a></p>
       </div>
     </section>
-
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <p class="footer__business">Limitless Diesel &amp; Offroad · 4011 Hicks Ln, College Station, TX · <a href="tel:+19792099668">(979) 209-9668</a></p>
-        <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> — a DBA of Lewis Tech Services LLC</p>
-      </div>
-    </footer>
 
   </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__business">Limitless Diesel &amp; Offroad &middot; 4011 Hicks Ln, College Station, TX 77845 &middot; <a href="tel:+19792099668">(979) 209-9668</a></p>
+      <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> &mdash; a DBA of Lewis Tech Services LLC</p>
+    </div>
+  </footer>
 
 </body>
 </html>
