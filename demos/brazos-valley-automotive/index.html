@@ -1,159 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brazos Valley Automotive — Auto Repair in College Station, TX</title>
-  <meta name="description" content="Brazos Valley Automotive — independent auto repair shop at 1702 Ponderosa Dr, College Station, TX. Call (979) 680-1234." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%23122338'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c07a3e' font-family='Georgia, serif' font-weight='bold'%3EB%3C/text%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brazos Valley Automotive — Independent Auto Repair in College Station, TX</title>
+<meta name="description" content="Brazos Valley Automotive — auto-repair facility known for honest service and quick turnaround, 1702 Ponderosa Dr, College Station, TX. Call (979) 680-1234." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23272219'/%3E%3Crect x='14' y='30' width='72' height='40' rx='4' fill='%23cda874'/%3E%3Ctext x='50' y='58' font-size='34' text-anchor='middle' fill='%234b5238' font-family='Georgia, serif' font-weight='700'%3EB%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Minimal sticky masthead ===== -->
+  <!-- ===== Nav ===== -->
   <header class="masthead">
-    <div class="masthead__inner">
-      <a class="wordmark" href="#top">
-        <span class="wordmark__mark">B</span>
-        <span class="wordmark__name">Brazos Valley <em>Automotive</em></span>
+    <div class="wrap masthead__inner">
+      <a href="#top" class="wordmark">
+        <span class="wordmark__name">Brazos Valley</span>
+        <span class="wordmark__sub">Automotive</span>
       </a>
-      <nav class="masthead__nav" aria-label="Primary">
+      <nav class="mainnav" aria-label="Main">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#contact" class="pill">Call (979) 680-1234</a>
+        <a href="#visit">Visit</a>
+        <a href="#reviews">Reviews</a>
+        <a href="tel:+19796801234" class="mainnav__phone">(979) 680-1234</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
 
-    <!-- ===== Split editorial hero ===== -->
+    <!-- ===== Hero — trust-forward, illustrated signboard ===== -->
     <section class="hero">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">Independent auto repair · College Station, Texas</p>
-          <h1 class="hero__title">Honest work,<br /><span>done right.</span></h1>
-          <p class="hero__tagline">Brazos Valley Automotive is an independent repair shop on Ponderosa Drive. Bring it by or call — we&rsquo;ll tell you straight what&rsquo;s wrong and what it&rsquo;ll take to fix it.</p>
-          <div class="hero__actions">
-            <a class="btn btn--solid" href="tel:+19796801234">Call (979) 680-1234</a>
-            <a class="btn btn--line" href="#services">See the services</a>
-          </div>
-          <p class="hero__address">1702 Ponderosa Dr · College Station, TX</p>
+      <div class="wrap hero__inner">
+        <p class="rating-callout">
+          <span class="rating-callout__num">4.7</span>
+          <span class="rating-callout__stars" aria-hidden="true">★★★★★</span>
+          <span class="rating-callout__text">156 Google reviews<br /><a href="https://www.google.com/maps/search/Brazos+Valley+Automotive+1702+Ponderosa+Dr+College+Station+TX+77845" target="_blank" rel="noopener">verified on Google Maps, Aug 2026</a></span>
+        </p>
+
+        <h1 class="hero__title">The shop College Station<br />calls when it's done guessing.</h1>
+        <p class="hero__tagline">Auto-repair facility known for honest service, along with quick turnaround times — Brazos Valley Automotive's own description on Google.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="tel:+19796801234">Call (979) 680-1234</a>
+          <a class="btn btn--ghost" href="#services">See what we handle</a>
         </div>
-        <figure class="hero__media">
-          <img src="assets/hero-brazos.png" alt="Illustrative image of a clean, light-filled auto repair shop bay." />
-          <figcaption>Illustrative — a calm, modern shop in soft daylight.</figcaption>
+
+        <!-- Signature element: illustrated building graphic, not a stock photo -->
+        <figure class="signplate" aria-label="Illustration of the shop's building and sign">
+          <div class="signplate__roof" aria-hidden="true"></div>
+          <div class="signplate__siding" aria-hidden="true">
+            <svg class="signplate__board" viewBox="0 0 360 110" role="img" aria-hidden="true">
+              <rect x="4" y="4" width="352" height="102" rx="6" fill="var(--sign-tan)" stroke="var(--sign-green)" stroke-width="3"/>
+              <circle cx="20" cy="20" r="5" fill="var(--sign-green)"/>
+              <circle cx="340" cy="20" r="5" fill="var(--sign-green)"/>
+              <circle cx="20" cy="90" r="5" fill="var(--sign-green)"/>
+              <circle cx="340" cy="90" r="5" fill="var(--sign-green)"/>
+              <text x="180" y="52" text-anchor="middle" fill="var(--sign-green)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="1">BRAZOS VALLEY</text>
+              <text x="180" y="82" text-anchor="middle" fill="var(--sign-green)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" letter-spacing="4">AUTOMOTIVE</text>
+            </svg>
+          </div>
+          <figcaption class="signplate__caption">Illustrative — a simplified rendering of the shop's real look (gray corrugated siding, dark gable roof, small wood-toned sign board), based on Google Maps photos reviewed Aug 28, 2026. Not a photograph.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ===== Horizontal fact strip ===== -->
-    <section class="factstrip" aria-label="At a glance">
-      <div class="factstrip__inner">
-        <div class="factstrip__item"><span class="factstrip__label">Where</span><span class="factstrip__value">College Station, TX</span></div>
-        <div class="factstrip__item"><span class="factstrip__label">Kind of shop</span><span class="factstrip__value">Independent auto repair</span></div>
-        <div class="factstrip__item"><span class="factstrip__label">Hours</span><span class="factstrip__value">Call for hours</span></div>
-        <div class="factstrip__item factstrip__item--cta"><span class="factstrip__label">Reach us</span><a class="factstrip__value" href="tel:+19796801234">(979) 680-1234</a></div>
-      </div>
-    </section>
-
-    <!-- ===== Services — editorial index ===== -->
-    <section class="services" id="services">
-      <div class="services__head">
-        <p class="eyebrow">What we handle</p>
-        <h2 class="services__title">Services</h2>
-        <p class="services__lede">Every shop has its own strengths. The list below is what an independent auto repair shop like Brazos Valley typically takes on — call to ask about yours.</p>
-      </div>
-      <ol class="index">
-        <li class="index__row">
-          <span class="index__num">01</span>
-          <h3 class="index__name">Brakes &amp; Brake Repair</h3>
-          <p class="index__desc">Pads, rotors, calipers and fluid — stopping power you can trust.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">02</span>
-          <h3 class="index__name">Oil Changes &amp; Maintenance</h3>
-          <p class="index__desc">Scheduled service, filters and fluids to keep your car running.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">03</span>
-          <h3 class="index__name">Diagnostics &amp; Check Engine Light</h3>
-          <p class="index__desc">Computer diagnostics to find the real problem, explained plainly.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">04</span>
-          <h3 class="index__name">Engine Repair &amp; Tune-Ups</h3>
-          <p class="index__desc">From rough idle to major repairs — an honest assessment first.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">05</span>
-          <h3 class="index__name">AC &amp; Heating Service</h3>
-          <p class="index__desc">Texas heat is no joke — cool air checked, recharged and repaired.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">06</span>
-          <h3 class="index__name">Tires, Alignment &amp; Suspension</h3>
-          <p class="index__desc">Tires, balancing, alignments and suspension parts that wear with miles.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">07</span>
-          <h3 class="index__name">Electrical &amp; Battery Service</h3>
-          <p class="index__desc">Batteries, alternators, starters and wiring gremlins tracked down.</p>
-        </li>
-        <li class="index__row">
-          <span class="index__num">08</span>
-          <h3 class="index__name">Belts, Hoses &amp; Fluids</h3>
-          <p class="index__desc">The small parts that cause big breakdowns — replaced before they fail.</p>
-        </li>
-      </ol>
-      <p class="services__note">These categories are examples of what an independent shop typically offers. Confirm what Brazos Valley works on — and your exact repair — when you call <a href="tel:+19796801234">(979) 680-1234</a>.</p>
-    </section>
-
-    <!-- ===== About & Hours ===== -->
-    <section class="about" id="about">
-      <div class="about__grid">
-        <div class="about__intro">
-          <p class="eyebrow">About &amp; hours</p>
-          <h2 class="about__title">A local shop, here when you need it.</h2>
-          <p class="about__text">Brazos Valley Automotive is an independent auto repair shop in College Station, TX. If you&rsquo;re not sure what&rsquo;s wrong, bring it by or call — we&rsquo;ll tell you straight.</p>
-          <p class="about__source">Business details from Brazos Valley Automotive&rsquo;s public Google listing, verified August 2026.</p>
+    <!-- ===== Trust strip — three verified facts, not four generic ones ===== -->
+    <section class="trust" aria-label="Verified facts">
+      <div class="wrap trust__grid">
+        <div class="trust__tile">
+          <span class="trust__eyebrow">On Google</span>
+          <p class="trust__value">4.7★ <span class="trust__unit">/ 156 reviews</span></p>
+          <p class="trust__note">Google Maps listing, verified Aug 28, 2026.</p>
         </div>
-        <div class="about__cards">
-          <div class="card">
-            <h3 class="card__label">Find us</h3>
-            <p class="card__big"><a href="https://www.google.com/maps/search/Brazos+Valley+Automotive+TX" target="_blank" rel="noopener">1702 Ponderosa Dr<br />College Station, TX</a></p>
-          </div>
-          <div class="card">
-            <h3 class="card__label">Hours</h3>
-            <p class="card__big">Call for hours</p>
-            <p class="card__small">The surest way to know when we&rsquo;re at the shop is to call <a href="tel:+19796801234">(979) 680-1234</a>.</p>
-          </div>
+        <div class="trust__tile">
+          <span class="trust__eyebrow">Hours</span>
+          <p class="trust__value">Call or message for hours</p>
+          <p class="trust__note">A secondary source (SureCritic, via Google's AI Overview, checked Aug 28, 2026) lists Mon–Fri 7:30 AM–5:30 PM, closed weekends — call to confirm.</p>
+        </div>
+        <div class="trust__tile">
+          <span class="trust__eyebrow">Getting here</span>
+          <p class="trust__value">Wheelchair accessible</p>
+          <p class="trust__note">Accessible entrance shown on the shop's Google Maps listing.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Reviews placeholder ===== -->
-    <section class="reviews" id="reviews">
-      <div class="reviews__inner">
-        <p class="eyebrow">Reviews</p>
-        <h2 class="reviews__title">What customers say.</h2>
-        <p class="reviews__text">Real reviews from real customers will appear here once connected. We&rsquo;ll show exactly what people have said on Google — nothing invented, nothing edited.</p>
-        <p class="reviews__coming">Google rating &amp; reviews will appear here once connected.</p>
-        <a class="btn btn--line btn--on-light" href="https://www.google.com/maps/search/Brazos+Valley+Automotive+TX" target="_blank" rel="noopener">See us on Google</a>
+    <!-- ===== Services ===== -->
+    <section class="services section" id="services">
+      <div class="wrap">
+        <p class="section__eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>What we handle</p>
+        <h2 class="section__title">Common work for a full-service independent shop</h2>
+        <p class="section__lede">Every shop's exact lineup differs — the list below covers what a full-service independent garage like this one typically takes on. Ask about your specific vehicle when you call.</p>
+        <ul class="panels">
+          <li class="panel"><h3>Brakes</h3><p>Pads, rotors, calipers and fluid — stopping power you can trust.</p></li>
+          <li class="panel"><h3>Belt &amp; hose replacement</h3><p>The small parts that cause big breakdowns, replaced before they fail.</p></li>
+          <li class="panel"><h3>Heating &amp; AC</h3><p>Cabin heat and cool air, checked, recharged and repaired.</p></li>
+          <li class="panel"><h3>Diagnostics</h3><p>Computer diagnostics to find the real problem, explained plainly.</p></li>
+          <li class="panel"><h3>Engine repair</h3><p>From a rough idle to major work, assessed honestly first.</p></li>
+          <li class="panel"><h3>Electrical &amp; battery</h3><p>Batteries, alternators, starters and wiring issues tracked down.</p></li>
+          <li class="panel"><h3>Tires &amp; alignment</h3><p>Tires, balancing and alignment for wear that adds up over miles.</p></li>
+          <li class="panel"><h3>Older &amp; high-mileage vehicles</h3><p>Bringing a well-worn truck or car back to reliable running order.</p></li>
+        </ul>
+        <p class="services__note">Service list above is a general example of what a full-service independent auto shop typically offers — not Brazos Valley Automotive's confirmed menu. Confirm your exact repair by phone: <a href="tel:+19796801234">(979) 680-1234</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== About / Crew ===== -->
+    <section class="about section" id="about">
+      <div class="wrap about__grid">
+        <div class="about__copy">
+          <p class="section__eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>About the shop</p>
+          <h2 class="section__title">A neighborhood shop, run by a crew — not a chain, not a one-person operation</h2>
+          <p>Brazos Valley Automotive is an independent, full-service repair shop on Ponderosa Drive in College Station. It's a team operation — the kind of shop regulars come back to for years because the same crew stands behind the work every time.</p>
+          <p>If your car needs a straight answer before it needs a repair, that's the visit to expect here.</p>
+        </div>
+        <ul class="values">
+          <li><span class="values__mark" aria-hidden="true"></span>Straight answers before any work starts</li>
+          <li><span class="values__mark" aria-hidden="true"></span>Fair, explained pricing</li>
+          <li><span class="values__mark" aria-hidden="true"></span>Thorough diagnosis, not guesswork</li>
+          <li><span class="values__mark" aria-hidden="true"></span>The same crew, visit after visit</li>
+        </ul>
+      </div>
+      <p class="about__note wrap">Description above reflects Brazos Valley Automotive's own listing category and Google's summary of the business ("Auto-repair facility known for honest service, along with quick turnaround times") — verified on Google Maps, Aug 28, 2026. Values list is general marketing language, not sourced quotes.</p>
+    </section>
+
+    <div class="rivet-divider" aria-hidden="true"></div>
+
+    <!-- ===== Visit us ===== -->
+    <section class="visit section" id="visit">
+      <div class="wrap">
+        <div class="visit__plate">
+          <p class="section__eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Visit us</p>
+          <h2 class="section__title">1702 Ponderosa Dr, College Station, TX 77845</h2>
+          <div class="visit__row">
+            <a class="btn btn--primary" href="tel:+19796801234">Call (979) 680-1234</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/Brazos+Valley+Automotive+1702+Ponderosa+Dr+College+Station+TX+77845" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <p class="visit__note">Hours: call or message to confirm — a secondary source (SureCritic via Google's AI Overview, checked Aug 28, 2026) lists Monday–Friday 7:30 AM–5:30 PM, closed Saturday &amp; Sunday.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="wrap reviews__stack">
+        <p class="section__eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Reputation</p>
+        <p class="reviews__score">4.7<span class="reviews__score-of">/5</span></p>
+        <p class="reviews__count">156 Google reviews</p>
+        <p class="reviews__source">Shown on Brazos Valley Automotive's public Google Maps listing — verified Aug 28, 2026.</p>
+        <a class="btn btn--outline" href="https://www.google.com/maps/search/Brazos+Valley+Automotive+1702+Ponderosa+Dr+College+Station+TX+77845" target="_blank" rel="noopener">See the listing on Google</a>
+        <div class="reviews__placeholder">
+          <h3>Customer reviews</h3>
+          <p>Real reviews from real customers will appear here once connected — exactly what customers said on Google, nothing invented, nothing edited.</p>
+        </div>
       </div>
     </section>
 
     <!-- ===== Contact CTA ===== -->
-    <section class="contact" id="contact">
-      <div class="contact__inner">
-        <p class="eyebrow eyebrow--light">Ready when you are</p>
-        <h2 class="contact__title">Need your car looked at?</h2>
-        <p class="contact__text">Call us — we&rsquo;ll tell you straight what&rsquo;s going on and what it&rsquo;ll cost before any work begins.</p>
-        <a class="btn btn--solid btn--invert" href="tel:+19796801234">Call now: (979) 680-1234</a>
-        <p class="contact__directions"><a href="https://www.google.com/maps/search/Brazos+Valley+Automotive+TX" target="_blank" rel="noopener">Get directions — 1702 Ponderosa Dr, College Station, TX</a></p>
+    <section class="contact">
+      <div class="wrap contact__inner">
+        <h2>Need your car looked at?</h2>
+        <p>Call and get a straight answer on what's wrong and what it costs — before any work begins.</p>
+        <a class="btn btn--tan btn--big" href="tel:+19796801234">Call now: (979) 680-1234</a>
       </div>
     </section>
 
@@ -161,8 +173,8 @@
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
-    <div class="footer__inner">
-      <p class="footer__business">Brazos Valley Automotive · 1702 Ponderosa Dr, College Station, TX · <a href="tel:+19796801234">(979) 680-1234</a></p>
+    <div class="wrap footer__inner">
+      <p class="footer__business">Brazos Valley Automotive · 1702 Ponderosa Dr, College Station, TX 77845 · <a href="tel:+19796801234">(979) 680-1234</a></p>
       <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> — a DBA of Lewis Tech Services LLC</p>
     </div>
   </footer>
