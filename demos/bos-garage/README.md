@@ -1,4 +1,4 @@
-# Bos Garage Auto Repair — Demo Site (Client #1, v3 — REAL CLIENT BRAND, replaces DERIVED v2)
+# Bos Garage Auto Repair — Demo Site (Client #1, v3.1 — REAL CLIENT BRAND + real hero photo)
 
 One-page demo website for **Bos Garage Auto Repair** (1617 Briarcrest Dr, Bryan,
 TX 77802 · (979) 906-0924), rebuilt **from scratch on 2026-08-28** using real
@@ -30,11 +30,8 @@ real material — never the trade category by itself.
 |------|---------|
 | `index.html` | Complete one-page site (hero, trust strip, about/story, services, hours, reviews, contact, footer) |
 | `styles.css` | All styling — real client brand (warm cream + muted barn-red + warm stone-tan + soft bollard-yellow; Bitter + Work Sans + one Caveat signature accent) |
+| `assets/hero-mechanic.jpg` | Hero photo — free-license stock photo, NOT a photo of Bos Garage (see "Hero photo" below) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's in-person visit (OUR sales tool — deliberately left in Lewis Digital brand, NOT modified) |
-
-No raster hero photo in this version — see "Hero art" below for why, and how
-the illustration was built to be grounded in the real photo evidence without
-reproducing it.
 
 ## Preview
 
@@ -44,11 +41,11 @@ python -m http.server 8093 --bind 127.0.0.1   # preview on localhost:8093 (use `
 ```
 
 Do NOT use port 3000 — that serves the agency site. Verified locally on
-2026-08-28: no console errors, no failed asset requests (the hero is an
-inline SVG, so there's nothing to 404), no horizontal overflow at desktop or
-mobile widths, WCAG contrast ratios for all body/heading text pairs range
-7.1:1–15.5:1 (checked programmatically against the actual rendered
-`color`/`background-color`).
+2026-08-28: no console errors, no failed asset requests, no horizontal
+overflow at desktop or mobile widths, WCAG contrast ratios for all
+body/heading text pairs range 7.1:1–15.5:1 (checked programmatically against
+the actual rendered `color`/`background-color`). Re-verified 2026-08-29 after
+swapping the hero illustration for a real stock photo (see below).
 
 ## Research (gathered live via non-headless Chrome, 2026-08-28)
 
@@ -142,20 +139,36 @@ sound direction, but neither was adopted verbatim (a bakery palette risks
 reading as a cafe, not a garage) — exact hex values were derived from the
 photo evidence above instead.
 
-## Hero art: why an illustration, not a photo
+## Hero photo: v3.1 update, 2026-08-29 — real stock photo replaces the SVG illustration
 
-The real storefront photo is a third party's copyrighted Google Maps upload
-(credited "Tianyi Lu") — not ours to republish on a client's site. Per
-`client-demo-site` §3, an unowned photo isn't a usable asset; the honest
-options are a real (licensed) photo, an AI-generated illustrative stand-in,
-or omission. This version uses a **hand-built inline SVG illustration**
-(`.hero__illustration` in `index.html`) that reproduces the photo's
-described *elements* — white corrugated wall, red standing-seam roofline,
-stone corner, two bay doors, a hand-lettered sign (rendered as an abstract
-red squiggle, not literal invented text), a yellow bollard — without
-copying the photograph itself. The page's `figcaption` and this README both
-say plainly that it's an illustration grounded in the real photo, not a
-photo of the shop.
+The v3 build (above) used a hand-built inline SVG illustration for the hero
+instead of a photo, reasoning that the real storefront photo is a third
+party's copyrighted Google Maps upload (credited "Tianyi Lu") and not ours to
+republish. That reasoning about the Google Maps photo still holds, but the
+owner reviewed the live v3 site and the flat-illustration hero read as
+generic/unfinished rather than "a good hero photo" — a fair call per
+`client-demo-site` §3's own menu of options: a real (licensed) photo, an
+AI-generated stand-in, or omission. No AI image-generation tool is available
+in this environment (confirmed by the Lead before proceeding), so this update
+uses the remaining honest option: a **real, free-license stock photo**.
+
+**Source:** [pexels.com/photo/8478259](https://www.pexels.com/photo/8478259/)
+("Man in Black Crew Neck T Shirt Fixing a Car"), photographer **cottonbro
+studio**, downloaded 2026-08-29. Licensed under the
+[Pexels License](https://www.pexels.com/license/) — free for commercial use,
+modification allowed, no attribution legally required (credited here anyway).
+The Lead sourced two candidate photos via a live Chrome session and sent both
+to the owner; the owner picked this one (a mechanic working under an open
+hood in daylight — its blurred background happens to show a sliver of white
+corrugated siding, an unplanned but fitting echo of the real storefront's own
+material) over a moodier workshop-interior alternative that was set aside
+because it showed a visible third-party Texaco sign as background decor.
+
+This is a **stock photo of a generic mechanic, not a photo of Bos Garage, its
+building, or its owner "Bo."** The page's `alt` text and `figcaption` say so
+explicitly, and so does this README. Nothing about the photo is presented as
+real to the business — only the name/address/phone/rating facts elsewhere on
+the page are verified.
 
 ## Structural distinctness vs. every other demo under `demos/`
 
@@ -165,7 +178,7 @@ shops in the same trade converging on one look is the most-flagged failure):
 
 | | Bos Garage (this v3) | Brazos Valley Automotive | Bryan Muffler & Performance | Limitless Diesel & Offroad | Neff's (different trade) |
 |---|---|---|---|---|---|
-| Hero | Centered copy + full-bleed illustrated "shopfront strip" banner below it | Split grid, copy left / raster photo right | Full-bleed gradient with scrolling keyword ticker above nav | Sidebar rail nav + "opening log" panel + raster photo, no centered hero at all | Centered copy over a dark hero photo |
+| Hero | Centered copy + full-bleed real stock photo banner below it | Split grid, copy left / raster photo right | Full-bleed gradient with scrolling keyword ticker above nav | Sidebar rail nav + "opening log" panel + raster photo, no centered hero at all | Centered copy over a dark hero photo |
 | Section order | Hero → **trust strip (rating) → about/story → services** → hours → reviews → contact | Hero → fact-strip (location/hours) → services → about → reviews → contact | Hero → oversized number band → services → **reviews before about** → about → contact | Hero → services → about → contact → **reviews last** | Hero → services → about → reviews → contact |
 | Services layout | Vertical "repair ticket" stub list (circular code stamp + dashed tear line) | Numbered editorial index list (`01`–`08`) | Asymmetric CSS grid of cells | Numbered field-log rows inside a fixed left rail | Numbered list, arch-framed photos |
 | Signature element | Hand-lettered "— ask for Bo" script signature tag + a "colors read from the real photo" swatch strip | Split editorial photo + horizontal fact-strip | Scrolling ticker + oversized number band | Fixed left sidebar "field log" rail nav | Arch-framed portrait photos |
@@ -210,11 +223,10 @@ doesn't converge with their *current* state.)
   examples of what an independent repair garage typically offers — NOT
   confirmed as Bos Garage's actual service list. The page says so directly
   and points to the phone number to confirm.
-- **Hero illustration**: an inline SVG built to echo the real photo's
-  described elements (siding, roofline, stone, bay doors, bollard, sign) —
-  it is NOT the photo itself and NOT a rendering of the shop's actual
-  building beyond that description. Labeled illustrative in the page's
-  `figcaption` and here.
+- **Hero photo** (`assets/hero-mechanic.jpg`): a free-license stock photo
+  (Pexels, cottonbro studio) of a generic mechanic — it is NOT a photo of Bos
+  Garage, its building, or its owner. Labeled as such in the page's `alt`
+  text/`figcaption` and here. See "Hero photo" above for source/license.
 - **Reviews section**: only the real "5.0 out of 5" and "7 Google reviews"
   numbers are shown. Review text/cards are an explicit "reviews will
   appear here once connected" placeholder — the six review texts and one
