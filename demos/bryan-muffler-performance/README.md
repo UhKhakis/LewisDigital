@@ -302,8 +302,10 @@ Mustang.
   **No Lewis gold (`#C9A227` family), no Lewis charcoal `#16130e`, no Lewis
   cream `#fbf8f1`** anywhere in `index.html`/`styles.css` — confirmed by
   inspection.
-- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of
-  Lewis Tech Services LLC."
+- Footer keeps a single small credit: "Designed by Lewis Tech" (owner
+  instruction 2026-08-29: never say "Lewis Digital" on client-facing pages,
+  including the two body-copy attribution sentences on this page that used
+  to name it).
 - `pitch-sheet.html` was NOT modified — it stays in Lewis Digital's own
   brand (it is OUR sales tool).
 - Structurally distinct from all four sibling demos — see the table above.
