@@ -1,4 +1,4 @@
-# Bryan Muffler & Performance — Demo Site (Rebuild v2 — REAL CLIENT BRAND, replaces DERIVED v1)
+# Bryan Muffler & Performance — Demo Site (Rebuild v2.1 — CLIENT BRAND + real photos)
 
 One-page demo website for **Bryan Muffler & Performance** (1309 S College
 Ave, Bryan, TX 77801 · (979) 822-2612), **rebuilt from scratch** using real
@@ -33,12 +33,8 @@ brand with one built on that real material.
 | `index.html` | Complete one-page site (phone band, nav, sign-board hero, spec-plate trust bar, about/story, custom-exhaust craft spotlight, services, hours/location, reviews, contact, footer) |
 | `styles.css` | All styling — researched client brand (dark asphalt + bold sign-board red + steel-blue-gray + cream sign lettering; Alfa Slab One + Archivo + IBM Plex Mono) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
-
-No `assets/` folder in this rebuild — the old `assets/hero-muffler.png` (an
-AI-generated orange-toned exhaust image built for the retired carbon+orange
-brand) was deleted as no longer accurate to the researched brand. The hero
-and craft-section visuals are hand-built inline SVG/CSS illustrations
-grounded in the real photo evidence below (see "Hero &amp; illustration art").
+| `assets/hero-mustang.jpg` | Hero photo — free-license stock photo, NOT a photo of Bryan Muffler & Performance (see "Photos" below) |
+| `assets/craft-exhaust-tips.jpg` | Custom-exhaust section photo — free-license stock photo (see "Photos" below) |
 
 ## Preview
 
@@ -207,23 +203,35 @@ Location → Reviews → Contact → Footer (10 sections, with a dedicated
 mid-page craft spotlight no sibling has, and the review numeral shown via a
 gauge rather than a stamp/callout/tile).
 
-## Hero & illustration art: why SVG, not a photo
+## Photos: v2.1 update, 2026-08-29 — real stock photos replace the SVG art
 
-The real storefront photo and its parked Mustang are a third party's
-copyrighted Google Maps upload — not ours to republish on a client's site.
-Per `client-demo-site` §3, this version uses **hand-built inline SVG/CSS**
-for both signature visuals:
+The hero headline is still styled as the shop's real sign board (red plaque,
+riveted corners, cream Alfa Slab One lettering) — an original typographic
+treatment inspired by the photo's described colors and layout, not a
+reproduction of the photograph, and that part is unchanged. What changed is
+the fastback-coupe **illustration** that sat next to it: the owner reviewed
+the same SVG-illustration approach on the Bos Garage and Brazos Valley
+demos and said plainly it needed real photos, not flat vector art. No AI
+image-generation tool is available in this environment (confirmed
+2026-08-29), so this update uses real, free-license stock photos instead —
+and, per updated process, the Lead now picks the photo directly (no more
+presenting candidates for approval) and brings back the finished page.
 
-- The **hero headline itself** is styled as the shop's real sign board (red
-  plaque, riveted corners, cream Alfa Slab One lettering) — an original
-  typographic treatment inspired by the photo's described colors and
-  layout, not a reproduction of the photograph.
-- A **simplified fastback-coupe silhouette** (steel-blue gradient, abstract
-  proportions) nods to the vintage Mustang in the real photo without
-  tracing or reproducing it.
+- **Hero** (`assets/hero-mustang.jpg`): [pexels.com/photo/3992279](https://www.pexels.com/photo/yellow-ford-car-3992279/)
+  ("Yellow Ford Car"), photographer **Suleyman Seykan** — a real classic
+  Ford's rear end with dual chrome exhaust tips clearly visible, echoing both
+  the real vintage Mustang parked in the shop's own Google Maps photo and the
+  exhaust specialty, without reproducing that photo.
+- **Custom-exhaust section** (`assets/craft-exhaust-tips.jpg`): [pexels.com/photo/10827691](https://www.pexels.com/photo/close-up-shot-of-a-car-muffler-10827691/)
+  ("Close Up Shot of a Car Muffler"), photographer **Rahul Soni** — a dual
+  chrome exhaust-tip close-up placed beside the existing sound-waveform
+  graphic (kept, since it's an original CSS element, not a stock asset).
 
-Both are labeled illustrative in the page's `aria-label`/`figcaption` text
-and here.
+Both are licensed under the [Pexels License](https://www.pexels.com/license/)
+(free commercial use, no attribution required, credited here anyway) and
+labeled as illustrative stock photos in their `alt` text/`figcaption` — not
+photos of Bryan Muffler & Performance, its shop, its staff, or its vintage
+Mustang.
 
 ## What is REAL (verified & traceable)
 
@@ -262,10 +270,12 @@ and here.
   generic examples of what a muffler & performance shop typically offers —
   not a confirmed menu. The page says so directly and points to the phone
   number to confirm.
-- **Hero sign-board headline and vintage-coupe illustration**: original
-  SVG/CSS art inspired by the real photo's described colors/elements — not
-  a reproduction of the photograph itself. Labeled illustrative in the
-  page's `aria-label` text and here.
+- **Hero sign-board headline**: original CSS/typographic treatment inspired
+  by the real photo's described colors/elements, not a reproduction of the
+  photograph itself.
+- **Hero and custom-exhaust photos** (`assets/hero-mustang.jpg`,
+  `assets/craft-exhaust-tips.jpg`): free-license stock photos, not photos of
+  Bryan Muffler & Performance, its shop, or its staff. See "Photos" above.
 - **Reviews section on the page**: only the real 4.4/108 numbers are shown;
   review text/cards are an explicit "reviews will appear here once
   connected" placeholder — none of the six review texts (positive or
@@ -314,7 +324,7 @@ and here.
   shop operating in a state with emissions/noise rules.
 - If the owner provides real photos, confirms the "Griffinator" build or any
   staff names, or shares an actual logo, swap them into `index.html` and
-  re-publish — the current SVG illustrations and generic service list are
+  re-publish — the current stock photos and generic service list are
   explicitly placeholders for those, not final answers.
 - This folder is a standalone deliverable; nothing goes live for the client
   until they confirm interest.
