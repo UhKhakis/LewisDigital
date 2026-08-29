@@ -194,12 +194,27 @@ a:focus-visible,button:focus-visible{
 .services__note{margin-top:28px; font-size:0.86rem; color:var(--ink-muted); max-width:70ch;}
 .services__note a{color:var(--sign-green); font-weight:600;}
 
+.services__photo{margin-top:36px; max-width:720px;}
+.services__photo img{
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover; object-position:center 35%;
+  border:1px solid var(--line); border-top:4px solid var(--sign-green);
+}
+.services__photo figcaption{margin-top:8px; font-size:0.78rem; color:var(--ink-muted); line-height:1.5;}
+
 /* ---------- About / crew ---------- */
 .about{background:var(--paper-deep);}
 .about__grid{
   display:grid; grid-template-columns:1.4fr 1fr; gap:52px; align-items:start;
 }
 .about__copy p{margin-top:14px; max-width:56ch; color:var(--ink);}
+.about__side{display:flex; flex-direction:column; gap:24px;}
+.about__photo img{
+  width:100%; height:auto; display:block;
+  aspect-ratio:4/3; object-fit:cover;
+  border:1px solid var(--line); border-top:4px solid var(--sign-green);
+}
+.about__photo figcaption{margin-top:8px; font-size:0.76rem; color:var(--ink-muted); line-height:1.5;}
 .values{list-style:none;}
 .values li{
   display:flex; align-items:baseline; gap:12px;

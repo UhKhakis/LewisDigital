@@ -53,6 +53,33 @@ This is a **stock photo of a generic mechanic, not a photo of Brazos Valley
 Automotive, its building, or its staff.** The page's `alt` text and
 `figcaption` say so explicitly, and so does this README.
 
+## More photos throughout the page: v2.2 update, 2026-08-29
+
+After approving the hero photo, the owner asked for more images throughout
+the page rather than a single hero shot. Per updated process (the owner also
+said not to present candidates for approval on photo choices anymore — decide
+and implement, then bring the finished page back for approval), two more
+free-license Pexels photos were added:
+
+- **Services section** (`assets/services-brake.jpg`): [pexels.com/photo/6870307](https://www.pexels.com/photo/man-in-blue-uniform-fixing-the-car-s-brake-system-6870307/)
+  ("Man in Blue Uniform Fixing the Car's Brake System"), photographer
+  **Gustavo Fring** — the same photoshoot/model/car as the hero photo, so it
+  reads as one cohesive set on this page rather than a random stock grab, and
+  it directly ties to "brake work," the most-tagged real service theme from
+  the Google reviews research (5 mentions).
+- **About section** (`assets/about-shopfloor.jpg`): [pexels.com/photo/5158091](https://www.pexels.com/photo/modern-automobile-on-repair-in-garage-5158091/)
+  ("Modern Automobile on Repair in Garage") — a real multi-bay shop floor
+  (two lifts, vehicles mid-service), no people, backing up the "full-service
+  independent shop" copy without needing a staff photo (the owner names on
+  Google reviews were inconsistent across sources, so the page still doesn't
+  claim to show "the crew").
+
+Both are licensed under the [Pexels License](https://www.pexels.com/license/)
+(free commercial use, no attribution required, credited here anyway) and are
+marked as illustrative stock photos in their `alt` text/`figcaption`, same
+discipline as the hero photo — neither is a photo of Brazos Valley
+Automotive, its building, or its staff.
+
 ## Files
 
 | File | Purpose |
@@ -61,6 +88,8 @@ Automotive, its building, or its staff.** The page's `alt` text and
 | `styles.css` | All styling — researched client brand (galvanized-gray + charcoal-brown + rustic sign tan/green, Roboto Slab + Work Sans) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 | `assets/hero-mechanic.jpg` | Hero photo — free-license stock photo, NOT a photo of Brazos Valley Automotive (see "Hero photo" below) |
+| `assets/services-brake.jpg` | Services section photo — same photoshoot as the hero, ties to the real "brake work" review theme (see "More photos" below) |
+| `assets/about-shopfloor.jpg` | About section photo — a real multi-bay shop floor, no people (see "More photos" below) |
 
 ## Preview
 
