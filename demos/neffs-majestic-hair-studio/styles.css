@@ -1,26 +1,38 @@
 /* ============================================================
-   Neff's Majestic Hair Studio — client-branded demo site
-   Brand system: lavender-plum & ivory (drawn from the studio's
-   Facebook profile/cover photography), Cormorant Garamond + Jost.
+   Neff's Majestic Hair Studio — client-branded demo site (v3)
+   Brand system: lavender-plum & ivory (from the studio's real
+   Facebook profile photo — genuinely sourced, retained from v2),
+   plus a warm charcoal + amber pairing observed in the studio's
+   real Facebook cover photo (its dark, industrial-ceilinged,
+   collectibles-lined interior). Cormorant Garamond + Jost.
    This page intentionally carries ZERO Lewis Digital gold.
    ============================================================ */
 
 :root {
-  --plum: #4a2b4a;          /* primary — deep plum */
+  --plum: #4a2b4a;          /* primary — deep plum (verified: profile photo) */
   --plum-deep: #33203a;     /* darkest plum — header, footer, hero ink */
-  --lavender: #a79ac4;      /* secondary — muted lavender (from profile photo) */
+  --lavender: #a79ac4;      /* secondary — muted lavender (verified: profile photo) */
   --lavender-soft: #cfc6e2; /* light lavender for borders */
   --lilac: #f4f0f9;         /* soft lilac wash for alt sections */
-  --ivory: #fffdfa;         /* warm ivory base */
+  --ivory: #fffdfa;         /* warm ivory base (verified: profile photo bg) */
   --ink: #2b2427;           /* warm near-black for body text */
   --ink-soft: #6f626b;      /* muted text */
-  --peach: #e9bc9b;         /* warm peach accent (from profile photo tones) */
+  --peach: #e9bc9b;         /* warm peach accent (verified: profile photo skin tones) */
   --white: #ffffff;
+
+  /* Observed (not pixel-scripted) from the studio's real Facebook cover
+     photo: a black-painted ceiling, exposed ductwork, and warm track
+     spotlights over glass-front shelving. Used for ONE deliberate dark
+     band, not the whole page — see README for the honesty note. */
+  --charcoal: #1a1720;
+  --charcoal-soft: #241f2b;
+  --amber: #c98a3a;
+  --amber-soft: #e9c48d;
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Jost", "Segoe UI", system-ui, -apple-system, sans-serif;
 
-  --radius-arch: 220px 220px 28px 28px;
+  --radius-card: 26px;
   --shadow-soft: 0 24px 60px -28px rgba(51, 32, 58, 0.45);
 }
 
@@ -40,6 +52,11 @@ body {
 img { max-width: 100%; display: block; }
 a { color: var(--plum); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2.5px solid var(--plum);
+  outline-offset: 3px;
+}
 
 .container {
   width: min(1120px, 100% - 3rem);
@@ -61,7 +78,7 @@ a:hover { text-decoration: underline; }
 
 .section__title {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(1.9rem, 3.4vw, 2.7rem);
   line-height: 1.15;
   color: var(--plum-deep);
@@ -122,21 +139,23 @@ a:hover { text-decoration: underline; }
   color: var(--lilac);
   font-family: var(--font-display);
   font-size: 1.65rem;
-  font-weight: 600;
+  font-weight: 700;
   display: grid;
   place-items: center;
   line-height: 1;
   padding-bottom: 2px;
+  flex: none;
 }
 
 .brand__text { display: flex; flex-direction: column; line-height: 1.12; }
 .brand__name {
   font-family: var(--font-display);
   font-size: 1.28rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--plum-deep);
   letter-spacing: 0.01em;
 }
+.brand__name em { font-style: italic; color: var(--plum); }
 .brand__sub {
   font-size: 0.66rem;
   font-weight: 500;
@@ -218,7 +237,7 @@ a:hover { text-decoration: underline; }
 
 .hero__title {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(2.6rem, 5.2vw, 4.1rem);
   line-height: 1.04;
   color: var(--plum-deep);
@@ -249,65 +268,164 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.04em;
 }
 
-/* arch-framed photos */
-.arch {
-  border-radius: var(--radius-arch);
+.hero__photo { position: relative; }
+
+/* card-frame photos — a rounded "shop card" rather than a boutique arch,
+   with a small halftone-dot corner nodding to the studio's real
+   comic/collectibles-lined interior (see README) without reproducing
+   any actual comic art. */
+.card-frame {
+  border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   background: var(--lavender-soft);
+  position: relative;
+  border: 1px solid rgba(51, 32, 58, 0.08);
 }
-.arch img {
+.card-frame::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: rgba(255, 253, 250, 0.55);
+  background-image: radial-gradient(circle, var(--plum-deep) 1.4px, transparent 1.6px);
+  background-size: 8px 8px;
+  pointer-events: none;
+}
+.card-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero__photo .arch {
+.hero__photo .card-frame {
   aspect-ratio: 4 / 5;
   max-height: 560px;
   margin-inline: auto;
 }
 
-/* ---------- services (numbered list) ---------- */
+/* rating starburst badge — an original 8-point sunburst outline (a
+   generic, non-comic-specific device) nodding to the studio's real
+   pop-culture-collectibles interior, carrying the real verified rating */
+.rating-burst {
+  position: absolute;
+  bottom: -1.4rem;
+  left: -1.2rem;
+  width: 128px;
+  height: 128px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.rating-burst__spark {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--amber);
+  filter: drop-shadow(0 10px 20px rgba(201, 138, 58, 0.4));
+}
+.rating-burst__score {
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--plum-deep);
+  line-height: 1;
+  margin-top: -0.6rem;
+}
+.rating-burst__label {
+  position: relative;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--plum-deep);
+  line-height: 1.15;
+}
+
+/* ---------- verified highlights strip ---------- */
+.highlights {
+  background: var(--charcoal);
+  background-image: radial-gradient(circle, rgba(233, 196, 141, 0.12) 1px, transparent 1.4px);
+  background-size: 16px 16px;
+  padding: 2.6rem 0;
+}
+
+.highlights__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber-soft);
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.highlights__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 0.9rem;
+}
+
+.highlight-chip {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #f2ecf7;
+  background: var(--charcoal-soft);
+  border: 1px solid rgba(233, 196, 141, 0.3);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+}
+
+/* ---------- services (card grid, no numbering — this isn't a sequence) ---------- */
 .services { background: var(--white); }
 
 .services .section__title { max-width: 30ch; }
 
-.services__list {
-  list-style: none;
+.services__grid {
   margin-top: 2.6rem;
-  border-top: 1px solid #eee6f2;
-}
-
-.service-row {
   display: grid;
-  grid-template-columns: 84px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
-  padding: 1.55rem 0.4rem;
-  border-bottom: 1px solid #eee6f2;
-  align-items: baseline;
 }
 
-.service-row__num {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--lavender);
-  font-variant-numeric: tabular-nums;
+.service-card {
+  padding: 1.7rem 1.6rem;
+  border: 1px solid #eee6f2;
+  border-radius: 18px;
+  background: var(--lilac);
+  position: relative;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 22px;
+  height: 22px;
+  background-image: radial-gradient(circle, var(--lavender) 1.5px, transparent 1.7px);
+  background-size: 7px 7px;
+  opacity: 0.7;
 }
 
-.service-row__title {
+.service-card__title {
   font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-size: 1.32rem;
+  font-weight: 700;
   color: var(--plum-deep);
   line-height: 1.2;
+  padding-right: 1.6rem;
 }
 
-.service-row__text {
-  margin-top: 0.35rem;
+.service-card__text {
+  margin-top: 0.5rem;
   color: var(--ink-soft);
-  max-width: 60ch;
+  font-size: 0.96rem;
 }
 
 .services__note {
@@ -317,7 +435,7 @@ a:hover { text-decoration: underline; }
   max-width: 72ch;
 }
 
-/* ---------- about & hours ---------- */
+/* ---------- find us & hours ---------- */
 .about { background: var(--lilac); }
 
 .about__grid {
@@ -327,7 +445,7 @@ a:hover { text-decoration: underline; }
   align-items: center;
 }
 
-.about__photo .arch {
+.about__photo .card-frame {
   aspect-ratio: 4 / 5;
   max-height: 560px;
 }
@@ -350,14 +468,34 @@ a:hover { text-decoration: underline; }
 .about__heading {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--plum);
   margin-bottom: 0.55rem;
 }
 
 .about__text { font-size: 0.98rem; margin-bottom: 0.5rem; }
 .about__text--big { font-size: 1.12rem; font-weight: 500; color: var(--plum-deep); }
-.about__text--muted { color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.7rem; }
+.about__text--muted { color: var(--ink-soft); font-size: 0.86rem; margin-top: 0.7rem; }
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.96rem;
+}
+.hours-table th,
+.hours-table td {
+  text-align: left;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid #f0e9f4;
+}
+.hours-table th {
+  font-weight: 500;
+  color: var(--plum);
+  width: 3.4rem;
+}
+.hours-table td { color: var(--ink); }
+.hours-table tr:last-child th,
+.hours-table tr:last-child td { border-bottom: none; }
 
 .about__note {
   margin-top: 2rem;
@@ -386,7 +524,7 @@ a:hover { text-decoration: underline; }
 .reviews__score-label {
   font-size: 0.95rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
   margin-top: 0.4rem;
@@ -425,7 +563,7 @@ a:hover { text-decoration: underline; }
 
 .contact__title {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(2.1rem, 4vw, 3rem);
   color: var(--plum-deep);
 }
@@ -467,6 +605,8 @@ a:hover { text-decoration: underline; }
   .about__grid,
   .reviews__inner { grid-template-columns: 1fr; gap: 2.2rem; }
 
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+
   .hero { padding: 3rem 0 3.6rem; }
   .section { padding: 3.6rem 0; }
 
@@ -475,11 +615,20 @@ a:hover { text-decoration: underline; }
   .nav__link--cta { padding: 0.45rem 0.85rem; }
 
   .about__blocks { grid-template-columns: 1fr; }
-  .hero__photo .arch { max-height: 420px; }
+  .hero__photo .card-frame { max-height: 420px; }
+  .rating-burst { width: 104px; height: 104px; left: -0.8rem; bottom: -1rem; }
+  .rating-burst__score { font-size: 1.55rem; }
 }
 
 @media (max-width: 560px) {
   .header__inner { flex-direction: column; gap: 0.6rem; padding: 0.9rem 0; }
-  .service-row { grid-template-columns: 52px 1fr; gap: 0.8rem; }
-  .ribbon__inner { flex-direction: column; gap: 0.1rem; padding: 0.55rem 0; }
+  .services__grid { grid-template-columns: 1fr; }
+  .ribbon__inner { flex-direction: column; gap: 0.1rem; padding: 0.55rem 0; text-align: center; }
+  .rating-burst { position: relative; left: auto; bottom: auto; margin: 1.2rem auto 0; }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
 }
