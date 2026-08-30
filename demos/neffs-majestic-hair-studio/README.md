@@ -297,8 +297,8 @@ listing, **independently re-verified live by the Builder on 2026-08-28**
   pairing, all disclosed above) and client-brand fonts (Cormorant Garamond +
   Jost). **No Lewis gold (#C9A227 family), no Lewis charcoal #16130e, no
   Lewis cream #fbf8f1** anywhere in `index.html`/`styles.css`.
-- Footer keeps a single small credit: "Site by Lewis Digital — a DBA of Lewis
-  Tech Services LLC."
+- Footer keeps a single small credit: "Designed by Lewis Tech" (owner
+  instruction 2026-08-29: never say "Lewis Digital" on client-facing pages).
 - `pitch-sheet.html` palette was **not** touched — it stays in Lewis Digital
   brand (it is OUR sales tool). Only its rating line was updated to add the
   now-verified "(64 reviews)" for pitch accuracy.

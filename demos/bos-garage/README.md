@@ -254,8 +254,8 @@ doesn't converge with their *current* state.)
   demo's cream base `#f6efe2` and ink `#2b2118` are deliberately different
   hex values from Lewis Digital's own cream/charcoal, not a coincidental
   near-match).
-- Footer keeps a single small credit line: "Site by Lewis Digital — a DBA
-  of Lewis Tech Services LLC."
+- Footer keeps a single small credit line: "Designed by Lewis Tech" (owner
+  instruction 2026-08-29: never say "Lewis Digital" on client-facing pages).
 - `pitch-sheet.html` was NOT modified — it stays in Lewis Digital's own
   brand (it's our sales tool), per `client-demo-site` §4.
 - Structurally distinct from all four sibling demos — see the table above.
