@@ -301,6 +301,21 @@ a:hover { text-decoration: underline; }
   object-fit: cover;
 }
 
+.hero__figure, .about__figure { margin: 0; }
+.hero__figure figcaption, .about__figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+/* the rating starburst overlaps the bottom-left of the hero photo — keep
+   the caption clear by right-aligning it and giving it a matching top
+   offset, instead of fighting the star's irregular shape with margin alone */
+.hero__figure figcaption { margin-top: -1.6rem; text-align: right; max-width: 62%; margin-left: auto; }
+@media (max-width: 560px) {
+  .hero__figure figcaption { margin-top: 1.6rem; text-align: center; max-width: none; }
+}
+
 .hero__photo .card-frame {
   aspect-ratio: 4 / 5;
   max-height: 560px;
