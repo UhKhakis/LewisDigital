@@ -32,7 +32,7 @@
 
   <main id="top">
 
-    <!-- ===== Hero — trust-forward, illustrated signboard ===== -->
+    <!-- ===== Hero — trust-forward, real photo in a signboard-style frame ===== -->
     <section class="hero">
       <div class="wrap hero__inner">
         <p class="rating-callout">
@@ -49,21 +49,13 @@
           <a class="btn btn--ghost" href="#services">See what we handle</a>
         </div>
 
-        <!-- Signature element: illustrated building graphic, not a stock photo -->
-        <figure class="signplate" aria-label="Illustration of the shop's building and sign">
+        <!-- Signature element: real hero photo, framed with the shop's own roofline/siding motif -->
+        <figure class="signplate">
           <div class="signplate__roof" aria-hidden="true"></div>
-          <div class="signplate__siding" aria-hidden="true">
-            <svg class="signplate__board" viewBox="0 0 360 110" role="img" aria-hidden="true">
-              <rect x="4" y="4" width="352" height="102" rx="6" fill="var(--sign-tan)" stroke="var(--sign-green)" stroke-width="3"/>
-              <circle cx="20" cy="20" r="5" fill="var(--sign-green)"/>
-              <circle cx="340" cy="20" r="5" fill="var(--sign-green)"/>
-              <circle cx="20" cy="90" r="5" fill="var(--sign-green)"/>
-              <circle cx="340" cy="90" r="5" fill="var(--sign-green)"/>
-              <text x="180" y="52" text-anchor="middle" fill="var(--sign-green)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="1">BRAZOS VALLEY</text>
-              <text x="180" y="82" text-anchor="middle" fill="var(--sign-green)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" letter-spacing="4">AUTOMOTIVE</text>
-            </svg>
+          <div class="signplate__photo">
+            <img src="assets/hero-mechanic.jpg" alt="A smiling mechanic reviews paperwork on the phone beside a customer's car in a repair shop — illustrative stock photo, not a photo of Brazos Valley Automotive or its staff." width="1600" height="1067" loading="eager" />
           </div>
-          <figcaption class="signplate__caption">Illustrative — a simplified rendering of the shop's real look (gray corrugated siding, dark gable roof, small wood-toned sign board), based on Google Maps photos reviewed Aug 28, 2026. Not a photograph.</figcaption>
+          <figcaption class="signplate__caption">Illustrative stock photo (Pexels, photographer Gustavo Fring) — not a photo of Brazos Valley Automotive, its building, or its staff.</figcaption>
         </figure>
       </div>
     </section>
@@ -105,6 +97,10 @@
           <li class="panel"><h3>Tires &amp; alignment</h3><p>Tires, balancing and alignment for wear that adds up over miles.</p></li>
           <li class="panel"><h3>Older &amp; high-mileage vehicles</h3><p>Bringing a well-worn truck or car back to reliable running order.</p></li>
         </ul>
+        <figure class="services__photo">
+          <img src="assets/services-brake.jpg" alt="A mechanic inspects a brake caliper and rotor on a lifted car — illustrative stock photo, not a photo of Brazos Valley Automotive or its staff." width="1600" height="1067" loading="lazy" />
+          <figcaption>Illustrative stock photo (Pexels, photographer Gustavo Fring) — not a photo of Brazos Valley Automotive, its shop, or its staff.</figcaption>
+        </figure>
         <p class="services__note">Service list above is a general example of what a full-service independent auto shop typically offers — not Brazos Valley Automotive's confirmed menu. Confirm your exact repair by phone: <a href="tel:+19796801234">(979) 680-1234</a>.</p>
       </div>
     </section>
@@ -118,14 +114,20 @@
           <p>Brazos Valley Automotive is an independent, full-service repair shop on Ponderosa Drive in College Station. It's a team operation — the kind of shop regulars come back to for years because the same crew stands behind the work every time.</p>
           <p>If your car needs a straight answer before it needs a repair, that's the visit to expect here.</p>
         </div>
-        <ul class="values">
-          <li><span class="values__mark" aria-hidden="true"></span>Straight answers before any work starts</li>
-          <li><span class="values__mark" aria-hidden="true"></span>Fair, explained pricing</li>
-          <li><span class="values__mark" aria-hidden="true"></span>Thorough diagnosis, not guesswork</li>
-          <li><span class="values__mark" aria-hidden="true"></span>The same crew, visit after visit</li>
-        </ul>
+        <div class="about__side">
+          <figure class="about__photo">
+            <img src="assets/about-shopfloor.jpg" alt="A multi-bay repair shop floor with vehicles on lifts — illustrative stock photo, not a photo of Brazos Valley Automotive's actual shop." width="1600" height="1067" loading="lazy" />
+            <figcaption>Illustrative — not a photo of Brazos Valley Automotive's actual shop.</figcaption>
+          </figure>
+          <ul class="values">
+            <li><span class="values__mark" aria-hidden="true"></span>Straight answers before any work starts</li>
+            <li><span class="values__mark" aria-hidden="true"></span>Fair, explained pricing</li>
+            <li><span class="values__mark" aria-hidden="true"></span>Thorough diagnosis, not guesswork</li>
+            <li><span class="values__mark" aria-hidden="true"></span>The same crew, visit after visit</li>
+          </ul>
+        </div>
       </div>
-      <p class="about__note wrap">Description above reflects Brazos Valley Automotive's own listing category and Google's summary of the business ("Auto-repair facility known for honest service, along with quick turnaround times") — verified on Google Maps, Aug 28, 2026. Values list is general marketing language, not sourced quotes.</p>
+      <p class="about__note wrap">Description above reflects Brazos Valley Automotive's own listing category and Google's summary of the business ("Auto-repair facility known for honest service, along with quick turnaround times") — verified on Google Maps, Aug 28, 2026. Values list is general marketing language, not sourced quotes. Both photos on this page are free-license stock photos, not photos of the real shop — see the README.</p>
     </section>
 
     <div class="rivet-divider" aria-hidden="true"></div>
@@ -175,7 +177,7 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <p class="footer__business">Brazos Valley Automotive · 1702 Ponderosa Dr, College Station, TX 77845 · <a href="tel:+19796801234">(979) 680-1234</a></p>
-      <p class="footer__credit">Site by <a href="https://lewisdigital.ctonew.app" target="_blank" rel="noopener">Lewis Digital</a> — a DBA of Lewis Tech Services LLC</p>
+      <p class="footer__credit">Designed by <a href="https://lewistechservices.com/" target="_blank" rel="noopener">Lewis Tech</a></p>
     </div>
   </footer>
 

@@ -124,23 +124,26 @@ a:focus-visible,button:focus-visible{
 }
 .hero__actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:28px;}
 
-/* -- Signature element: illustrated signboard on corrugated siding -- */
-.signplate{margin-top:52px;}
+/* -- Signature element: real hero photo, framed with the shop's roofline/siding motif -- */
+.signplate{margin-top:52px; max-width:560px;}
 .signplate__roof{
-  height:26px; max-width:520px;
+  height:26px;
   background:var(--roof);
   clip-path:polygon(0 100%, 6% 0, 94% 0, 100% 100%);
 }
-.signplate__siding{
-  max-width:520px;
-  padding:26px 22px 18px;
-  background:repeating-linear-gradient(180deg, var(--steel-light) 0px, var(--steel-light) 2px, var(--steel) 2px, var(--steel) 11px);
+.signplate__photo{
+  padding:6px;
+  background:var(--steel);
   border:1px solid var(--roof-soft);
   border-top:none;
+  line-height:0;
 }
-.signplate__board{width:100%; height:auto;}
+.signplate__photo img{
+  width:100%; height:auto; display:block;
+  aspect-ratio:3/2; object-fit:cover; object-position:center 30%;
+}
 .signplate__caption{
-  max-width:520px; margin-top:10px; font-size:0.78rem; color:var(--ink-muted); line-height:1.5;
+  margin-top:10px; font-size:0.78rem; color:var(--ink-muted); line-height:1.5;
 }
 
 /* ---------- Trust strip ---------- */
@@ -191,12 +194,27 @@ a:focus-visible,button:focus-visible{
 .services__note{margin-top:28px; font-size:0.86rem; color:var(--ink-muted); max-width:70ch;}
 .services__note a{color:var(--sign-green); font-weight:600;}
 
+.services__photo{margin-top:36px; max-width:720px;}
+.services__photo img{
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover; object-position:center 35%;
+  border:1px solid var(--line); border-top:4px solid var(--sign-green);
+}
+.services__photo figcaption{margin-top:8px; font-size:0.78rem; color:var(--ink-muted); line-height:1.5;}
+
 /* ---------- About / crew ---------- */
 .about{background:var(--paper-deep);}
 .about__grid{
   display:grid; grid-template-columns:1.4fr 1fr; gap:52px; align-items:start;
 }
 .about__copy p{margin-top:14px; max-width:56ch; color:var(--ink);}
+.about__side{display:flex; flex-direction:column; gap:24px;}
+.about__photo img{
+  width:100%; height:auto; display:block;
+  aspect-ratio:4/3; object-fit:cover;
+  border:1px solid var(--line); border-top:4px solid var(--sign-green);
+}
+.about__photo figcaption{margin-top:8px; font-size:0.76rem; color:var(--ink-muted); line-height:1.5;}
 .values{list-style:none;}
 .values li{
   display:flex; align-items:baseline; gap:12px;
