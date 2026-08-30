@@ -1,4 +1,4 @@
-# Neff's Majestic Hair Studio — Demo Site (Client #2, v3 — REVIEW & PHOTO RESEARCH REFRESH)
+# Neff's Majestic Hair Studio — Demo Site (Client #2, v3.1 — real stock photos replace AI-generated images)
 
 One-page demo website for **Neff's Majestic Hair Studio** (Bryan, TX), refined in
 **the studio's own brand**. This is the **third** iteration:
@@ -19,14 +19,53 @@ One-page demo website for **Neff's Majestic Hair Studio** (Bryan, TX), refined i
 Lightweight static site: plain HTML + CSS, no frameworks, no build step —
 deployable as-is to any static host.
 
+## Photos: v3.1 update, 2026-08-29 — real stock photos replace the AI-generated images
+
+v2/v3 used two AI-generated raster images (a moody studio interior, and a
+portrait of a female stylist working on a client). Unlike the other four
+demos in this batch, these were never flat SVG illustrations, so they didn't
+trigger the same "no images" complaint — but two things argued for replacing
+them anyway, per the owner's now-standing preference for real stock photos
+over any synthetic image, decided directly without a candidate-approval
+round: (1) consistency with the rest of the batch, and (2) the stylist
+portrait showed a woman, while every real Google review names the owner
+"Neff" with male pronouns ("he did great," "I met Neff and another
+employee") — a generic AI portrait doesn't claim to *be* Neff, but showing a
+woman in that slot sits awkwardly next to research that's consistently
+male-pronoun. The replacement photo sidesteps the question entirely by
+showing only hands and the back of a client's head — no one's face or
+gender is depicted at all.
+
+- **Hero** (`assets/hero-salon.jpg`): [pexels.com/photo/1895701](https://www.pexels.com/photo/salon-chair-beside-oil-heater-in-front-of-mirror-inside-room-1895701/)
+  ("Salon Chair Beside Oil Heater in Front of Mirror Inside Room"),
+  photographer **Lisa Fotios** — a real, warm, industrial-style barbershop
+  (exposed brick, a barber chair, styling products on a shelf), fitting the
+  "warm, relaxed, walk-in-friendly" direction the real reviews support, and
+  echoing (without reproducing) the eclectic/industrial character discovered
+  in the studio's real Facebook cover photo.
+- **About section** (`assets/stylist.jpg`): [pexels.com/photo/33461079](https://www.pexels.com/photo/barber-trimming-hair-with-clipper-and-comb-33461079/)
+  ("Barber Trimming Hair with Clipper and Comb"), photographer **Alexander
+  Mass** — a barber giving a precise fade with clippers and a comb, directly
+  matching the real "fades"/"barber" review-tag theme, shown from behind so
+  no face or gender is depicted.
+
+Both licensed under the [Pexels License](https://www.pexels.com/license/)
+(free commercial use, no attribution required, credited here anyway) and
+labeled as illustrative stock photos in their `alt` text/`figcaption` — not
+photos of Neff's Majestic, its studio, or its staff. A pre-existing
+accessibility bug was also fixed in passing: both images were previously
+wrapped in an `aria-hidden="true"` container despite carrying meaningful
+`alt` text, which hid them from screen readers entirely; they're now proper
+`<figure>` elements with visible captions.
+
 ## Files
 
 | File | Purpose |
 |------|---------|
 | `index.html` | Complete one-page site (hero, verified-highlights strip, services, find us & hours, Google rating/reviews, contact, footer) |
 | `styles.css` | All styling — client brand (lavender-plum + ivory anchor, retained from v2, plus a new charcoal + amber pairing for one section — see below) |
-| `assets/hero-salon.jpg` | AI-generated illustrative hero photo (dark, moody studio interior) — unchanged from v2 |
-| `assets/stylist.jpg` | AI-generated illustrative portrait — unchanged from v2 |
+| `assets/hero-salon.jpg` | Hero photo — free-license stock photo, replaces the v2/v3 AI-generated interior (see "Photos" below) |
+| `assets/stylist.jpg` | About-section photo — free-license stock photo, replaces the v2/v3 AI-generated portrait (see "Photos" below) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's in-person visit (OUR sales tool — Lewis Digital brand, untouched palette; only the rating line was updated to add the now-verified review count) |
 | `preview.png` | Browser screenshot of the rendered page (QA check) |
 
@@ -268,13 +307,10 @@ listing, **independently re-verified live by the Builder on 2026-08-28**
   informed by real review vocabulary (fades, barber-style cuts) for tone, but
   **not** Neff's confirmed menu. The page carries an explicit note to confirm
   by phone/Facebook message.
-- **Hero photo** (`assets/hero-salon.jpg`) and **portrait**
-  (`assets/stylist.jpg`): unchanged AI-generated images from v2 — not photos
-  of the real studio or its staff. No new images were generated in this pass
-  (no image-generation tool was available in this session); a future pass
-  could commission a more literally on-brand interior/exterior shot given the
-  new "warm neighborhood studio" mood direction, but the existing images are
-  not misleading and remain clearly disclosed as illustrative.
+- **Hero photo** (`assets/hero-salon.jpg`) and **About-section photo**
+  (`assets/stylist.jpg`): free-license stock photos — not photos of the real
+  studio or its staff. See "Photos" below for why they replaced the v2/v3
+  AI-generated images and where they came from.
 - **Google reviews section**: only the real 4.6/64 rating is shown; review
   text/cards remain an explicit placeholder ("Google reviews will appear here
   once connected") — no real review text, tags, or quotes appear as page
@@ -297,8 +333,9 @@ listing, **independently re-verified live by the Builder on 2026-08-28**
   pairing, all disclosed above) and client-brand fonts (Cormorant Garamond +
   Jost). **No Lewis gold (#C9A227 family), no Lewis charcoal #16130e, no
   Lewis cream #fbf8f1** anywhere in `index.html`/`styles.css`.
-- Footer keeps a single small credit: "Designed by Lewis Tech" (owner
-  instruction 2026-08-29: never say "Lewis Digital" on client-facing pages).
+- Footer keeps a single small credit: "Designed by Lewis Tech," linked to
+  lewistechservices.com (owner instruction 2026-08-29: never say "Lewis
+  Digital" on client-facing pages).
 - `pitch-sheet.html` palette was **not** touched — it stays in Lewis Digital
   brand (it is OUR sales tool). Only its rating line was updated to add the
   now-verified "(64 reviews)" for pitch accuracy.
