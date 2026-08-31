@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dean Plumbing & Repair — Your Free Demo Website</title>
+<style>
+  :root{
+    --charcoal:#16130e; --charcoal-soft:#201b14; --cream:#fbf8f1; --cream-deep:#f3eee1;
+    --gold:#c9a227; --gold-bright:#d9b53c; --gold-deep:#a8841c; --ink:#2a2418; --muted:#6f6755;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink); background:var(--cream); font-size:14px; line-height:1.5;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;line-height:1.15;}
+  .page{max-width:7.6in;margin:0 auto;padding:0.55in 0.6in;}
+  /* header */
+  .masthead{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold);padding-bottom:0.28in;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));color:var(--charcoal);font-family:"Playfair Display",serif;font-weight:700;font-size:20px;display:grid;place-items:center;}
+  .brand-name{font-family:"Playfair Display",serif;font-weight:700;font-size:19px;color:var(--charcoal);}
+  .brand-sub{font-size:9.5px;text-transform:uppercase;letter-spacing:0.18em;color:var(--muted);}
+  .masthead .tag{font-size:11px;font-weight:600;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.12em;text-align:right;}
+  /* title block */
+  .title-block{margin-top:0.3in;}
+  .title-block .for{font-size:11px;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold-deep);font-weight:600;}
+  .title-block h1{font-size:30px;color:var(--charcoal);margin-top:4px;}
+  .title-block .demo-line{font-size:15px;color:var(--ink);margin-top:6px;max-width:40em;}
+  /* facts strip */
+  .facts{margin-top:0.24in;background:var(--charcoal);color:var(--cream);border-radius:10px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px 26px;}
+  .facts span{font-size:12.5px;}
+  .facts b{color:var(--gold-bright);font-weight:600;}
+  .facts .note{width:100%;font-size:11px;color:#c9c1ab;margin-top:2px;}
+  /* section */
+  .section{margin-top:0.26in;}
+  .section h2{font-size:17px;color:var(--charcoal);display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+  .section h2 .num{width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--charcoal);font-size:12px;font-weight:700;display:grid;place-items:center;flex:none;}
+  .section p{color:#3a3325;}
+  /* offers */
+  .offers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2px;}
+  .offer{border:1.5px solid rgba(201,162,39,0.55);border-radius:10px;padding:13px 15px;background:var(--white,#fff);}
+  .offer h3{font-size:15px;color:var(--charcoal);}
+  .offer .price{font-family:"Playfair Display",serif;font-size:19px;font-weight:700;color:var(--gold-deep);margin-top:3px;}
+  .offer .price small{font-family:"Inter",sans-serif;font-size:11.5px;font-weight:500;color:var(--muted);}
+  .offer ul{list-style:none;margin-top:7px;}
+  .offer li{font-size:12.5px;color:#3a3325;padding-left:14px;position:relative;margin-top:3px;}
+  .offer li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .offer .cta{margin-top:9px;display:inline-block;font-size:12px;font-weight:600;color:var(--gold-deep);text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:1px;}
+  .included{margin-top:10px;font-size:12.5px;color:var(--muted);}
+  .included b{color:var(--ink);}
+  /* pay */
+  .pay{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap;}
+  .pay a{flex:1;min-width:2.2in;text-decoration:none;border-radius:9px;padding:11px 14px;color:var(--charcoal);background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:12.5px;}
+  .pay a small{font-weight:500;opacity:0.85;font-size:10.5px;}
+  .pay-note{margin-top:7px;font-size:11.5px;color:var(--muted);}
+  /* footer */
+  .footer{margin-top:0.28in;border-top:1px solid rgba(201,162,39,0.4);padding-top:0.14in;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .footer .contact{font-size:13px;}
+  .footer .contact b{color:var(--charcoal);}
+  .footer .legal{font-size:10px;color:var(--muted);}
+  @media print{
+    @page{size:letter;margin:0;}
+    body{background:#fff;}
+    .page{max-width:100%;padding:0.5in 0.55in;}
+    .offer,.facts,.pay a{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .pay a{text-decoration:none;color:var(--charcoal);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="masthead">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">LD</span>
+      <div>
+        <div class="brand-name">Lewis Digital</div>
+        <div class="brand-sub">a DBA of Lewis Tech Services LLC</div>
+      </div>
+    </div>
+    <div class="tag">Your free demo is ready</div>
+  </div>
+
+  <!-- Title -->
+  <div class="title-block">
+    <div class="for">For</div>
+    <h1>Dean Plumbing &amp; Repair</h1>
+    <p class="demo-line">We built you a <strong>free demo website</strong> — no charge, no obligation, and nothing goes live without your OK. Here's what we put together for you.</p>
+  </div>
+
+  <!-- Verified facts -->
+  <div class="facts">
+    <span><b>Plumber</b> · College Station, TX</span>
+    <span><b>9972 Brookwood Ln</b> · (979) 774-0999</span>
+    <span>Rated <b>4.5 on Google</b> (2 ratings)</span>
+    <span class="note">30+ years in service (per MapQuest) · residential &amp; commercial (per your Facebook page)</span>
+  </div>
+
+  <!-- What we built -->
+  <div class="section">
+    <h2><span class="num">1</span>What we built</h2>
+    <p>A clean, one-page website for Dean Plumbing &amp; Repair — your real name, address, phone, and your 4.5 Google rating front and center, plus your 30+ years in business and your residential-and-commercial scope, both pulled from your own listings. Your two Google ratings don't have written reviews on them yet, so we said so plainly instead of making anything up — that's the kind of honest page your customers can trust. It's built and ready to show you — you decide if it goes live.</p>
+  </div>
+
+  <!-- Offers -->
+  <div class="section">
+    <h2><span class="num">2</span>Your options</h2>
+    <div class="offers">
+      <div class="offer">
+        <h3>Basic Website</h3>
+        <div class="price">$299 <small>one-time</small> &nbsp;+&nbsp; $25<small>/mo hosting &amp; care</small></div>
+        <ul>
+          <li>Your website, designed and built for you</li>
+          <li>Hosting, backups, updates &amp; small edits handled</li>
+          <li>Your domain (renewals covered)</li>
+        </ul>
+        <a class="cta" href="https://buy.stripe.com/4gM3cvf0NbxN3fbgKg1RC00">Pay securely online →</a>
+      </div>
+      <div class="offer">
+        <h3>Bundle — most popular</h3>
+        <div class="price">$399 <small>one-time</small> &nbsp;+&nbsp; $149<small>/mo</small></div>
+        <ul>
+          <li>Everything in Basic Website</li>
+          <li><strong>AI receptionist</strong> — answers calls &amp; messages 24/7, never misses a client</li>
+        </ul>
+        <a class="cta" href="https://buy.stripe.com/00wbJ1g4R8lB8zv51y1RC01">Pay securely online →</a>
+      </div>
+    </div>
+    <p class="included"><b>Included either way:</b> Google Business Profile setup (worth claiming — your listing is currently unclaimed) and your Google reviews displayed on your site as they come in.</p>
+  </div>
+
+  <!-- Pay links -->
+  <div class="section">
+    <h2><span class="num">3</span>Ready when you are</h2>
+    <div class="pay">
+      <a href="https://buy.stripe.com/4gM3cvf0NbxN3fbgKg1RC00">Start with Basic Website <small>$299 + $25/mo</small></a>
+      <a href="https://buy.stripe.com/00wbJ1g4R8lB8zv51y1RC01">Start with the Bundle <small>$399 + $149/mo</small></a>
+    </div>
+    <p class="pay-note">Prefer to talk first? Call or reply to the email — happy to walk you through it. No pressure, ever.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="contact"><b>Jake Lewis</b> · Lewis Digital · <b>lewisdigital.ctonew.app</b></div>
+    <div class="legal">Lewis Digital — a DBA of Lewis Tech Services LLC</div>
+  </div>
+
+</div>
+</body>
+</html>
