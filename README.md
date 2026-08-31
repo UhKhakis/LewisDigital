@@ -15,6 +15,11 @@
 | **Brazos Valley Automotive** demo + pitch | [demos/brazos-valley-automotive/](https://uhkhakis.github.io/LewisDigital/demos/brazos-valley-automotive/) |
 | **Bryan Muffler & Performance** demo + pitch | [demos/bryan-muffler-performance/](https://uhkhakis.github.io/LewisDigital/demos/bryan-muffler-performance/) |
 | **Limitless Diesel & Offroad** demo + pitch | [demos/limitless-diesel-offroad/](https://uhkhakis.github.io/LewisDigital/demos/limitless-diesel-offroad/) |
+| **BCS Roofing** demo + pitch | [demos/bcs-roofing/](https://uhkhakis.github.io/LewisDigital/demos/bcs-roofing/) |
+| **Frank Seale Electric** demo + pitch | [demos/frank-seale-electric/](https://uhkhakis.github.io/LewisDigital/demos/frank-seale-electric/) |
+| **Sanchez Landscaping & Construction** demo + pitch | [demos/sanchez-landscaping/](https://uhkhakis.github.io/LewisDigital/demos/sanchez-landscaping/) |
+| **Bernado's Landscaping and Dirtworks** demo + pitch | [demos/bernados-landscaping-dirtworks/](https://uhkhakis.github.io/LewisDigital/demos/bernados-landscaping-dirtworks/) |
+| **Dean Plumbing & Repair** demo + pitch | [demos/dean-plumbing-repair/](https://uhkhakis.github.io/LewisDigital/demos/dean-plumbing-repair/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 ---
