@@ -15,8 +15,6 @@
 | **Brazos Valley Automotive** demo + pitch | [demos/brazos-valley-automotive/](https://sites.lewistechservices.com/demos/brazos-valley-automotive/) |
 | **Bryan Muffler & Performance** demo + pitch | [demos/bryan-muffler-performance/](https://sites.lewistechservices.com/demos/bryan-muffler-performance/) |
 | **Limitless Diesel & Offroad** demo + pitch | [demos/limitless-diesel-offroad/](https://sites.lewistechservices.com/demos/limitless-diesel-offroad/) |
-| **BCS Roofing** demo + pitch | [demos/bcs-roofing/](https://sites.lewistechservices.com/demos/bcs-roofing/) |
-| **Frank Seale Electric** demo + pitch | [demos/frank-seale-electric/](https://sites.lewistechservices.com/demos/frank-seale-electric/) |
 | **Sanchez Landscaping & Construction** demo + pitch | [demos/sanchez-landscaping/](https://sites.lewistechservices.com/demos/sanchez-landscaping/) |
 | **Bernado's Landscaping and Dirtworks** demo + pitch | [demos/bernados-landscaping-dirtworks/](https://sites.lewistechservices.com/demos/bernados-landscaping-dirtworks/) |
 | **Dean Plumbing & Repair** demo + pitch | [demos/dean-plumbing-repair/](https://sites.lewistechservices.com/demos/dean-plumbing-repair/) |
