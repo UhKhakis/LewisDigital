@@ -307,3 +307,22 @@ a:focus-visible, button:focus-visible {
   .trust__row { gap: 1rem 1.2rem; }
   .trust__sep { display: none; }
 }
+
+/* ---------- photo enrichment (supporting imagery) ---------- */
+.story__photo { margin-top: 2.6rem; }
+.story__photo img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 3 / 2; object-fit: cover; object-position: center 40%;
+  border: 1px solid var(--line); border-top: 4px solid var(--barn-red);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.story__photo figcaption { margin-top: 0.55rem; font-size: 0.78rem; color: var(--stone-deep); line-height: 1.5; }
+
+.services__photo { margin-top: 2.4rem; }
+.services__photo img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 16 / 9; object-fit: cover; object-position: center 45%;
+  border: 1px solid var(--line); border-top: 4px solid var(--barn-red);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.services__photo figcaption { margin-top: 0.55rem; font-size: 0.78rem; color: var(--stone-deep); line-height: 1.5; }

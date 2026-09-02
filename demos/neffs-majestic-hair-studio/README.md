@@ -58,6 +58,33 @@ wrapped in an `aria-hidden="true"` container despite carrying meaningful
 `alt` text, which hid them from screen readers entirely; they're now proper
 `<figure>` elements with visible captions.
 
+## Supporting photography: photo-enrichment pass, August 2026
+
+Two additional photos were added to the Services card grid during a
+photo-enrichment pass: `service-cut.jpg` (on the "Cuts & Fades" card) and
+`service-color.jpg` (on the "Color & Highlights" card). These are the only
+two cards in the grid carrying images.
+
+- **Source & licensing**: both are **AI-generated illustrative images**
+  (photorealistic, generated for this demo). They are NOT photographs of
+  Neff's Majestic Hair Studio, its studio, or its staff, and carry no
+  third-party photographer/license beyond the generated asset itself — no
+  Pexels/Unsplash license applies to them (unlike the hero-salon and stylist
+  photos, which are real licensed stock). This is a deliberate split, not a
+  contradiction with the v3.1 "real stock replaces AI" update above: that
+  update concerned the hero and about *portrait* slots (where a face/gender
+  question made stock the honest choice); the two services cards are
+  small, non-portrait, illustrative-only slots with no person depicted
+  end-to-end, so a generated stand-in is acceptable there per
+  `client-demo-site` §3's own menu (real licensed photo, AI stand-in, or
+  omission).
+- **Honest disclaimer**: like every other photo on this page, these are
+  **stand-ins to be swapped for Neff's Majestic's real photographs after
+  go-live.** The on-page `alt` text and a small on-card note state this
+  explicitly, and the page presents no AI image as a real photo of the
+  business. Only the name/address/phone/rating/hours facts elsewhere on the
+  page are verified.
+
 ## Files
 
 | File | Purpose |
@@ -66,6 +93,8 @@ wrapped in an `aria-hidden="true"` container despite carrying meaningful
 | `styles.css` | All styling — client brand (lavender-plum + ivory anchor, retained from v2, plus a new charcoal + amber pairing for one section — see below) |
 | `assets/hero-salon.jpg` | Hero photo — free-license stock photo, replaces the v2/v3 AI-generated interior (see "Photos" below) |
 | `assets/stylist.jpg` | About-section photo — free-license stock photo, replaces the v2/v3 AI-generated portrait (see "Photos" below) |
+| `assets/service-cut.jpg` | Services-card photo ("Cuts & Fades") — AI-generated illustrative stand-in (see "Supporting photography" below) |
+| `assets/service-color.jpg` | Services-card photo ("Color & Highlights") — AI-generated illustrative stand-in (see "Supporting photography" below) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's in-person visit (OUR sales tool — Lewis Digital brand, untouched palette; only the rating line was updated to add the now-verified review count) |
 | `preview.png` | Browser screenshot of the rendered page (QA check) |
 

@@ -90,6 +90,27 @@ Automotive, its building, or its staff.
 | `assets/hero-mechanic.jpg` | Hero photo — free-license stock photo, NOT a photo of Brazos Valley Automotive (see "Hero photo" below) |
 | `assets/services-brake.jpg` | Services section photo — same photoshoot as the hero, ties to the real "brake work" review theme (see "More photos" below) |
 | `assets/about-shopfloor.jpg` | About section photo — a real multi-bay shop floor, no people (see "More photos" below) |
+| `assets/about-consult.jpg` | About section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
+| `assets/visit-storefront.jpg` | Visit Us section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
+
+## Supporting photography: photo-enrichment pass, August 2026
+
+Two additional AI-generated photos were added during a photo-enrichment pass:
+`about-consult.jpg` (About section) and `visit-storefront.jpg` (Visit Us
+section).
+
+- **Source & licensing**: both are **AI-generated illustrative images**
+  (photorealistic, generated for this demo). They are NOT photographs of
+  Brazos Valley Automotive, its building, or its staff, and carry no
+  third-party photographer/license beyond the generated asset itself — no
+  Pexels/Unsplash license applies to them (unlike the hero, services-brake,
+  and about-shopfloor photos, which are real licensed stock).
+- **Honest disclaimer**: like every other photo on this page, these are
+  **stand-ins to be swapped for Brazos Valley Automotive's real photographs
+  after go-live.** The on-page `alt` text and `figcaption` state this
+  explicitly, and the page presents no AI image as a real photo of the
+  business. Only the name/address/phone/rating facts elsewhere on the page
+  are verified.
 
 ## Preview
 

@@ -31,6 +31,8 @@ real material — never the trade category by itself.
 | `index.html` | Complete one-page site (hero, trust strip, about/story, services, hours, reviews, contact, footer) |
 | `styles.css` | All styling — real client brand (warm cream + muted barn-red + warm stone-tan + soft bollard-yellow; Bitter + Work Sans + one Caveat signature accent) |
 | `assets/hero-mechanic.jpg` | Hero photo — free-license stock photo, NOT a photo of Bos Garage (see "Hero photo" below) |
+| `assets/about-shop.jpg` | About-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
+| `assets/services-brakes.jpg` | Services-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's in-person visit (OUR sales tool — deliberately left in Lewis Digital brand, NOT modified) |
 
 ## Preview
@@ -169,6 +171,24 @@ building, or its owner "Bo."** The page's `alt` text and `figcaption` say so
 explicitly, and so does this README. Nothing about the photo is presented as
 real to the business — only the name/address/phone/rating facts elsewhere on
 the page are verified.
+
+## Supporting photography: photo-enrichment pass, August 2026
+
+Two additional AI-generated photos were added to the About ("story") and
+Services sections during a photo-enrichment pass (`about-shop.jpg`,
+`services-brakes.jpg`):
+
+- **Source & licensing**: both are **AI-generated illustrative images**
+  (photorealistic, generated for this demo). They are NOT photographs of Bos
+  Garage, its building, its shop, or its owner "Bo," and they carry no
+  third-party photographer/license beyond the generated asset itself — no
+  Pexels/Unsplash license applies to them (unlike `hero-mechanic.jpg`, which
+  is real licensed stock).
+- **Honest disclaimer**: like every other photo on this page, these are
+  **stand-ins to be swapped for Bos Garage's real photographs after go-live.**
+  The on-page `alt` text and `figcaption` state this explicitly, and the page
+  presents no AI image as a real photo of the business. Only the
+  name/address/phone/rating facts elsewhere on the page are verified.
 
 ## Structural distinctness vs. every other demo under `demos/`
 

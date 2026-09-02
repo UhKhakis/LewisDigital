@@ -35,6 +35,8 @@ brand with one built on that real material.
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 | `assets/hero-mustang.jpg` | Hero photo — free-license stock photo, NOT a photo of Bryan Muffler & Performance (see "Photos" below) |
 | `assets/craft-exhaust-tips.jpg` | Custom-exhaust section photo — free-license stock photo (see "Photos" below) |
+| `assets/about-welding.jpg` | About-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
+| `assets/services-exhaust.jpg` | Services-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
 
 ## Preview
 
@@ -232,6 +234,25 @@ Both are licensed under the [Pexels License](https://www.pexels.com/license/)
 labeled as illustrative stock photos in their `alt` text/`figcaption` — not
 photos of Bryan Muffler & Performance, its shop, its staff, or its vintage
 Mustang.
+
+## Supporting photography: photo-enrichment pass, August 2026
+
+Two additional AI-generated photos were added during a photo-enrichment pass:
+`about-welding.jpg` (About section) and `services-exhaust.jpg` (Services
+section).
+
+- **Source & licensing**: both are **AI-generated illustrative images**
+  (photorealistic, generated for this demo). They are NOT photographs of
+  Bryan Muffler & Performance, its shop, its staff, or its work, and carry
+  no third-party photographer/license beyond the generated asset itself — no
+  Pexels/Unsplash license applies to them (unlike the hero-mustang and
+  craft-exhaust-tips photos, which are real licensed stock).
+- **Honest disclaimer**: like every other photo on this page, these are
+  **stand-ins to be swapped for Bryan Muffler & Performance's real
+  photographs after go-live.** The on-page `alt` text and `figcaption` state
+  this explicitly, and the page presents no AI image as a real photo of the
+  business. Only the name/address/phone/rating facts elsewhere on the page
+  are verified.
 
 ## What is REAL (verified & traceable)
 

@@ -647,3 +647,12 @@ a:hover { text-decoration: underline; }
   html { scroll-behavior: auto; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* ---------- photo enrichment (service card imagery) ---------- */
+.service-card--photo::before { content: none; }
+.service-card__img {
+  width: 100%; display: block;
+  aspect-ratio: 4 / 3; object-fit: cover; object-position: center 22%;
+  border-radius: 12px;
+}
+.service-card__img-note { display: block; margin-top: 0.5rem; margin-bottom: 0.9rem; font-size: 0.74rem; color: var(--ink-soft); line-height: 1.4; }

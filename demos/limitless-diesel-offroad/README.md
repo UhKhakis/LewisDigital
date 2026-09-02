@@ -62,6 +62,8 @@ Distinctive architecture vs. the other three same-trade demos:
 | `pitch-sheet.html` | Printable one-page pitch sheet for the owner's phone outreach (OUR sales tool — Lewis Digital brand, untouched) |
 | `assets/about-truck.jpg` | About-section photo — free-license stock photo (see "Photos" below) |
 | `assets/work-lifted-truck.jpg` | Work-section photo — free-license stock photo (see "Photos" below) |
+| `assets/work-turbo.jpg` | Work-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
+| `assets/work-wheels.jpg` | Work-section photo — AI-generated illustrative stand-in (see "Supporting photography" below) |
 
 ## Photos: v1.1 update, 2026-08-29
 
@@ -89,6 +91,25 @@ Both licensed under the [Pexels License](https://www.pexels.com/license/)
 labeled as illustrative stock photos in their `alt` text/`figcaption` — not
 photos of Limitless Diesel & Offroad, its shop, its staff, or any customer's
 truck.
+
+## Supporting photography: photo-enrichment pass, August 2026
+
+Two additional AI-generated photos were added during a photo-enrichment pass:
+`work-turbo.jpg` and `work-wheels.jpg`, both in the "The Work" section (shown
+as a two-up gallery above the existing lifted-truck stock photo).
+
+- **Source & licensing**: both are **AI-generated illustrative images**
+  (photorealistic, generated for this demo). They are NOT photographs of
+  Limitless Diesel & Offroad, its shop, its staff, or any customer's truck,
+  and carry no third-party photographer/license beyond the generated asset
+  itself — no Pexels/Unsplash license applies to them (unlike the
+  about-truck and work-lifted-truck photos, which are real licensed stock).
+- **Honest disclaimer**: like every other photo on this page, these are
+  **stand-ins to be swapped for Limitless Diesel & Offroad's real work
+  photographs after go-live.** The on-page `alt` text and `figcaption` state
+  this explicitly, and the page presents no AI image as a real photo of the
+  business. Only the name/address/phone/rating facts elsewhere on the page
+  are verified.
 
 ## Preview
 

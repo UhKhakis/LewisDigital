@@ -294,3 +294,20 @@ a:focus-visible,button:focus-visible{
   .reviews__score{font-size:3.2rem;}
   .footer__inner{flex-direction:column; text-align:center;}
 }
+
+/* ---------- photo enrichment (supporting imagery) ---------- */
+.about__wide { margin-top: 40px; }
+.about__wide img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 16 / 9; object-fit: cover; object-position: center 40%;
+  border: 1px solid var(--line); border-top: 4px solid var(--sign-green);
+}
+.about__wide figcaption { margin-top: 8px; font-size: 0.76rem; color: var(--ink-muted); line-height: 1.5; }
+
+.visit__photo { margin-top: 26px; max-width: 560px; }
+.visit__photo img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 16 / 9; object-fit: cover; object-position: center 45%;
+  border: 1px solid var(--line); border-left: 6px solid var(--sign-green);
+}
+.visit__photo figcaption { margin-top: 8px; font-size: 0.76rem; color: var(--ink-muted); line-height: 1.5; }

@@ -636,3 +636,15 @@ a:focus-visible, button:focus-visible {
    Section head shared
    ============================================================ */
 .section-head { max-width: 720px; }
+
+/* ---------- photo enrichment (supporting imagery) ---------- */
+.work__gallery { margin-top: 42px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.work__gallery-item { margin: 0; }
+.work__gallery-item img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 3 / 2; object-fit: cover; object-position: center 40%;
+  border: 1px solid var(--line-bright); border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--cyan-dim);
+}
+.work__gallery-item figcaption { margin-top: 8px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted-2); line-height: 1.5; }
+@media (max-width: 700px) { .work__gallery { grid-template-columns: 1fr; } }
