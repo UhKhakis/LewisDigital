@@ -10,15 +10,11 @@
 |---|---|
 | **Main site** (public) | [lewisdigital.ctonew.app](https://lewisdigital.ctonew.app) |
 | **Demos gallery** (public) | [sites.lewistechservices.com](https://sites.lewistechservices.com/) |
-| **Bos Garage** demo + pitch | [demos/bos-garage/](https://sites.lewistechservices.com/demos/bos-garage/) |
-| **Neff's Majestic** demo + pitch | [demos/neffs-majestic-hair-studio/](https://sites.lewistechservices.com/demos/neffs-majestic-hair-studio/) |
-| **Brazos Valley Automotive** demo + pitch | [demos/brazos-valley-automotive/](https://sites.lewistechservices.com/demos/brazos-valley-automotive/) |
-| **Bryan Muffler & Performance** demo + pitch | [demos/bryan-muffler-performance/](https://sites.lewistechservices.com/demos/bryan-muffler-performance/) |
 | **Limitless Diesel & Offroad** demo + pitch | [demos/limitless-diesel-offroad/](https://sites.lewistechservices.com/demos/limitless-diesel-offroad/) |
 | **Sanchez Landscaping & Construction** demo + pitch | [demos/sanchez-landscaping/](https://sites.lewistechservices.com/demos/sanchez-landscaping/) |
-| **Bernado's Landscaping and Dirtworks** demo + pitch | [demos/bernados-landscaping-dirtworks/](https://sites.lewistechservices.com/demos/bernados-landscaping-dirtworks/) |
-| **Dean Plumbing & Repair** demo + pitch | [demos/dean-plumbing-repair/](https://sites.lewistechservices.com/demos/dean-plumbing-repair/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
+
+Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
 
 ---
 
