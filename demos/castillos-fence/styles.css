@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Castillo's Fence — client brand system
+   Sourced from real research (Google Maps listing, verified 2026-09-03):
+   a family-run Bryan fence contractor, 5.0 stars from 5 reviews praising
+   professionalism and fence quality, no photos or website found on the
+   listing itself. Palette leans warm/traditional (cedar wood + charcoal
+   metal + cream) — a family-heritage feel, deliberately distinct from
+   MK Fencing & Construction's cooler, modern minimalist system. See
+   README for full sourcing.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --cedar: #a45a2a;
+  --cedar-deep: #7c4019;
+  --cedar-bright: #c17a41;
+  --charcoal: #3b3530;
+  --charcoal-deep: #26221e;
+  --cream: #f6efe2;
+  --cream-deep: #ecdfc4;
+  --rust: #8c3b28;
+  --ink: #2c261e;
+  --ink-soft: #5c5240;
+  --white: #ffffff;
+
+  --font-display: "Zilla Slab", Georgia, serif;
+  --font-body: "Mulish", "Segoe UI", sans-serif;
+
+  --container: 1160px;
+  --radius: 6px;
+  --shadow: 0 20px 44px -26px rgba(38, 34, 30, 0.4);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body { margin: 0; font-family: var(--font-body); background: var(--cream); color: var(--ink); line-height: 1.62; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: var(--cedar-deep); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--cedar); outline-offset: 2px; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; color: var(--charcoal-deep); margin: 0; line-height: 1.15; }
+p { margin: 0 0 0.9em; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cedar-deep); font-weight: 800; margin: 0 0 0.5rem; }
+.eyebrow--light { color: var(--cedar-bright); }
+
+.section { padding: 4.6rem 0; }
+.section__title { font-size: clamp(1.7rem, 2.5vw, 2.25rem); }
+.section__title--light { color: var(--cream); }
+.section__lede { color: var(--ink-soft); font-size: 1.02rem; max-width: 44em; margin-top: 0.6rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.96rem;
+  padding: 0.85rem 1.5rem; border-radius: var(--radius); border: 2px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.btn--cedar { background: var(--cedar); color: var(--white); }
+.btn--cedar:hover { background: var(--cedar-bright); transform: translateY(-1px); }
+.btn--big { font-size: 1.06rem; padding: 1.05rem 2.1rem; }
+.btn--line { border-color: rgba(255,255,255,0.6); color: var(--white); }
+.btn--line:hover { border-color: var(--white); background: rgba(255,255,255,0.12); }
+.btn--charcoal { background: var(--charcoal); color: var(--white); }
+.btn--charcoal:hover { background: var(--charcoal-deep); transform: translateY(-1px); }
+
+/* ---------- header ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--cream); border-bottom: 3px solid var(--cedar); }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 24px; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark { background: var(--charcoal); color: var(--cream); font-family: var(--font-display); font-weight: 700; font-size: 1rem; width: 40px; height: 40px; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.brand__text { display: flex; flex-direction: column; }
+.brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; color: var(--charcoal-deep); }
+.brand__tag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--ink-soft); }
+.site-nav__links { display: flex; align-items: center; gap: 1.4rem; }
+.site-nav__links a:not(.site-nav__cta) { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 0.92rem; display: none; }
+.site-nav__cta { background: var(--charcoal); color: var(--cream) !important; padding: 0.5rem 1rem; border-radius: var(--radius); font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+.site-nav__cta:hover { background: var(--charcoal-deep); }
+
+/* ---------- rail divider: signature fence-post element ---------- */
+.rail-divider { display: flex; justify-content: center; padding: 0.6rem 0; background: var(--cream); }
+.rail-divider--dark { background: var(--charcoal-deep); }
+
+/* ---------- hero: full-bleed photo, centered, warm scrim ---------- */
+.hero { position: relative; color: var(--white); }
+.hero__media { position: relative; height: 66vh; min-height: 420px; max-height: 620px; overflow: hidden; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,34,30,0.35) 0%, rgba(38,34,30,0.45) 50%, rgba(38,34,30,0.85) 100%); }
+.hero__inner { position: absolute; left: 0; right: 0; bottom: 2.4rem; text-align: center; }
+.hero__title { color: var(--white); font-size: clamp(2.3rem, 5.6vw, 3.6rem); margin-bottom: 0.7rem; }
+.hero__tagline { max-width: 32em; margin: 0 auto 1.6rem; font-size: 1.1rem; color: rgba(255,255,255,0.92); }
+.hero__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.9rem; }
+.hero__credit { text-align: center; font-size: 0.72rem; color: var(--ink-soft); padding: 0.5rem 1rem; background: var(--cream); }
+
+/* ---------- about (family story) ---------- */
+.about { background: var(--white); }
+.about__grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: start; }
+.about__copy p { color: var(--ink-soft); font-size: 1.02rem; }
+.about__source { font-size: 0.82rem; }
+
+.fact-card { background: var(--charcoal-deep); border-radius: var(--radius); padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 1.1rem; box-shadow: var(--shadow); }
+.fact-card__row { display: flex; flex-direction: column; border-bottom: 1px solid rgba(246,239,226,0.14); padding-bottom: 1rem; }
+.fact-card__row:last-child { border-bottom: none; padding-bottom: 0; }
+.fact-card__value { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; color: var(--cedar-bright); }
+.fact-card__label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(246,239,226,0.7); margin-top: 0.2rem; }
+
+/* ---------- services ---------- */
+.services { background: var(--cream); }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.3rem; margin-top: 2.2rem; }
+.service-card { background: var(--white); border: 1px solid var(--cream-deep); border-radius: var(--radius); padding: 1.5rem 1.3rem; border-left: 4px solid var(--cedar); }
+.service-card h3 { font-size: 1.02rem; margin-bottom: 0.5rem; }
+.service-card p { color: var(--ink-soft); font-size: 0.92rem; }
+.services__photo { margin: 2.2rem 0 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.services__photo img { width: 100%; height: auto; max-height: 340px; object-fit: cover; }
+.services__photo figcaption { font-size: 0.74rem; color: var(--ink-soft); background: var(--cream-deep); padding: 0.5rem 1rem; text-align: center; }
+.services__note { margin-top: 1.8rem; font-size: 0.9rem; color: var(--ink-soft); background: var(--cream-deep); border-radius: var(--radius); padding: 0.9rem 1.2rem; display: inline-block; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--charcoal-deep); }
+.reviews__grid { display: grid; grid-template-columns: 240px 1fr; gap: 2.8rem; align-items: center; margin-top: 2rem; }
+.rating-card { background: var(--white); border-radius: var(--radius); padding: 1.8rem 1.4rem; text-align: center; box-shadow: var(--shadow); }
+.rating-card__num { font-family: var(--font-display); font-size: 3.2rem; font-weight: 700; color: var(--charcoal-deep); line-height: 1; }
+.rating-card__stars { color: var(--cedar); font-size: 1.15rem; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.rating-card__count { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.4rem; }
+.reviews__copy p { color: rgba(246,239,226,0.88); font-size: 1.02rem; }
+.reviews__copy .btn { margin: 0.6rem 0; }
+.reviews__source { font-size: 0.78rem; color: rgba(246,239,226,0.6); margin-top: 0.6rem; }
+
+/* ---------- hours & find us ---------- */
+.visit { background: var(--white); }
+.visit__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6rem; }
+.visit__block h3 { font-family: var(--font-display); font-size: 1.05rem; color: var(--charcoal-deep); margin-bottom: 0.7rem; }
+.visit__block p { color: var(--ink-soft); }
+.visit__block a.btn { margin-top: 0.6rem; }
+.visit address { font-style: normal; color: var(--ink-soft); margin-bottom: 0.5rem; }
+
+/* ---------- contact ---------- */
+.contact { background: var(--cedar-deep); color: var(--white); text-align: center; padding: 4.6rem 0; }
+.contact h2 { color: var(--white); font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.8rem; }
+.contact__lede { color: rgba(255,255,255,0.88); max-width: 34em; margin: 0 auto 1.8rem; }
+.contact__meta { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 1.2rem; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--charcoal-deep); color: rgba(246,239,226,0.7); text-align: center; padding: 1.6rem 0; font-size: 0.86rem; }
+.footer a { color: var(--cedar-bright); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- responsive ---------- */
+@media (min-width: 760px) { .site-nav__links a:not(.site-nav__cta) { display: inline; } }
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .visit__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; text-align: center; }
+}
+@media (max-width: 620px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__media { height: 56vh; }
+}
