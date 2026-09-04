@@ -1,0 +1,181 @@
+/* ==========================================================================
+   All American Septic — client brand system
+   Sourced from real research (Google Business listing, verified
+   2026-09-03): a sole-proprietor, family-owned septic service in Bryan, TX
+   running since 2005 (Jordan R. Bucknum, with Jessica also answering
+   calls per reviews). Review tone: professional, courteous, respectful,
+   prompt, "works until the problem is resolved." No other septic demo
+   exists in this gallery, so this palette (deep olive-forest + rust-orange
+   + cream) is chosen freely from the trade and the reviewer language,
+   without needing to differentiate from a sibling in the same category.
+   See README for full sourcing.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Overpass+Mono:wght@400;500&display=swap');
+
+:root {
+  --olive: #33422b;
+  --olive-deep: #212c1b;
+  --olive-soft: #4f6141;
+  --rust: #b5622c;
+  --rust-bright: #d3823f;
+  --rust-deep: #8c481c;
+  --cream: #f3ede0;
+  --cream-panel: #faf6ec;
+  --white: #fffcf5;
+  --ink: #262218;
+  --ink-soft: #5c5747;
+
+  --font-display: "Roboto Slab", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Overpass Mono", "Courier New", monospace;
+
+  --container: 1120px;
+  --radius: 12px;
+  --shadow: 0 20px 44px -30px rgba(33, 44, 27, 0.45);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--rust-deep); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--rust); outline-offset: 2px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; color: var(--olive-deep); margin: 0; line-height: 1.25; }
+p { margin: 0 0 0.9em; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rust-deep);
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+.eyebrow--light { color: var(--rust-bright); }
+
+.section { padding: 4rem 0; }
+.section__title { font-size: clamp(1.6rem, 2.4vw, 2.1rem); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
+  padding: 0.85rem 1.6rem; border-radius: 8px; border: 2px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.btn--rust { background: var(--rust); color: var(--white); }
+.btn--rust:hover { background: var(--rust-bright); transform: translateY(-1px); }
+.btn--big { font-size: 1.05rem; padding: 1.05rem 2.2rem; }
+.btn--line { border-color: var(--olive); color: var(--olive); }
+.btn--line:hover { background: var(--olive); color: var(--white); }
+.btn--line-dark { border-color: var(--olive-deep); color: var(--olive-deep); }
+.btn--line-dark:hover { background: var(--olive-deep); color: var(--white); }
+
+/* ---------- header: minimal centered-ish wordmark, no sticky, no CTA button ---------- */
+.site-header { background: var(--cream); padding: 1.1rem 0; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--olive-deep); text-decoration: none; }
+.brand strong { color: var(--rust-deep); }
+.site-nav__cta { font-family: var(--font-mono); font-weight: 500; color: var(--olive-deep); text-decoration: none; border-bottom: 2px solid var(--rust); padding-bottom: 2px; }
+.site-nav__cta:hover { color: var(--rust-deep); }
+
+/* ---------- hero: plain image-right layout, no overlay, no full-bleed (signature contrast vs. other 4) ---------- */
+.hero { background: var(--white); }
+.hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; }
+.hero__title { font-size: clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom: 1.1rem; }
+.hero__tagline { color: var(--ink-soft); font-size: 1.04rem; max-width: 34em; margin-bottom: 1.7rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.6rem; }
+.hero__rating { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; background: var(--cream); padding: 0.5rem 1.1rem; border-radius: 999px; width: fit-content; }
+.hero__stars { color: var(--rust); letter-spacing: 0.12em; }
+.hero__photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.hero__photo img { width: 100%; height: 360px; object-fit: cover; }
+.hero__photo figcaption { font-size: 0.74rem; color: var(--ink-soft); background: var(--cream-panel); padding: 0.5rem 1rem; text-align: center; }
+
+/* ---------- numbered process strip (signature element) ---------- */
+.process { background: var(--cream); }
+.process__strip { display: flex; align-items: flex-start; gap: 1rem; margin-top: 2.2rem; }
+.process__step { flex: 1; background: var(--white); border-radius: var(--radius); padding: 1.8rem 1.4rem; text-align: center; box-shadow: var(--shadow); }
+.process__num {
+  display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--olive); color: var(--cream); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.9rem;
+}
+.process__step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.process__step p { color: var(--ink-soft); font-size: 0.92rem; margin: 0; }
+.process__arrow { color: var(--rust); font-size: 1.6rem; align-self: center; padding-top: 1.4rem; }
+.process__note {
+  margin-top: 1.8rem; font-size: 0.9rem; color: var(--ink-soft);
+  background: var(--white); border-radius: var(--radius); padding: 0.9rem 1.2rem; display: inline-block;
+}
+
+/* ---------- about: photo left, copy right ---------- */
+.about { background: var(--white); }
+.about__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.6rem; align-items: center; }
+.about__photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.about__photo img { width: 100%; height: 300px; object-fit: cover; }
+.about__photo figcaption { font-size: 0.74rem; color: var(--ink-soft); background: var(--cream-panel); padding: 0.5rem 1rem; text-align: center; }
+.about__copy p { color: var(--ink-soft); font-size: 1.02rem; }
+.about__source { font-size: 0.82rem; color: var(--ink-soft); margin-top: 1rem; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--cream); }
+.reviews__grid { display: grid; grid-template-columns: 220px 1fr; gap: 2.6rem; align-items: center; }
+.rating-card { background: var(--olive-deep); color: var(--white); border-radius: var(--radius); padding: 1.7rem 1.3rem; text-align: center; box-shadow: var(--shadow); }
+.rating-card__num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--rust-bright); line-height: 1; }
+.rating-card__stars { color: var(--rust-bright); font-size: 1.1rem; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.rating-card__count { font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-top: 0.4rem; }
+.reviews__copy p { color: var(--ink-soft); font-size: 1rem; }
+.reviews__cta { margin: 1.2rem 0; }
+.reviews__source { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.6rem; }
+
+/* ---------- service area ---------- */
+.area { background: var(--white); }
+.area__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+.area__card { background: var(--cream); border-radius: var(--radius); padding: 1.6rem 1.5rem; }
+.area__card h3 { color: var(--rust-deep); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+.area__card p { color: var(--ink-soft); font-size: 0.92rem; }
+.area__card--call { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.area__phone { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--olive-deep); text-decoration: none; margin-bottom: 0.5rem; }
+.area__phone:hover { color: var(--rust-deep); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--olive-deep); color: var(--white); text-align: center; padding: 4.4rem 0; }
+.contact h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
+.contact__lede { color: rgba(255,255,255,0.8); max-width: 34em; margin: 0 auto 1.8rem; }
+.contact__meta { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 1.2rem; font-family: var(--font-mono); }
+
+/* ---------- footer ---------- */
+.footer { background: var(--cream); color: var(--ink-soft); text-align: center; padding: 1.6rem 0; font-size: 0.86rem; }
+.footer a { color: var(--rust-deep); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__photo { order: -1; }
+  .process__strip { flex-direction: column; }
+  .process__arrow { display: none; }
+  .about__grid { grid-template-columns: 1fr; }
+  .area__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .hero__actions { flex-direction: column; align-items: stretch; }
+}

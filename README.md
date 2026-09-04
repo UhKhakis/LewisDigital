@@ -27,6 +27,11 @@
 | **Sunrise Pool & Spa Services** demo + pitch | [demos/sunrise-pool-spa-services/](https://sites.lewistechservices.com/demos/sunrise-pool-spa-services/) |
 | **Smart Water Irrigation Repair** demo + pitch | [demos/smart-water-irrigation-repair/](https://sites.lewistechservices.com/demos/smart-water-irrigation-repair/) |
 | **All-Tex Roofing** demo + pitch | [demos/all-tex-roofing/](https://sites.lewistechservices.com/demos/all-tex-roofing/) |
+| **Next Plumbing & Heating** demo + pitch | [demos/next-plumbing-heating/](https://sites.lewistechservices.com/demos/next-plumbing-heating/) |
+| **B & B Electric Co** demo + pitch | [demos/b-and-b-electric/](https://sites.lewistechservices.com/demos/b-and-b-electric/) |
+| **Andy's Auto Repair** demo + pitch | [demos/andys-auto-repair/](https://sites.lewistechservices.com/demos/andys-auto-repair/) |
+| **Skyes View Window Cleaning** demo + pitch | [demos/skyes-view-window-cleaning/](https://sites.lewistechservices.com/demos/skyes-view-window-cleaning/) |
+| **All American Septic** demo + pitch | [demos/all-american-septic/](https://sites.lewistechservices.com/demos/all-american-septic/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.

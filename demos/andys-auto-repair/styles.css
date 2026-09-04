@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Andy's Auto Repair — client brand system
+   Sourced from real research (Google Business listing, verified 2026-09-03):
+   the oldest business in this batch — open since 1971 — with the highest
+   review count in the whole gallery (100 reviews, 4.0 average). Review
+   tone: "treat you like family," honest, fair prices, quick, trusted even
+   with a BMW despite being a small shop. Palette is vintage service-station
+   green + cream + mustard-gold pinstripe — deliberately avoiding red, which
+   every other auto-repair demo in this gallery (Bos Garage's barn-red,
+   Bryan Muffler's sign-red, Brazos Valley's charcoal/paper, Limitless
+   Diesel's black) either already uses or trades on darkness instead. See
+   README for full sourcing.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --service-green: #1f3d30;
+  --service-green-deep: #142a20;
+  --service-green-soft: #3a5c4a;
+  --mustard: #c99a3c;
+  --mustard-bright: #dfb85e;
+  --mustard-deep: #a17724;
+  --cream: #f2ead4;
+  --cream-panel: #f9f4e6;
+  --white: #fbf7ec;
+  --ink: #22201a;
+  --ink-soft: #5b5647;
+
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body: "Work Sans", "Segoe UI", system-ui, sans-serif;
+
+  --container: 1120px;
+  --radius: 12px;
+  --shadow: 0 20px 44px -30px rgba(20, 42, 32, 0.45);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--service-green); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.02em; font-weight: 400; color: var(--service-green-deep); margin: 0; line-height: 1.15; }
+p { margin: 0 0 0.9em; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--mustard-deep);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+.eyebrow--light { color: var(--mustard-bright); }
+
+.section { padding: 4rem 0; }
+.section__title { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.section__lede { color: var(--ink-soft); font-size: 1.02rem; max-width: 44em; margin-top: 0.7rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-display); letter-spacing: 0.04em; font-size: 1.05rem;
+  padding: 0.8rem 1.7rem; border-radius: 999px; border: 2px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.btn--mustard { background: var(--mustard); color: var(--service-green-deep); }
+.btn--mustard:hover { background: var(--mustard-bright); transform: translateY(-1px); }
+.btn--big { font-size: 1.2rem; padding: 1rem 2.3rem; }
+.btn--line { border-color: var(--service-green); color: var(--service-green); }
+.btn--line:hover { background: var(--service-green); color: var(--white); }
+.btn--line-dark { border-color: var(--service-green-deep); color: var(--service-green-deep); }
+.btn--line-dark:hover { background: var(--service-green-deep); color: var(--white); }
+
+/* ---------- header ---------- */
+.site-header { background: var(--cream); border-bottom: 3px solid var(--service-green); }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 24px; }
+.brand { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+.brand__badge {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--service-green); color: var(--cream);
+  font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.02em;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  border: 2px solid var(--mustard); flex: none; line-height: 1.15;
+}
+.brand__badge small { font-size: 0.58rem; color: var(--mustard-bright); }
+.brand__name { font-family: var(--font-display); font-size: 1.3rem; color: var(--service-green-deep); letter-spacing: 0.02em; }
+.site-nav__links { display: flex; align-items: center; gap: 1.4rem; }
+.site-nav__links a:not(.site-nav__cta) { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: none; }
+.site-nav__cta { background: var(--service-green); color: var(--cream) !important; padding: 0.6rem 1.2rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.9rem; font-family: var(--font-display); letter-spacing: 0.03em; }
+.site-nav__cta:hover { background: var(--service-green-deep); }
+
+/* ---------- hero: two-tone banner + inset circular photo (signature) ---------- */
+.hero { position: relative; overflow: hidden; background: var(--cream); }
+.hero__band { position: absolute; inset: 0 0 auto 0; height: 62%; background: var(--service-green); z-index: 0; }
+.hero__band::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 6px;
+  background: repeating-linear-gradient(90deg, var(--mustard) 0 28px, var(--service-green-deep) 28px 56px);
+}
+.hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; padding: 4.4rem 0 3.4rem; }
+.hero__copy { color: var(--cream); }
+.hero__title { font-size: clamp(2.4rem, 5.5vw, 4rem); color: var(--cream); margin-bottom: 1.2rem; }
+.hero__tagline { max-width: 34em; color: rgba(242,234,212,0.88); font-size: 1.05rem; margin-bottom: 1.7rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.6rem; }
+.hero .btn--line { border-color: var(--mustard-bright); color: var(--cream); }
+.hero .btn--line:hover { background: var(--mustard-bright); color: var(--service-green-deep); }
+.hero__rating { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; background: rgba(242,234,212,0.12); color: var(--cream); padding: 0.5rem 1.1rem; border-radius: 999px; width: fit-content; }
+.hero__stars { color: var(--mustard-bright); letter-spacing: 0.12em; }
+.hero__medallion-wrap { position: relative; justify-self: center; }
+.hero__medallion {
+  width: min(280px, 80vw); height: min(280px, 80vw); border-radius: 50%; object-fit: cover;
+  border: 6px solid var(--mustard); box-shadow: var(--shadow);
+}
+.hero__stamp {
+  position: absolute; bottom: -0.6rem; right: -0.6rem; width: 74px; height: 74px; border-radius: 50%;
+  background: var(--mustard); color: var(--service-green-deep); font-family: var(--font-display);
+  font-size: 0.85rem; line-height: 1.15; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; border: 3px solid var(--white); transform: rotate(-8deg);
+}
+.hero__credit { font-size: 0.72rem; color: var(--ink-soft); padding: 0.6rem 24px; text-align: right; background: var(--white); }
+
+/* ---------- decades ribbon (signature element) ---------- */
+.decades { background: var(--white); }
+.decades__ribbon { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.4rem; position: relative; }
+.decades__ribbon::before {
+  content: ""; position: absolute; top: 0.55rem; left: 10%; right: 10%; height: 3px; background: var(--mustard); z-index: 0;
+}
+.decades__stop { position: relative; z-index: 1; padding-top: 1.6rem; }
+.decades__dot { position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--service-green); border: 3px solid var(--mustard); }
+.decades__label { display: block; font-family: var(--font-display); font-size: 1.4rem; color: var(--service-green); letter-spacing: 0.03em; margin-bottom: 0.4rem; }
+.decades__stop p { color: var(--ink-soft); font-size: 0.94rem; }
+.about__source { font-size: 0.82rem; color: var(--ink-soft); margin-top: 1.6rem; }
+
+/* ---------- services: simple list (not grid cards) ---------- */
+.services { background: var(--cream); }
+.service-list { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.service-list li { background: var(--white); border-radius: var(--radius); padding: 1.4rem 1.2rem; border-left: 4px solid var(--mustard); }
+.service-list h3 { font-family: var(--font-body); font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; color: var(--service-green-deep); }
+.service-list p { color: var(--ink-soft); font-size: 0.9rem; margin: 0; }
+.services__note {
+  margin-top: 1.8rem; font-size: 0.9rem; color: var(--ink-soft);
+  background: var(--white); border-radius: var(--radius); padding: 0.9rem 1.2rem; display: inline-block;
+}
+.services__photo { margin: 2.4rem 0 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); max-width: 640px; }
+.services__photo img { width: 100%; height: auto; max-height: 300px; object-fit: cover; }
+.services__photo figcaption { font-size: 0.76rem; color: var(--ink-soft); background: var(--white); padding: 0.5rem 1rem; text-align: center; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--white); }
+.reviews__grid { display: grid; grid-template-columns: 220px 1fr; gap: 2.6rem; align-items: center; }
+.rating-card { background: var(--service-green); color: var(--cream); border-radius: var(--radius); padding: 1.7rem 1.3rem; text-align: center; box-shadow: var(--shadow); }
+.rating-card__num { font-family: var(--font-display); font-size: 3.2rem; color: var(--mustard-bright); line-height: 1; }
+.rating-card__stars { color: var(--mustard-bright); font-size: 1.1rem; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.rating-card__count { font-size: 0.8rem; color: rgba(242,234,212,0.8); margin-top: 0.4rem; }
+.reviews__copy p { color: var(--ink-soft); font-size: 1rem; }
+.reviews__cta { margin: 1.2rem 0; }
+.reviews__source { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.6rem; }
+
+/* ---------- service area ---------- */
+.area { background: var(--cream); }
+.area__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+.area__card { background: var(--white); border-radius: var(--radius); padding: 1.6rem 1.5rem; }
+.area__card h3 { font-family: var(--font-body); color: var(--mustard-deep); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+.area__card p { color: var(--ink-soft); font-size: 0.92rem; }
+.area__card--call { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.area__phone { font-family: var(--font-display); font-size: 1.5rem; color: var(--service-green-deep); text-decoration: none; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+.area__phone:hover { color: var(--mustard-deep); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--service-green-deep); color: var(--cream); text-align: center; padding: 4.4rem 0; }
+.contact h2 { color: var(--cream); font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.8rem; }
+.contact__lede { color: rgba(242,234,212,0.82); max-width: 34em; margin: 0 auto 1.8rem; }
+.contact__meta { font-size: 0.9rem; color: rgba(242,234,212,0.6); margin-top: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--cream); color: var(--ink-soft); text-align: center; padding: 1.6rem 0; font-size: 0.86rem; border-top: 1px solid rgba(31,61,48,0.15); }
+.footer a { color: var(--service-green); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- responsive ---------- */
+@media (min-width: 760px) {
+  .site-nav__links a:not(.site-nav__cta) { display: inline; }
+}
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .hero__copy { order: 2; }
+  .hero__medallion-wrap { order: 1; }
+  .hero .hero__actions, .hero .hero__rating { margin-left: auto; margin-right: auto; justify-content: center; }
+  .service-list { grid-template-columns: repeat(2, 1fr); }
+  .decades__ribbon { grid-template-columns: 1fr; }
+  .decades__ribbon::before { display: none; }
+  .area__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .service-list { grid-template-columns: 1fr; }
+  .hero .hero__actions { flex-direction: column; align-items: stretch; }
+}
