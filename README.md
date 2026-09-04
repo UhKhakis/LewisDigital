@@ -17,6 +17,11 @@
 | **Static Heating and Air Conditioning** demo + pitch | [demos/static-heating-air-conditioning/](https://sites.lewistechservices.com/demos/static-heating-air-conditioning/) |
 | **Castillo's Fence** demo + pitch | [demos/castillos-fence/](https://sites.lewistechservices.com/demos/castillos-fence/) |
 | **MK Fencing & Construction Services** demo + pitch | [demos/mk-fencing-construction/](https://sites.lewistechservices.com/demos/mk-fencing-construction/) |
+| **Bush's Appliance Repair** demo + pitch | [demos/bushs-appliance-repair/](https://sites.lewistechservices.com/demos/bushs-appliance-repair/) |
+| **95 Locksmith LLC** demo + pitch | [demos/95-locksmith/](https://sites.lewistechservices.com/demos/95-locksmith/) |
+| **Bucket of Suds Exterior Cleaning** demo + pitch | [demos/bucket-of-suds-exterior-cleaning/](https://sites.lewistechservices.com/demos/bucket-of-suds-exterior-cleaning/) |
+| **Larry's Handyman Service** demo + pitch | [demos/larrys-handyman-service/](https://sites.lewistechservices.com/demos/larrys-handyman-service/) |
+| **DC Custom Seamless Gutters** demo + pitch | [demos/dc-custom-seamless-gutters/](https://sites.lewistechservices.com/demos/dc-custom-seamless-gutters/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
