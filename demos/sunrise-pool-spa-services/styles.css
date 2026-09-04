@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Sunrise Pool & Spa Services — client brand system
+   Sourced from real research (Google Maps listing + reviews, verified
+   2026-09-03): family-owned pool/spa maintenance run by Luis Benda, 4.9
+   stars from 10 reviews, several customers of 10+ years standing. Top
+   review-tag topics: dependable, knowledgeable staff. Palette takes the
+   business's own name literally — a coral/gold sunrise sky over pool blue
+   and deep navy-teal — distinct from every other blue-toned demo in the
+   gallery by leaning into the warm gradient rather than a flat blue. See
+   README for full sourcing.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap');
+
+:root {
+  --navy: #0d3b45;
+  --navy-deep: #082a32;
+  --pool: #1291b0;
+  --pool-bright: #33b0cc;
+  --coral: #ff7a59;
+  --coral-deep: #e2603f;
+  --gold: #ffb454;
+  --sand: #fdf6ec;
+  --sand-deep: #f5e9d4;
+  --white: #ffffff;
+  --ink: #22302f;
+  --ink-soft: #5c6b6a;
+
+  --font-display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Urbanist", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Martian Mono", "Courier New", monospace;
+
+  --container: 1160px;
+  --radius: 18px;
+  --shadow: 0 22px 48px -28px rgba(13, 59, 69, 0.4);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--sand);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--coral-deep); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; color: var(--navy); margin: 0; line-height: 1.25; }
+p { margin: 0 0 0.9em; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--coral-deep);
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+.eyebrow--light { color: var(--gold); }
+
+.section { padding: 4.4rem 0; }
+.section__title { font-size: clamp(1.6rem, 2.4vw, 2.2rem); }
+.section__lede { color: var(--ink-soft); font-size: 1.02rem; max-width: 44em; margin-top: 0.7rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+  padding: 0.85rem 1.6rem; border-radius: 999px; border: 2px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.btn--sun { background: var(--gold); color: var(--navy-deep); }
+.btn--sun:hover { background: #ffc978; transform: translateY(-1px); }
+.btn--big { font-size: 0.98rem; padding: 1.05rem 2.2rem; }
+.btn--line { border-color: rgba(255,255,255,0.65); color: var(--white); }
+.btn--line:hover { border-color: var(--white); background: rgba(255,255,255,0.12); }
+.btn--line-dark { border-color: var(--navy); color: var(--navy); }
+.btn--line-dark:hover { background: var(--navy); color: var(--white); }
+
+/* ---------- header ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--navy); }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem 24px; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark {
+  width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--coral));
+  color: var(--navy-deep); font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.brand__text { display: flex; flex-direction: column; }
+.brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--white); line-height: 1.25; }
+.brand__tag { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); }
+.site-nav__links { display: flex; align-items: center; gap: 1.3rem; }
+.site-nav__links a:not(.site-nav__cta) { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: none; }
+.site-nav__cta { background: var(--gold); color: var(--navy-deep) !important; padding: 0.55rem 1.2rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.88rem; }
+.site-nav__cta:hover { background: #ffc978; }
+
+/* ---------- hero: sunrise-gradient sky wash behind copy, photo docked bottom ---------- */
+.hero { position: relative; background: var(--navy); color: var(--white); overflow: hidden; }
+.hero__sky {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy) 40%, var(--coral) 78%, var(--gold) 100%);
+  opacity: 0.5;
+}
+.hero__inner { position: relative; padding: 4.4rem 0 2.6rem; max-width: 660px; }
+.hero__title { color: var(--white); font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-bottom: 1.1rem; }
+.hero__tagline { max-width: 34em; margin: 0 0 1.7rem; font-size: 1.04rem; color: rgba(255,255,255,0.85); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.6rem; }
+.hero__rating { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 999px; width: fit-content; }
+.hero__stars { color: var(--gold); letter-spacing: 0.12em; }
+.hero__photo { position: relative; margin: 0 24px; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; box-shadow: var(--shadow); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; max-height: 380px; }
+.hero__photo figcaption { font-size: 0.7rem; color: rgba(255,255,255,0.6); background: rgba(8,42,50,0.85); padding: 0.5rem 0.9rem; }
+
+/* ---------- signature horizon band (unique to this demo) ---------- */
+.horizon-band { height: 10px; background: linear-gradient(90deg, var(--coral), var(--gold), var(--pool-bright), var(--pool)); }
+
+/* ---------- about-first section, with fact-card ---------- */
+.about { background: var(--sand); }
+.about__grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: start; }
+.about__copy p { color: var(--ink-soft); font-size: 1.02rem; }
+.about__source { font-size: 0.82rem; color: var(--ink-soft); margin-top: 1rem; }
+
+.fact-card {
+  background: var(--navy); border-radius: var(--radius); padding: 1.8rem 1.6rem;
+  display: flex; flex-direction: column; gap: 1.1rem; box-shadow: var(--shadow);
+}
+.fact-card__row { display: flex; flex-direction: column; border-bottom: 1px solid rgba(255,255,255,0.14); padding-bottom: 1rem; }
+.fact-card__row:last-child { border-bottom: none; padding-bottom: 0; }
+.fact-card__value { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; color: var(--gold); }
+.fact-card__label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
+
+/* ---------- services ---------- */
+.services { background: var(--white); }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
+.service-card {
+  background: var(--sand); border-radius: var(--radius);
+  padding: 1.6rem 1.3rem; position: relative;
+}
+.service-card__mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%; background: var(--pool);
+  color: var(--white); margin-bottom: 0.9rem; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+}
+.service-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+.service-card p { color: var(--ink-soft); font-size: 0.92rem; }
+.services__note {
+  margin-top: 1.8rem; font-size: 0.9rem; color: var(--ink-soft);
+  background: var(--sand); border-radius: var(--radius); padding: 0.9rem 1.2rem; display: inline-block;
+}
+.services__photo { margin: 2.4rem 0 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); max-width: 420px; }
+.services__photo img { width: 100%; height: auto; max-height: 380px; object-fit: cover; }
+.services__photo figcaption { font-size: 0.76rem; color: var(--ink-soft); background: var(--sand-deep); padding: 0.5rem 1rem; text-align: center; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--sand-deep); }
+.reviews__grid { display: grid; grid-template-columns: 240px 1fr; gap: 2.6rem; align-items: center; margin-top: 2rem; }
+
+.rating-card {
+  background: var(--navy); color: var(--white); border-radius: var(--radius);
+  padding: 1.8rem 1.3rem; text-align: center; box-shadow: var(--shadow);
+}
+.rating-card__num { font-family: var(--font-display); font-size: 2.9rem; font-weight: 800; color: var(--gold); line-height: 1; }
+.rating-card__stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.rating-card__count { font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-top: 0.4rem; }
+
+.reviews__copy p { color: var(--ink-soft); font-size: 1rem; }
+.tag-cloud { list-style: none; padding: 0; margin: 1.2rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.tag-cloud li {
+  background: var(--white); border: 1px solid var(--coral);
+  border-radius: 999px; padding: 0.45rem 0.9rem; font-size: 0.86rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono);
+  color: var(--navy);
+}
+.tag-cloud li span { color: var(--coral-deep); }
+.reviews__cta { margin: 1.2rem 0; }
+.reviews__source { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.6rem; }
+
+/* ---------- service area ---------- */
+.area { background: var(--navy); color: var(--white); }
+.area__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.area__card { background: rgba(255,255,255,0.06); border-radius: var(--radius); padding: 1.6rem 1.5rem; border: 1px solid rgba(255,255,255,0.14); }
+.area__card h3 { color: var(--gold); font-size: 0.98rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.6rem; }
+.area__card p { color: rgba(255,255,255,0.82); font-size: 0.92rem; }
+.area__card--call { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.area__phone { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--white); text-decoration: none; margin-bottom: 0.5rem; }
+.area__phone:hover { color: var(--gold); }
+
+/* ---------- contact ---------- */
+.contact { background: linear-gradient(120deg, var(--coral), var(--gold)); color: var(--navy-deep); text-align: center; padding: 4.4rem 0; }
+.contact h2 { color: var(--navy-deep); font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.8rem; }
+.contact .eyebrow--light { color: var(--navy-deep); opacity: 0.7; }
+.contact__lede { color: rgba(13,59,69,0.85); max-width: 34em; margin: 0 auto 1.8rem; }
+.contact__meta { font-size: 0.88rem; color: rgba(13,59,69,0.7); margin-top: 1.2rem; font-family: var(--font-mono); }
+
+/* ---------- footer ---------- */
+.footer { background: var(--navy-deep); color: rgba(255,255,255,0.6); text-align: center; padding: 1.6rem 0; font-size: 0.86rem; }
+.footer a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- responsive ---------- */
+@media (min-width: 760px) {
+  .site-nav__links a:not(.site-nav__cta) { display: inline; }
+}
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .area__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__photo { margin: 0 12px; }
+}
