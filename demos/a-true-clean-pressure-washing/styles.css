@@ -1,0 +1,179 @@
+/* ==========================================================================
+   A True Clean Pressure Washing — client brand system
+   Sourced from real research (Google Business listing, verified 2026-09-05):
+   Ben Sanchez, a sole-proprietor pressure-washing operation in College
+   Station, TX since 2021 — 5.0 stars on a small, perfect 4-review record.
+   Reviewers single out attention to detail and personal knowledge of the
+   job (driveway/porch/patio work, rental properties).
+
+   STRUCTURALLY DISTINCT from demos/bucket-of-suds-exterior-cleaning/ (the
+   other pressure-washing demo in this gallery): that demo uses a full-bleed
+   photo hero with a dark scrim, a sticky header with a circular logo mark,
+   wave-shaped section dividers, a 3-column bubble-icon service-card grid,
+   a photo+copy "recent work" split, a dark reviews panel with a tag cloud,
+   sky-blue + sun-yellow palette, and pill-shaped buttons (Baloo 2 + Rubik).
+   This demo instead uses: a solid-color split hero with an offset rotated
+   photo card (no scrim, no full-bleed), a thin static (non-sticky) text-only
+   header with no logo mark, no wave dividers, an about-first section before
+   services, a plain checklist (no cards/bubbles) for services, a light
+   single-column reviews block (no dark panel, no tag cloud), a
+   citrus-lime + navy-charcoal palette (no blue, no yellow-sun), sharp
+   rounded-rectangle buttons, and only two typefaces (Space Grotesk + Public
+   Sans, no third/mono font) — reflecting a one-man operation rather than a
+   larger established crew. See README for the full structural-distinctness
+   diff.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy: #1c2b2e;
+  --navy-deep: #101a1c;
+  --navy-soft: #2c3f42;
+  --lime: #b6d94c;
+  --lime-bright: #cdea6f;
+  --lime-deep: #8fae2e;
+  --stone: #e9e6dd;
+  --stone-panel: #f4f2ea;
+  --white: #ffffff;
+  --ink: #1c2320;
+  --ink-soft: #5c6560;
+
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+
+  --container: 1120px;
+  --radius: 14px;
+  --shadow: 0 22px 46px -28px rgba(16, 26, 28, 0.5);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--lime-deep); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; color: var(--navy-deep); margin: 0; line-height: 1.2; }
+p { margin: 0 0 0.9em; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow { font-family: var(--font-display); font-size: 0.92rem; color: var(--lime-deep); margin: 0 0 0.4rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.eyebrow--light { color: var(--lime-deep); }
+
+.section { padding: 4.2rem 0; }
+.section__title { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.96rem;
+  padding: 0.85rem 1.6rem; border-radius: 10px; border: 2px solid transparent;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.btn--lime { background: var(--lime); color: var(--navy-deep); }
+.btn--lime:hover { background: var(--lime-bright); transform: translateY(-1px); }
+.btn--big { font-size: 1.06rem; padding: 1.05rem 2.2rem; }
+.btn--line { border-color: rgba(255,255,255,0.8); color: var(--white); }
+.btn--line:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+.btn--line-dark { border-color: var(--navy); color: var(--navy-deep); }
+.btn--line-dark:hover { background: var(--navy); color: var(--white); }
+
+/* ---------- header: thin static text-only bar, no logo mark, no sticky ---------- */
+.site-header { background: var(--white); border-bottom: 2px solid var(--stone); padding: 1rem 0; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy-deep); text-decoration: none; }
+.brand span { font-weight: 500; color: var(--ink-soft); font-size: 0.95rem; }
+.site-nav__cta { font-family: var(--font-display); font-weight: 600; color: var(--navy-deep); text-decoration: none; background: var(--lime); padding: 0.5rem 1rem; border-radius: 8px; }
+.site-nav__cta:hover { background: var(--lime-bright); }
+
+/* ---------- hero: solid color-block split + offset rotated photo card (signature) ---------- */
+.hero { background: var(--navy); color: var(--white); }
+.hero__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center; padding: 4.4rem 0; }
+.hero__title { color: var(--white); font-size: clamp(2rem, 4vw, 2.9rem); margin-bottom: 1.1rem; }
+.hero__tagline { color: rgba(255,255,255,0.78); font-size: 1.04rem; max-width: 32em; margin-bottom: 1.7rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.6rem; }
+.hero__rating { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; background: rgba(182,217,76,0.14); border: 1px solid rgba(182,217,76,0.4); padding: 0.5rem 1.1rem; border-radius: 999px; width: fit-content; }
+.hero__stars { color: var(--lime); letter-spacing: 0.12em; }
+.hero__photo { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transform: rotate(2.5deg); border: 6px solid var(--white); }
+.hero__photo img { width: 100%; height: 340px; object-fit: cover; }
+.hero__photo figcaption { font-size: 0.72rem; color: var(--ink-soft); background: var(--white); padding: 0.5rem 1rem; text-align: center; transform: rotate(0); }
+
+/* ---------- intro (about-first, before services) ---------- */
+.intro { background: var(--stone-panel); }
+.intro__copy { color: var(--ink-soft); font-size: 1.06rem; max-width: 50em; margin-top: 0.6rem; }
+.about__source { font-size: 0.82rem; color: var(--ink-soft); margin-top: 1.2rem; }
+
+/* ---------- services: plain checklist, no cards ---------- */
+.services { background: var(--white); }
+.checklist { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 2rem; max-width: 42em; }
+.checklist li { position: relative; padding-left: 2rem; font-size: 1.04rem; font-weight: 500; color: var(--navy-deep); }
+.checklist li::before {
+  content: "\2713"; position: absolute; left: 0; top: -0.1rem; width: 1.4rem; height: 1.4rem; border-radius: 50%;
+  background: var(--lime); color: var(--navy-deep); font-size: 0.82rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.services__note { margin-top: 1.8rem; font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---------- reviews: "work order" receipt-styled card ---------- */
+.reviews { background: var(--stone-panel); }
+.reviews__grid { display: grid; grid-template-columns: 220px 1fr; gap: 2.6rem; align-items: center; }
+.rating-card {
+  background: var(--white); border: 2px dashed var(--navy); border-radius: 6px; padding: 1.6rem 1.3rem; text-align: center;
+  font-family: var(--font-display);
+}
+.rating-card__num { font-size: 2.9rem; font-weight: 700; color: var(--navy-deep); line-height: 1; }
+.rating-card__stars { color: var(--lime-deep); font-size: 1.1rem; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.rating-card__count { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reviews__copy p { color: var(--ink-soft); font-size: 1rem; }
+.reviews__cta { margin: 1.2rem 0; }
+.reviews__source { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.6rem; }
+
+/* ---------- service area ---------- */
+.area { background: var(--white); }
+.area__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+.area__card { background: var(--stone-panel); border-radius: var(--radius); padding: 1.6rem 1.5rem; }
+.area__card h3 { color: var(--navy-deep); font-size: 0.98rem; margin-bottom: 0.6rem; }
+.area__card p { color: var(--ink-soft); font-size: 0.92rem; }
+.area__card--call { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.area__phone { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--navy-deep); text-decoration: none; margin-bottom: 0.5rem; }
+.area__phone:hover { color: var(--lime-deep); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--lime); color: var(--navy-deep); text-align: center; padding: 4.4rem 0; }
+.contact h2 { color: var(--navy-deep); font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.8rem; }
+.contact__lede { color: rgba(28,43,46,0.8); max-width: 34em; margin: 0 auto 1.8rem; }
+.contact .btn--lime { background: var(--navy-deep); color: var(--lime-bright); }
+.contact .btn--lime:hover { background: var(--navy-soft); }
+.contact__meta { font-size: 0.9rem; color: rgba(28,43,46,0.7); margin-top: 1.2rem; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); text-align: center; padding: 1.6rem 0; font-size: 0.86rem; }
+.footer a { color: var(--lime-bright); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; padding: 3rem 0; }
+  .hero__photo { order: -1; transform: rotate(0); max-width: 420px; margin: 0 auto; }
+  .checklist { grid-template-columns: 1fr; }
+  .area__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .hero__actions { flex-direction: column; align-items: stretch; }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Garcia Solar Screens — Your Free Demo Website</title>
+<style>
+  :root{
+    --charcoal:#16130e; --charcoal-soft:#201b14; --cream:#fbf8f1; --cream-deep:#f3eee1;
+    --gold:#c9a227; --gold-bright:#d9b53c; --gold-deep:#a8841c; --ink:#2a2418; --muted:#6f6755;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink); background:var(--cream); font-size:14px; line-height:1.5;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;line-height:1.15;}
+  .page{max-width:7.6in;margin:0 auto;padding:0.55in 0.6in;}
+  .masthead{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold);padding-bottom:0.28in;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));color:var(--charcoal);font-family:"Playfair Display",serif;font-weight:700;font-size:20px;display:grid;place-items:center;}
+  .brand-name{font-family:"Playfair Display",serif;font-weight:700;font-size:19px;color:var(--charcoal);}
+  .brand-sub{font-size:9.5px;text-transform:uppercase;letter-spacing:0.18em;color:var(--muted);}
+  .masthead .tag{font-size:11px;font-weight:600;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.12em;text-align:right;}
+  .title-block{margin-top:0.3in;}
+  .title-block .for{font-size:11px;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold-deep);font-weight:600;}
+  .title-block h1{font-size:30px;color:var(--charcoal);margin-top:4px;}
+  .title-block .demo-line{font-size:15px;color:var(--ink);margin-top:6px;max-width:40em;}
+  .facts{margin-top:0.24in;background:var(--charcoal);color:var(--cream);border-radius:10px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px 26px;}
+  .facts span{font-size:12.5px;}
+  .facts b{color:var(--gold-bright);font-weight:600;}
+  .section{margin-top:0.26in;}
+  .section h2{font-size:17px;color:var(--charcoal);display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+  .section h2 .num{width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--charcoal);font-size:12px;font-weight:700;display:grid;place-items:center;flex:none;}
+  .section p{color:#3a3325;}
+  .offers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2px;}
+  .offer{border:1.5px solid rgba(201,162,39,0.55);border-radius:10px;padding:13px 15px;background:#fff;}
+  .offer h3{font-size:15px;color:var(--charcoal);}
+  .offer .price{font-family:"Playfair Display",serif;font-size:19px;font-weight:700;color:var(--gold-deep);margin-top:3px;}
+  .offer .price small{font-family:"Inter",sans-serif;font-size:11.5px;font-weight:500;color:var(--muted);}
+  .offer ul{list-style:none;margin-top:7px;}
+  .offer li{font-size:12.5px;color:#3a3325;padding-left:14px;position:relative;margin-top:3px;}
+  .offer li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .addon{border:1.5px dashed rgba(201,162,39,0.6);border-radius:10px;padding:12px 15px;margin-top:10px;background:rgba(201,162,39,0.06);}
+  .addon h3{font-size:14px;color:var(--charcoal);}
+  .addon .price{font-family:"Playfair Display",serif;font-size:16px;font-weight:700;color:var(--gold-deep);margin-top:2px;}
+  .addon p{font-size:12px;color:var(--muted);margin-top:4px;}
+  .included{margin-top:10px;font-size:12.5px;color:var(--muted);}
+  .included b{color:var(--ink);}
+  .terms{margin-top:10px;font-size:11px;color:var(--muted);border-top:1px dashed var(--cream-deep);padding-top:9px;}
+  .cta-row{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap;}
+  .cta-row a{flex:1;min-width:2.2in;text-decoration:none;border-radius:9px;padding:11px 14px;color:var(--charcoal);background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:12.5px;}
+  .cta-row a small{font-weight:500;opacity:0.85;font-size:10.5px;}
+  .pay-note{margin-top:7px;font-size:11.5px;color:var(--muted);}
+  .footer{margin-top:0.28in;border-top:1px solid rgba(201,162,39,0.4);padding-top:0.14in;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .footer .contact{font-size:13px;}
+  .footer .contact b{color:var(--charcoal);}
+  .footer .legal{font-size:10px;color:var(--muted);}
+  @media print{
+    @page{size:letter;margin:0;}
+    body{background:#fff;}
+    .page{max-width:100%;padding:0.5in 0.55in;}
+    .offer,.addon,.facts,.cta-row a{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .cta-row a{text-decoration:none;color:var(--charcoal);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">LD</span>
+      <div>
+        <div class="brand-name">Lewis Digital</div>
+        <div class="brand-sub">a DBA of Lewis Tech Services LLC</div>
+      </div>
+    </div>
+    <div class="tag">Your free demo is ready</div>
+  </div>
+
+  <div class="title-block">
+    <div class="for">For</div>
+    <h1>Garcia Solar Screens</h1>
+    <p class="demo-line">We built you a <strong>free demo website</strong> — no charge, no obligation, and nothing goes live without your OK. Here's what we put together for you.</p>
+  </div>
+
+  <div class="facts">
+    <span><b>Solar screens</b> &middot; Bryan, TX &middot; family-owned since 1968</span>
+    <span><b>4308 Vintage Hills Dr</b> &middot; (979) 324-7997</span>
+    <span>Rated <b>5.0 on Google</b> (7 reviews)</span>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">1</span>What we built</h2>
+    <p>A clean, one-page website for Garcia Solar Screens — your real name, address, phone, your 57-year family history, and your perfect 5.0 Google rating front and center, with a place for your hours, services, and customer reviews. It's built and ready to show you. You decide if it goes live.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">2</span>Your options</h2>
+    <div class="offers">
+      <div class="offer">
+        <h3>Basic Website</h3>
+        <div class="price">$299 <small>one-time</small> &nbsp;+&nbsp; $25<small>/mo hosting &amp; care</small></div>
+        <ul>
+          <li>Your website, designed and built for you</li>
+          <li>Hosting, backups, updates &amp; small edits handled</li>
+          <li>Your domain (passed through at actual cost, no markup)</li>
+        </ul>
+      </div>
+      <div class="offer">
+        <h3>Bundle — most popular</h3>
+        <div class="price">$399 <small>one-time</small> &nbsp;+&nbsp; $149<small>/mo</small></div>
+        <ul>
+          <li>Everything in Basic Website</li>
+          <li>Priority support &amp; expanded page set</li>
+          <li>Built to grow with the business</li>
+        </ul>
+      </div>
+    </div>
+    <div class="addon">
+      <h3>Add-on: AI Receptionist</h3>
+      <div class="price">$199<small>/mo</small></div>
+      <p>Answers calls &amp; messages 24/7 so a call never goes unanswered. Available as an add-on to either plan above — priced and billed separately, never bundled into the website price.</p>
+    </div>
+    <p class="included"><b>Included either way:</b> Google Business Profile setup, and your Google reviews displayed on your site.</p>
+    <p class="terms"><b>Terms:</b> requested changes beyond routine care are billed at $75/hr (1-hr minimum). Hosting runs on a 12-month term, then continues month-to-month with 30 days' notice to cancel. Canceling before the 12-month term ends means the remaining balance for that term is due.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">3</span>Ready when you are</h2>
+    <div class="cta-row">
+      <a href="tel:+19793247997">Call to get started <small>(979) 324-7997</small></a>
+    </div>
+    <p class="pay-note">Prefer to talk first? Call, or reply to the email — happy to walk you through it. No pressure, ever. We'll send a secure payment link once you're ready to move forward.</p>
+  </div>
+
+  <div class="footer">
+    <div class="contact"><b>Jake Lewis</b> &middot; Lewis Digital &middot; <b>lewistechservices.com</b></div>
+    <div class="legal">Lewis Digital — a DBA of Lewis Tech Services LLC</div>
+  </div>
+
+</div>
+</body>
+</html>
