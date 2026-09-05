@@ -32,6 +32,11 @@
 | **Andy's Auto Repair** demo + pitch | [demos/andys-auto-repair/](https://sites.lewistechservices.com/demos/andys-auto-repair/) |
 | **Skyes View Window Cleaning** demo + pitch | [demos/skyes-view-window-cleaning/](https://sites.lewistechservices.com/demos/skyes-view-window-cleaning/) |
 | **All American Septic** demo + pitch | [demos/all-american-septic/](https://sites.lewistechservices.com/demos/all-american-septic/) |
+| **Capitol Custom Tile** demo + pitch | [demos/capitol-custom-tile/](https://sites.lewistechservices.com/demos/capitol-custom-tile/) |
+| **M&A Flooring** demo + pitch | [demos/ma-flooring/](https://sites.lewistechservices.com/demos/ma-flooring/) |
+| **M&C Countertops** demo + pitch | [demos/mc-countertops/](https://sites.lewistechservices.com/demos/mc-countertops/) |
+| **Hernandez Pro Drywall & Painting** demo + pitch | [demos/hernandez-pro-drywall-painting/](https://sites.lewistechservices.com/demos/hernandez-pro-drywall-painting/) |
+| **CRC Cabinet** demo + pitch | [demos/crc-cabinet/](https://sites.lewistechservices.com/demos/crc-cabinet/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
@@ -63,6 +68,11 @@ Archived after the 2026-09-01 cold-call round (pulled from the public gallery, s
 - `demos/static-heating-air-conditioning/` — Demo site + pitch sheet for Static Heating and Air Conditioning (Bryan, TX)
 - `demos/castillos-fence/` — Demo site + pitch sheet for Castillo's Fence (Bryan, TX)
 - `demos/mk-fencing-construction/` — Demo site + pitch sheet for MK Fencing & Construction Services (Brazos County, TX)
+- `demos/capitol-custom-tile/` — Demo site + pitch sheet for Capitol Custom Tile (Bryan, TX)
+- `demos/ma-flooring/` — Demo site + pitch sheet for M&A Flooring (College Station, TX)
+- `demos/mc-countertops/` — Demo site + pitch sheet for M&C Countertops (Bryan, TX)
+- `demos/hernandez-pro-drywall-painting/` — Demo site + pitch sheet for Hernandez Pro Drywall & Painting (Bryan, TX)
+- `demos/crc-cabinet/` — Demo site + pitch sheet for CRC Cabinet (Bryan, TX)
 - `ai-receptionist/` — AI Receptionist (Cloudflare Worker: website chat, SMS, voice, social DMs + per-client encrypted keys, usage ledger, honesty guard)
 
 Each demo folder is self-contained static HTML/CSS (relative asset paths) with its own README listing exactly what is verified vs. placeholder.

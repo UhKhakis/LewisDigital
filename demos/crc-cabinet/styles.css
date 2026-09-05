@@ -1,0 +1,136 @@
+/* CRC Cabinet — bespoke brand system
+   Heritage woodworking palette: deep walnut + warm cream + a cool pewter-sage
+   accent (brushed cabinet hardware), for a custom cabinet maker in business
+   since 1988. Typography leans literary/refined (Prata) to match "custom,
+   built to last" positioning; Cutive Mono nods to a shop that's been
+   handwriting job tickets since before most software existed. */
+
+:root {
+  --cream: #f2e9d8;
+  --cream-deep: #e6d8ba;
+  --paper: #faf5ea;
+  --walnut: #4a3423;
+  --walnut-deep: #2e2013;
+  --walnut-line: rgba(74, 52, 35, 0.16);
+  --pewter: #8a8f7e;
+  --pewter-bright: #a3a894;
+  --pewter-deep: #666b5c;
+  --ivory: #fffbf2;
+
+  --font-display: "Prata", Georgia, serif;
+  --font-body: "Livvic", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Cutive Mono", "Courier New", monospace;
+
+  --radius: 4px;
+  --shadow: 0 22px 46px -20px rgba(46, 32, 19, 0.4);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Livvic:wght@400;500;600;700&family=Cutive+Mono&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--cream); color: var(--walnut-deep); line-height: 1.66; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; color: var(--walnut-deep); margin: 0; line-height: 1.16; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--pewter-deep); font-weight: 700; }
+
+/* ---------- Nav ---------- */
+.nav { position: sticky; top: 0; z-index: 40; background: rgba(242,233,216,0.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--walnut-line); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; max-width: 1120px; margin: 0 auto; gap: 16px; flex-wrap: wrap; }
+.nav__brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav__joint { width: 36px; height: 36px; flex: none; }
+.nav__name { font-family: var(--font-display); font-size: 1.24rem; color: var(--walnut-deep); }
+.nav__sub { display: block; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pewter-deep); margin-top: 2px; }
+.nav__links { display: flex; align-items: center; gap: 26px; }
+.nav__links a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--walnut); }
+.nav__links a:hover { color: var(--pewter-deep); }
+.nav__cta { background: var(--walnut); color: var(--ivory) !important; padding: 10px 18px; border-radius: var(--radius); font-weight: 700 !important; text-decoration: none; }
+.nav__cta:hover { background: var(--walnut-deep); }
+@media (max-width: 780px) { .nav__links { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; color: var(--ivory); overflow: hidden; }
+.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(46,32,19,0.32) 0%, rgba(46,32,19,0.56) 55%, rgba(30,20,12,0.94) 100%); }
+.hero__content { position: relative; z-index: 2; padding: 0 28px 68px; max-width: 1120px; margin: 0 auto; width: 100%; }
+.hero__eyebrow { color: var(--pewter-bright); margin-bottom: 18px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.hero h1 { font-size: clamp(2.3rem, 5.2vw, 3.7rem); color: var(--ivory); max-width: 15em; }
+.hero__lede { margin-top: 22px; max-width: 33em; font-size: 1.1rem; color: rgba(255,251,242,0.86); font-family: var(--font-body); }
+.hero__row { margin-top: 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 26px; border-radius: var(--radius); font-weight: 700; text-decoration: none; font-size: 0.96rem; font-family: var(--font-body); transition: transform 0.15s ease, background 0.15s ease; }
+.btn-primary { background: var(--pewter-deep); color: var(--ivory); }
+.btn-primary:hover { background: var(--pewter); transform: translateY(-1px); }
+.btn-ghost { border: 1px solid rgba(255,251,242,0.4); color: var(--ivory); }
+.btn-ghost:hover { border-color: var(--pewter-bright); color: var(--pewter-bright); }
+.rating-chip { display: flex; align-items: center; gap: 9px; font-size: 0.9rem; color: var(--ivory); background: rgba(0,0,0,0.28); border: 1px solid rgba(255,251,242,0.22); padding: 9px 14px; border-radius: var(--radius); font-family: var(--font-body); }
+.rating-chip b { font-family: var(--font-display); font-size: 1.1rem; color: var(--pewter-bright); }
+
+/* ---------- Heritage timeline (legitimate: real 1988-to-today chronology) ---------- */
+.heritage { background: var(--walnut-deep); color: var(--cream); padding: 56px 0; }
+.timeline { display: flex; align-items: center; gap: 0; max-width: 620px; margin: 0 auto; }
+.timeline__point { display: flex; flex-direction: column; align-items: center; text-align: center; flex: none; width: 160px; }
+.timeline__dot { width: 16px; height: 16px; border-radius: 50%; background: var(--pewter-bright); border: 3px solid var(--walnut-deep); box-shadow: 0 0 0 2px var(--pewter-bright); margin-bottom: 14px; }
+.timeline__year { font-family: var(--font-display); font-size: 1.5rem; color: var(--ivory); }
+.timeline__label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pewter-bright); margin-top: 4px; }
+.timeline__line { flex: 1; height: 2px; background: repeating-linear-gradient(90deg, var(--pewter) 0 8px, transparent 8px 16px); }
+@media (max-width: 560px) { .timeline { flex-direction: column; gap: 20px; } .timeline__line { width: 2px; height: 40px; } }
+
+/* ---------- Sections ---------- */
+.section { padding: 92px 0; }
+.section--tight { padding: 72px 0; }
+.section-head { max-width: 40em; margin-bottom: 50px; }
+.section-head h2 { font-size: clamp(1.85rem, 3.3vw, 2.5rem); margin-top: 12px; }
+.section-head p { margin-top: 16px; font-size: 1.02rem; color: #5c4a37; font-family: var(--font-body); }
+
+/* Services grid */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card { background: var(--paper); border: 1px solid var(--walnut-line); padding: 28px 24px; border-radius: var(--radius); }
+.service-card h3 { font-size: 1.14rem; margin-bottom: 10px; }
+.service-card p { font-size: 0.93rem; color: #5c4a37; font-family: var(--font-body); }
+.service-card .confirm { display: block; margin-top: 12px; font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--pewter-deep); }
+
+/* Craft photo section */
+.craft { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+@media (max-width: 860px) { .craft { grid-template-columns: 1fr; } }
+.craft figure { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 8px solid var(--paper); }
+.craft img { width: 100%; object-fit: cover; aspect-ratio: 5/4; }
+.craft figcaption { font-size: 0.72rem; color: #7a6650; opacity: 0.75; margin-top: 8px; }
+.craft__copy h2 { font-size: clamp(1.75rem, 3vw, 2.2rem); }
+.craft__copy p { margin-top: 16px; font-size: 1.02rem; color: #5c4a37; font-family: var(--font-body); max-width: 32em; }
+.craft__list { margin-top: 22px; display: grid; gap: 10px; }
+.craft__list li { list-style: none; display: flex; gap: 10px; align-items: baseline; font-size: 0.96rem; font-family: var(--font-body); }
+.craft__list li::before { content: "◆"; font-size: 0.6rem; color: var(--pewter-deep); }
+
+/* Reviews */
+.reviews-band { background: var(--cream-deep); }
+.reviews-inner { display: flex; gap: 44px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.rating-block { display: flex; align-items: center; gap: 20px; }
+.rating-num { font-family: var(--font-display); font-size: 3.8rem; color: var(--walnut-deep); line-height: 1; }
+.stars { color: var(--pewter-deep); font-size: 1.25rem; letter-spacing: 2px; }
+.rating-meta { font-size: 0.9rem; color: #5c4a37; margin-top: 6px; font-family: var(--font-body); }
+.review-placeholder { flex: 1; min-width: 260px; max-width: 460px; background: var(--paper); border: 1px dashed var(--pewter-deep); border-radius: var(--radius); padding: 20px 22px; font-size: 0.93rem; color: #5c4a37; font-family: var(--font-body); }
+.review-placeholder b { color: var(--walnut-deep); }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 52px; }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
+.contact-card { background: var(--walnut-deep); color: var(--cream); border-radius: var(--radius); padding: 40px 36px; }
+.contact-card h3 { color: var(--ivory); font-size: 1.44rem; }
+.contact-card .row { margin-top: 22px; display: flex; flex-direction: column; gap: 16px; }
+.contact-card .row a, .contact-card .row span { color: rgba(242,233,216,0.9); text-decoration: none; font-size: 0.98rem; font-family: var(--font-body); }
+.contact-card .label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pewter-bright); display: block; margin-bottom: 4px; }
+.contact-card .cta { margin-top: 26px; }
+.map-note { border-radius: var(--radius); background: var(--paper); border: 1px solid var(--walnut-line); padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+.map-note h4 { font-size: 1.12rem; }
+.map-note p { margin-top: 12px; font-size: 0.94rem; color: #5c4a37; font-family: var(--font-body); }
+
+footer { background: var(--walnut); color: rgba(242,233,216,0.85); padding: 34px 0; text-align: center; font-size: 0.86rem; }
+footer a { color: var(--pewter-bright); text-decoration: none; font-weight: 600; }
+footer a:hover { text-decoration: underline; }
+.footer-note { margin-top: 6px; font-size: 0.76rem; color: rgba(242,233,216,0.5); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
