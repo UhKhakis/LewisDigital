@@ -37,6 +37,10 @@
 | **M&C Countertops** demo + pitch | [demos/mc-countertops/](https://sites.lewistechservices.com/demos/mc-countertops/) |
 | **Hernandez Pro Drywall & Painting** demo + pitch | [demos/hernandez-pro-drywall-painting/](https://sites.lewistechservices.com/demos/hernandez-pro-drywall-painting/) |
 | **CRC Cabinet** demo + pitch | [demos/crc-cabinet/](https://sites.lewistechservices.com/demos/crc-cabinet/) |
+| **J&W Asphalt Paving** demo + pitch | [demos/jw-asphalt-paving/](https://sites.lewistechservices.com/demos/jw-asphalt-paving/) |
+| **Amanda's Mobile Grooming** demo + pitch | [demos/amandas-mobile-grooming/](https://sites.lewistechservices.com/demos/amandas-mobile-grooming/) |
+| **Bryan Awnings** demo + pitch | [demos/bryan-awnings/](https://sites.lewistechservices.com/demos/bryan-awnings/) |
+| **Custom Classic Upholstery** demo + pitch | [demos/custom-classic-upholstery/](https://sites.lewistechservices.com/demos/custom-classic-upholstery/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
