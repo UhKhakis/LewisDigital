@@ -1,0 +1,218 @@
+/* ============================================================
+   Gomez Shoe Repair — client-branded demo site
+   Brand system: SOURCED from real research (Google Maps listing +
+   reviews, verified 2026-09-21) — run by Tomas & Eva Gomez, nearly a
+   40-year connection to shoe repair in College Station per a
+   long-time customer's review, praised repeatedly for craftsmanship
+   on boot restoration (including Lucchese boots). Palette derived
+   from the trade's own workbench materials — walnut leather-dye
+   brown, aged-brass/verdigris patina green, warm rust leather-dye
+   accent, parchment — a craftsman's-workbench identity, deliberately
+   NOT the heritage-badge/award look used for Sam's Shoe Service (its
+   same-trade sibling in this batch — see README for the full diff).
+   Typography: Literata (warm book/craft serif) + Catamaran (body) +
+   Space Mono (small labels).
+   This page carries ZERO Lewis Digital branding.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Catamaran:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --walnut: #4e3524;
+  --walnut-deep: #2f1f14;
+  --walnut-darker: #211509;
+  --verdigris: #5c8a7c;
+  --verdigris-deep: #3c6357;
+  --rust: #b25b34;
+  --rust-deep: #8a4225;
+  --parchment: #f2e8d5;
+  --parchment-deep: #e8dabf;
+  --paper: #faf5ea;
+  --ink: #2a1f16;
+  --muted-on-dark: #cdbfa9;
+  --muted-on-light: #6c5c47;
+
+  --font-display: "Literata", Georgia, serif;
+  --font-body: "Catamaran", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
+
+  --radius: 4px;
+  --shadow: 0 24px 50px -28px rgba(33, 21, 9, 0.55);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: min(1080px, 92%); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; color: var(--walnut-darker); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--rust); outline-offset: 2px; }
+
+/* stitched-seam divider motif — the site's signature element */
+.stitch-divider { height: 1px; border: none; background: none; position: relative; margin: 0; }
+.stitch-divider::before {
+  content: ""; display: block; height: 0;
+  border-top: 2px dashed var(--rust); opacity: 0.55;
+}
+
+.eyebrow {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.74rem;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--rust-deep);
+  margin-bottom: 0.9rem;
+}
+.eyebrow--onwalnut { color: var(--verdigris); }
+.section { padding: 4.4rem 0; }
+.section__title { font-size: clamp(1.7rem, 3vw, 2.25rem); max-width: 22em; }
+.section__lede { margin-top: 0.9rem; color: var(--muted-on-light); max-width: 46em; font-size: 1.03rem; }
+
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+  padding: 0.85rem 1.7rem; border-radius: var(--radius); font-family: var(--font-body);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--rust { background: var(--rust); color: var(--parchment); }
+.btn--rust:hover { background: var(--rust-deep); }
+.btn--line { border-color: var(--verdigris); color: var(--walnut-darker); }
+.btn--line:hover { background: var(--verdigris); color: var(--paper); }
+.btn--line-onwalnut { border-color: var(--parchment); color: var(--parchment); }
+.btn--line-onwalnut:hover { background: var(--parchment); color: var(--walnut-darker); }
+.btn--big { font-size: 1.05rem; padding: 1rem 2.1rem; }
+
+/* ---------- minimal header (no link list — small, personal workshop feel) ---------- */
+.site-header { background: var(--paper); border-bottom: 1px solid var(--parchment-deep); }
+.header__row { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 1rem 0; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--walnut); color: var(--parchment);
+  font-family: var(--font-display); font-size: 1.05rem; display: flex; align-items: center; justify-content: center; flex: none;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand__name { font-family: var(--font-display); font-size: 1.05rem; color: var(--walnut-darker); font-weight: 600; }
+.brand__tag { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rust-deep); }
+.header__cta { display: flex; align-items: center; gap: 1rem; }
+.header__phone { font-family: var(--font-mono); font-size: 0.92rem; color: var(--walnut-darker); text-decoration: none; display: none; }
+.header__phone:hover { color: var(--rust); }
+@media (min-width: 640px) { .header__phone { display: inline; } }
+
+/* ---------- hero: asymmetric, large workbench photo dominant ---------- */
+.hero { background: var(--paper); }
+.hero__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 0; align-items: stretch; }
+.hero__copy { padding: 4rem 3rem 4rem 0; display: flex; flex-direction: column; justify-content: center; }
+.hero__title { font-size: clamp(2rem, 3.6vw, 2.7rem); margin-bottom: 1.1rem; }
+.hero__title em { font-style: italic; color: var(--rust); }
+.hero__tagline { max-width: 30em; color: var(--muted-on-light); font-size: 1.05rem; margin-bottom: 1.7rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.5rem; }
+.hero__address { font-family: var(--font-mono); font-size: 0.84rem; color: var(--muted-on-light); }
+.hero__photo { position: relative; min-height: 420px; }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero__badge {
+  position: absolute; bottom: 1.6rem; left: 1.6rem; background: var(--walnut-darker); color: var(--parchment);
+  padding: 0.85rem 1.2rem; border-radius: var(--radius); box-shadow: var(--shadow);
+  font-family: var(--font-mono); font-size: 0.82rem;
+}
+.hero__badge strong { color: var(--verdigris); font-size: 1.15rem; display: block; font-family: var(--font-display); }
+.hero__photo-caption {
+  position: absolute; bottom: 0; right: 0; background: rgba(33,21,9,0.78); color: var(--muted-on-dark);
+  font-size: 0.68rem; padding: 0.4rem 0.7rem;
+}
+
+/* ---------- craftsmanship spotlight: large single photo + story ---------- */
+.spotlight { background: var(--walnut-darker); color: var(--parchment); padding: 4.6rem 0; }
+.spotlight__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2rem; align-items: center; }
+.spotlight .eyebrow { color: var(--verdigris); }
+.spotlight__title { color: var(--parchment); font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.spotlight__text { margin-top: 1.1rem; color: var(--muted-on-dark); font-size: 1.03rem; max-width: 34em; }
+.spotlight__source { margin-top: 1rem; font-size: 0.82rem; color: var(--muted-on-dark); opacity: 0.8; }
+.spotlight__photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.spotlight__photo img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; }
+.spotlight__caption { margin-top: 0.6rem; font-size: 0.72rem; color: var(--muted-on-dark); opacity: 0.75; }
+
+/* ---------- about: meet Tomas & Eva ---------- */
+.about { background: var(--paper); }
+.about__grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; max-width: 52em; margin-top: 2rem; }
+.about__quote {
+  border-left: 3px dashed var(--rust); padding-left: 1.4rem; font-size: 1.1rem; font-style: italic;
+  color: var(--walnut-darker); font-family: var(--font-display);
+}
+.about__copy p { color: var(--muted-on-light); font-size: 1.02rem; margin-top: 1rem; }
+.about__source { margin-top: 1.2rem; font-size: 0.84rem; color: var(--muted-on-light); }
+
+/* ---------- services: simple list, not a grid (deliberately narrower than Sam's) ---------- */
+.services { background: var(--parchment); }
+.service-list { list-style: none; margin-top: 2.2rem; display: flex; flex-direction: column; max-width: 44em; }
+.service-list li { display: flex; gap: 1.2rem; padding: 1.2rem 0; border-bottom: 1px dashed var(--parchment-deep); align-items: baseline; }
+.service-list li:first-child { border-top: 1px dashed var(--parchment-deep); }
+.service-list__mark { font-family: var(--font-mono); color: var(--rust); font-size: 0.85rem; flex: none; width: 1.6rem; }
+.service-list__body h3 { font-size: 1.03rem; color: var(--walnut-darker); margin-bottom: 0.3rem; }
+.service-list__body p { font-size: 0.92rem; color: var(--muted-on-light); }
+.services__note { margin-top: 2rem; font-size: 0.9rem; color: var(--muted-on-light); max-width: 44em; }
+.services__note a { color: var(--rust-deep); font-weight: 700; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--paper); }
+.reviews__grid { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.rating-badge { text-align: center; background: var(--verdigris); color: var(--walnut-darker); border-radius: var(--radius); padding: 2.2rem 1.5rem; box-shadow: var(--shadow); }
+.rating-badge__num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; }
+.rating-badge__stars { color: var(--walnut-darker); letter-spacing: 0.14em; font-size: 1.1rem; margin: 0.4rem 0; }
+.rating-badge__count { font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.8; }
+.reviews__copy p { font-size: 1.02rem; color: var(--muted-on-light); margin-bottom: 1rem; }
+.reviews__placeholder { font-style: italic; color: var(--muted-on-light); border-left: 3px dashed var(--rust); padding-left: 1rem; margin: 1.1rem 0 1.3rem; }
+.reviews__source { font-size: 0.82rem; color: var(--muted-on-light); }
+
+/* ---------- hours / find us ---------- */
+.hours { background: var(--parchment); }
+.hours__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin-top: 2.2rem; }
+.info-card { background: var(--paper); border-radius: var(--radius); padding: 1.7rem 1.8rem; border: 1px solid var(--parchment-deep); }
+.info-card h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--walnut-darker); }
+.info-card p { margin-bottom: 0.7rem; font-size: 0.98rem; }
+.info-card p a { color: var(--rust-deep); text-decoration: none; font-weight: 700; }
+.info-card p a:hover { text-decoration: underline; }
+.info-card__muted { font-size: 0.86rem !important; color: var(--muted-on-light); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--walnut-darker); color: var(--parchment); text-align: center; padding: 4.6rem 0; }
+.contact__title { color: var(--parchment); font-size: clamp(1.7rem, 3.6vw, 2.3rem); }
+.contact__text { margin: 1.1rem auto 1.8rem; max-width: 34em; color: var(--muted-on-dark); font-size: 1.05rem; }
+.contact__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact__directions { margin-top: 1.6rem; font-size: 0.9rem; }
+.contact__directions a { color: var(--verdigris); text-decoration: none; font-weight: 700; }
+.contact__directions a:hover { text-decoration: underline; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--walnut-darker); color: var(--muted-on-dark); font-size: 0.85rem; border-top: 1px solid rgba(92,138,124,0.3); }
+.footer__inner { display: flex; flex-direction: column; gap: 0.35rem; align-items: center; text-align: center; padding: 1.7rem 0; }
+.footer a { color: var(--verdigris); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__copy { padding: 3rem 0 2.4rem; }
+  .hero__photo { min-height: 320px; order: -1; }
+  .spotlight__grid { grid-template-columns: 1fr; }
+  .spotlight__photo { max-width: 380px; margin-inline: auto; order: -1; }
+  .hours__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; text-align: center; }
+  .reviews__placeholder { border-left: none; border-top: 3px dashed var(--rust); padding-left: 0; padding-top: 0.9rem; }
+}
+@media (max-width: 640px) {
+  .section { padding: 3.2rem 0; }
+  .hero__actions, .contact__actions { flex-direction: column; align-items: stretch; }
+  .service-list li { flex-direction: column; gap: 0.3rem; }
+}

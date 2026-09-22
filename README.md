@@ -49,6 +49,11 @@
 | **A True Clean Pressure Washing** demo + pitch | [demos/a-true-clean-pressure-washing/](https://sites.lewistechservices.com/demos/a-true-clean-pressure-washing/) |
 | **Aggieland Septic Service** demo + pitch | [demos/aggieland-septic-service/](https://sites.lewistechservices.com/demos/aggieland-septic-service/) |
 | **Garcia Solar Screens** demo + pitch | [demos/garcia-solar-screens/](https://sites.lewistechservices.com/demos/garcia-solar-screens/) |
+| **Sam's Shoe Service** demo + pitch | [demos/sams-shoe-service/](https://sites.lewistechservices.com/demos/sams-shoe-service/) |
+| **Gomez Shoe Repair** demo + pitch | [demos/gomez-shoe-repair/](https://sites.lewistechservices.com/demos/gomez-shoe-repair/) |
+| **Soto's Mufflers** demo + pitch | [demos/sotos-mufflers/](https://sites.lewistechservices.com/demos/sotos-mufflers/) |
+| **Exhaust Works LLC** demo + pitch | [demos/exhaust-works/](https://sites.lewistechservices.com/demos/exhaust-works/) |
+| **Allstar Carpet Cleaning & Repair** demo + pitch | [demos/allstar-carpet-cleaning/](https://sites.lewistechservices.com/demos/allstar-carpet-cleaning/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
@@ -93,6 +98,11 @@ Archived after the 2026-09-01 cold-call round (pulled from the public gallery, s
 - `demos/a-true-clean-pressure-washing/` — Demo site + pitch sheet for A True Clean Pressure Washing (College Station, TX)
 - `demos/aggieland-septic-service/` — Demo site + pitch sheet for Aggieland Septic Service (Bryan, TX)
 - `demos/garcia-solar-screens/` — Demo site + pitch sheet for Garcia Solar Screens (Bryan, TX)
+- `demos/sams-shoe-service/` — Demo site + pitch sheet for Sam's Shoe Service (Bryan, TX)
+- `demos/gomez-shoe-repair/` — Demo site + pitch sheet for Gomez Shoe Repair (College Station, TX)
+- `demos/sotos-mufflers/` — Demo site + pitch sheet for Soto's Mufflers (Bryan, TX)
+- `demos/exhaust-works/` — Demo site + pitch sheet for Exhaust Works LLC (Bryan, TX)
+- `demos/allstar-carpet-cleaning/` — Demo site + pitch sheet for Allstar Carpet Cleaning & Repair (College Station, TX)
 - `ai-receptionist/` — AI Receptionist (Cloudflare Worker: website chat, SMS, voice, social DMs + per-client encrypted keys, usage ledger, honesty guard)
 
 Each demo folder is self-contained static HTML/CSS (relative asset paths) with its own README listing exactly what is verified vs. placeholder.

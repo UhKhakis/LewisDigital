@@ -1,0 +1,232 @@
+/* ============================================================
+   Soto's Mufflers — client-branded demo site
+   Brand system: SOURCED from real research (Google Maps listing +
+   reviews, verified 2026-09-21) — a father-and-son muffler, exhaust,
+   and light-mechanic shop on Finfeather Rd in Bryan, real reviews
+   noting cash-only service, Flowmaster installs, diesel exhaust work,
+   and rim restoration. Palette: gunmetal + oxidized-pipe rust + chrome
+   + a caution-tag mustard yellow — a working garage/toolbox identity,
+   deliberately different from the red-signboard/asphalt look already
+   used by Bryan Muffler & Performance (a different muffler shop
+   elsewhere in this repo) and structurally distinct from Exhaust Works
+   LLC, its same-trade sibling in this batch (see README for the diff).
+   Typography: Khand (condensed industrial display) + Overpass (body) +
+   JetBrains Mono (shop-ticket labels).
+   This page carries ZERO Lewis Digital branding.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700&family=Overpass:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --gunmetal: #23262b;
+  --gunmetal-raised: #2f333a;
+  --gunmetal-line: #3d424a;
+  --rust: #b5502a;
+  --rust-deep: #8a3a1c;
+  --chrome: #b9c2c6;
+  --chrome-deep: #7d868b;
+  --caution: #e8a53d;
+  --caution-deep: #b87c22;
+  --paper: #f1ede4;
+  --paper-deep: #e6ded0;
+  --ink: #211f1a;
+  --muted-on-dark: #b7bdc2;
+  --muted-on-light: #5c584d;
+
+  --font-display: "Khand", "Arial Narrow", sans-serif;
+  --font-body: "Overpass", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --radius: 8px;
+  --shadow: 0 20px 44px -24px rgba(0, 0, 0, 0.6);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: min(1140px, 92%); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.01em; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--caution); outline-offset: 2px; }
+
+/* galvanized ripple texture — signature background element */
+.ripple-bg {
+  background-image: repeating-linear-gradient(180deg, rgba(185,194,198,0.06) 0px, rgba(185,194,198,0.06) 2px, transparent 2px, transparent 7px);
+}
+
+.eyebrow {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.74rem;
+  text-transform: uppercase; letter-spacing: 0.16em; color: var(--rust);
+  font-weight: 500; margin-bottom: 0.9rem;
+}
+.eyebrow--onlight { color: var(--rust-deep); }
+.section { padding: 4.6rem 0; }
+.section__title { color: var(--paper); font-size: clamp(1.7rem, 3.2vw, 2.3rem); max-width: 22em; }
+.section__title--dark { color: var(--gunmetal); }
+.section__lede { margin-top: 0.9rem; color: var(--muted-on-dark); max-width: 46em; font-size: 1.02rem; }
+.section__lede--dark { color: var(--muted-on-light); }
+
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+  padding: 0.85rem 1.7rem; border-radius: var(--radius); font-family: var(--font-body);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--rust { background: var(--rust); color: var(--paper); }
+.btn--rust:hover { background: var(--rust-deep); }
+.btn--caution { background: var(--caution); color: var(--gunmetal); }
+.btn--caution:hover { background: var(--caution-deep); color: var(--paper); }
+.btn--line { border-color: var(--chrome); color: var(--paper); }
+.btn--line:hover { border-color: var(--caution); color: var(--caution); }
+.btn--line-dark { border-color: var(--gunmetal); color: var(--gunmetal); }
+.btn--line-dark:hover { background: var(--gunmetal); color: var(--paper); }
+.btn--big { font-size: 1.05rem; padding: 1rem 2.1rem; }
+
+/* ---------- header ---------- */
+.site-header { background: var(--gunmetal); border-bottom: 3px solid var(--rust); position: sticky; top: 0; z-index: 60; }
+.header__row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 0.8rem 0; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark {
+  width: 42px; height: 42px; border-radius: 6px; background: var(--rust); color: var(--paper);
+  font-family: var(--font-display); font-size: 1.3rem; display: flex; align-items: center; justify-content: center; flex: none;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand__name { font-family: var(--font-display); font-size: 1.15rem; color: var(--paper); text-transform: uppercase; }
+.brand__tag { font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--chrome); }
+.site-nav { display: flex; align-items: center; gap: 1.5rem; }
+.site-nav a:not(.site-nav__cta) { display: none; color: var(--muted-on-dark); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.site-nav a:not(.site-nav__cta):hover { color: var(--paper); }
+.site-nav__cta { background: var(--caution); color: var(--gunmetal) !important; padding: 0.55rem 1.15rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.site-nav__cta:hover { background: var(--caution-deep); color: var(--paper) !important; }
+@media (min-width: 860px) { .site-nav a:not(.site-nav__cta) { display: inline; } }
+
+/* ---------- hero ---------- */
+.hero { background: var(--gunmetal); color: var(--paper); }
+.hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3rem; align-items: center; padding: 3.8rem 0 3.2rem; }
+.hero__title { color: var(--paper); font-size: clamp(2.2rem, 4.4vw, 3.2rem); margin-bottom: 1.1rem; }
+.hero__title em { font-style: normal; color: var(--rust); }
+.hero__tagline { max-width: 32em; color: var(--muted-on-dark); font-size: 1.05rem; margin-bottom: 1.7rem; font-family: var(--font-body); text-transform: none; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.5rem; }
+.hero__address { font-family: var(--font-mono); font-size: 0.84rem; color: var(--muted-on-dark); }
+.photo-frame { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--gunmetal-line); }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+.photo-caption { margin-top: 0.55rem; font-size: 0.72rem; color: var(--chrome-deep); text-transform: none; }
+
+/* ---------- quick-facts strip: father & son, cash-only ---------- */
+.facts { background: var(--gunmetal-raised); border-top: 1px solid var(--gunmetal-line); border-bottom: 1px solid var(--gunmetal-line); }
+.facts__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; padding: 2rem 0; }
+.fact { text-align: center; }
+.fact__icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.fact__label { font-family: var(--font-display); font-size: 1.15rem; color: var(--paper); text-transform: uppercase; }
+.fact__sub { font-family: var(--font-mono); font-size: 0.76rem; color: var(--chrome); margin-top: 0.3rem; }
+
+/* ---------- services list ---------- */
+.services { background: var(--paper); }
+.service-list { list-style: none; margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 2rem; max-width: 56em; }
+.service-list li { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--paper-deep); align-items: baseline; }
+.service-list__mark { font-family: var(--font-mono); color: var(--rust); font-size: 0.85rem; flex: none; }
+.service-list__body h3 { font-size: 1rem; color: var(--gunmetal); text-transform: none; margin-bottom: 0.2rem; }
+.service-list__body p { font-size: 0.9rem; color: var(--muted-on-light); }
+.services__note { margin-top: 2rem; font-size: 0.9rem; color: var(--muted-on-light); max-width: 56em; }
+.services__note a { color: var(--rust-deep); font-weight: 700; }
+
+/* ---------- shop-rules chalkboard aside ---------- */
+.rules { background: var(--gunmetal); color: var(--paper); }
+.rules__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.chalkboard {
+  background: #1b2320; border: 10px solid #6b4a30; border-radius: 4px; padding: 1.8rem 2rem;
+  box-shadow: var(--shadow); font-family: "Khand", cursive;
+}
+.chalkboard__title { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--caution); margin-bottom: 1rem; }
+.chalkboard ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.chalkboard li { color: #eef2ea; font-size: 1.15rem; padding-left: 1.4rem; position: relative; }
+.chalkboard li::before { content: "\2713"; position: absolute; left: 0; color: var(--caution); }
+.rules__photo .photo-frame img { aspect-ratio: 4/3; }
+
+/* ---------- about ---------- */
+.about { background: var(--paper); }
+.about__copy { max-width: 52em; margin-top: 1.4rem; }
+.about__copy p { color: var(--muted-on-light); font-size: 1.02rem; margin-bottom: 1rem; text-transform: none; }
+.about__source { margin-top: 1rem; font-size: 0.84rem; color: var(--muted-on-light); }
+
+/* ---------- hours / find us: cash-only ticket stub ---------- */
+.hours { background: var(--gunmetal-raised); color: var(--paper); }
+.hours__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin-top: 2.2rem; }
+.info-card { background: var(--gunmetal); border-radius: var(--radius); padding: 1.7rem 1.8rem; border: 1px solid var(--gunmetal-line); }
+.info-card h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--paper); text-transform: uppercase; }
+.info-card p { margin-bottom: 0.7rem; font-size: 0.98rem; text-transform: none; color: var(--muted-on-dark); }
+.info-card p a { color: var(--caution); text-decoration: none; font-weight: 700; }
+.info-card p a:hover { text-decoration: underline; }
+.info-card__muted { font-size: 0.84rem !important; }
+.ticket-stub {
+  background: var(--caution); color: var(--gunmetal); border-radius: var(--radius);
+  padding: 1.7rem 1.8rem; font-family: var(--font-mono); position: relative;
+  box-shadow: var(--shadow);
+}
+.ticket-stub::before, .ticket-stub::after {
+  content: ""; position: absolute; top: 50%; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gunmetal-raised); transform: translateY(-50%);
+}
+.ticket-stub::before { left: -10px; }
+.ticket-stub::after { right: -10px; }
+.ticket-stub__label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.9rem; font-weight: 700; }
+.ticket-stub__row { display: flex; justify-content: space-between; padding: 0.45rem 0; border-bottom: 1px dashed rgba(35,38,43,0.3); font-size: 0.86rem; }
+.ticket-stub__row:last-of-type { border-bottom: none; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--paper); }
+.reviews__grid { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.rating-badge { text-align: center; background: var(--rust); color: var(--paper); border-radius: var(--radius); padding: 2.2rem 1.5rem; box-shadow: var(--shadow); }
+.rating-badge__num { font-family: var(--font-display); font-size: 3rem; }
+.rating-badge__stars { color: var(--caution); letter-spacing: 0.14em; font-size: 1.1rem; margin: 0.4rem 0; }
+.rating-badge__count { font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.9; }
+.reviews__copy p { font-size: 1.02rem; color: var(--muted-on-light); margin-bottom: 1rem; text-transform: none; }
+.reviews__placeholder { font-style: italic; color: var(--muted-on-light); border-left: 4px solid var(--rust); padding-left: 1rem; margin: 1.1rem 0 1.3rem; text-transform: none; }
+.reviews__source { font-size: 0.82rem; color: var(--muted-on-light); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--gunmetal); color: var(--paper); text-align: center; padding: 4.8rem 0; }
+.contact__title { color: var(--paper); font-size: clamp(1.9rem, 3.8vw, 2.5rem); }
+.contact__text { margin: 1.1rem auto 1.8rem; max-width: 34em; color: var(--muted-on-dark); font-size: 1.05rem; text-transform: none; font-family: var(--font-body); }
+.contact__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact__directions { margin-top: 1.6rem; font-size: 0.9rem; text-transform: none; }
+.contact__directions a { color: var(--caution); text-decoration: none; font-weight: 700; }
+.contact__directions a:hover { text-decoration: underline; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--gunmetal); color: var(--muted-on-dark); font-size: 0.85rem; border-top: 1px solid var(--gunmetal-line); }
+.footer__inner { display: flex; flex-direction: column; gap: 0.35rem; align-items: center; text-align: center; padding: 1.8rem 0; text-transform: none; }
+.footer a { color: var(--caution); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__photo { order: -1; max-width: 420px; margin-inline: auto; }
+  .facts__row { grid-template-columns: 1fr; gap: 1.6rem; }
+  .rules__grid { grid-template-columns: 1fr; }
+  .rules__photo { order: -1; max-width: 420px; margin-inline: auto; }
+  .hours__grid { grid-template-columns: 1fr; }
+  .service-list { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; text-align: center; }
+  .reviews__placeholder { border-left: none; border-top: 4px solid var(--rust); padding-left: 0; padding-top: 0.9rem; }
+}
+@media (max-width: 640px) {
+  .section { padding: 3.4rem 0; }
+  .hero__actions, .contact__actions { flex-direction: column; align-items: stretch; }
+}

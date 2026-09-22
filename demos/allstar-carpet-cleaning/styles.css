@@ -1,0 +1,220 @@
+/* ============================================================
+   Allstar Carpet Cleaning & Repair — client-branded demo site
+   Brand system: SOURCED from real research (Google Maps listing +
+   reviews, verified 2026-09-21) — owner Chris, "Aggie owned &
+   operated" since 2009 (per brief), 4.9 stars from 19 reviews, a
+   repeat customer of over 15 years. Palette pairs a deep Aggie-maroon
+   (a legitimate nod to the real, business-stated "Aggie owned" claim
+   — Texas A&M's own color) with a fresh sage green and warm linen —
+   deliberately NOT blue (most cleaning/HVAC demos in this repo lean
+   blue) and NOT the teal/terracotta system already used by
+   1st Choice Steam Cleaning, the other carpet-cleaning demo in this
+   repo — see README for the full diff.
+   Typography: Rokkitt (sturdy, trustworthy slab) + Asap (body) +
+   DM Mono (small labels).
+   This page carries ZERO Lewis Digital branding.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600;700&family=Asap:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --maroon: #5c1a2e;
+  --maroon-deep: #3d0f1e;
+  --maroon-bright: #7c2540;
+  --sage: #7a9b7e;
+  --sage-deep: #4f6b53;
+  --sage-bright: #94b598;
+  --linen: #f7f2e7;
+  --linen-deep: #ede3d0;
+  --white: #fffcf6;
+  --ink: #2b2420;
+  --muted-on-dark: #d9c9ce;
+  --muted-on-light: #635a4f;
+
+  --font-display: "Rokkitt", Georgia, serif;
+  --font-body: "Asap", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", "Courier New", monospace;
+
+  --radius: 12px;
+  --shadow: 0 22px 46px -26px rgba(43, 36, 32, 0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--linen);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: min(1140px, 92%); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; color: var(--maroon-deep); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.76rem;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--sage-deep);
+  margin-bottom: 0.9rem;
+}
+.eyebrow--onmaroon { color: var(--sage-bright); }
+.section { padding: 4.6rem 0; }
+.section__title { font-size: clamp(1.7rem, 3vw, 2.3rem); max-width: 22em; }
+.section__lede { margin-top: 0.9rem; color: var(--muted-on-light); max-width: 46em; font-size: 1.02rem; }
+
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+  padding: 0.85rem 1.7rem; border-radius: var(--radius); font-family: var(--font-body);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--maroon { background: var(--maroon); color: var(--white); }
+.btn--maroon:hover { background: var(--maroon-deep); }
+.btn--sage { background: var(--sage); color: var(--maroon-deep); }
+.btn--sage:hover { background: var(--sage-deep); color: var(--white); }
+.btn--line { border-color: var(--white); color: var(--white); }
+.btn--line:hover { background: var(--white); color: var(--maroon-deep); }
+.btn--line-dark { border-color: var(--maroon); color: var(--maroon-deep); }
+.btn--line-dark:hover { background: var(--maroon); color: var(--white); }
+.btn--big { font-size: 1.05rem; padding: 1rem 2.1rem; }
+
+/* ---------- header: NOT sticky — deliberately different from 1st Choice's sticky teal header ---------- */
+.site-header { background: var(--white); border-bottom: 1px solid var(--linen-deep); }
+.header__row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 0; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark {
+  width: 42px; height: 42px; border-radius: 8px; background: var(--maroon); color: var(--linen);
+  font-family: var(--font-display); font-size: 1.1rem; display: flex; align-items: center; justify-content: center; flex: none;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand__name { font-family: var(--font-display); font-size: 1.02rem; color: var(--maroon-deep); }
+.brand__tag { font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage-deep); }
+.site-nav { display: flex; align-items: center; gap: 1.5rem; }
+.site-nav a:not(.site-nav__cta) { display: none; color: var(--muted-on-light); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.site-nav a:not(.site-nav__cta):hover { color: var(--maroon); }
+.site-nav__cta { background: var(--maroon); color: var(--white) !important; padding: 0.55rem 1.15rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.site-nav__cta:hover { background: var(--maroon-deep); }
+@media (min-width: 860px) { .site-nav a:not(.site-nav__cta) { display: inline; } }
+
+/* ---------- hero: full-bleed photo with overlay ---------- */
+.hero { position: relative; color: var(--white); }
+.hero__bg { position: relative; min-height: 560px; display: flex; align-items: flex-end; }
+.hero__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__bg::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(61,15,30,0.94) 10%, rgba(61,15,30,0.5) 55%, rgba(61,15,30,0.2) 100%); }
+.hero__inner { position: relative; padding: 3.2rem 0 3.4rem; max-width: 38em; }
+.hero__badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--sage); color: var(--maroon-deep); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 999px; margin-bottom: 1.2rem; }
+.hero__title { color: var(--white); font-size: clamp(2.1rem, 4.2vw, 3rem); margin-bottom: 1.1rem; }
+.hero__title em { font-style: normal; color: var(--sage-bright); }
+.hero__tagline { color: var(--muted-on-dark); font-size: 1.06rem; margin-bottom: 1.7rem; max-width: 32em; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.5rem; }
+.hero__address { font-family: var(--font-mono); font-size: 0.84rem; color: var(--muted-on-dark); }
+.hero__photo-caption { position: relative; text-align: right; font-size: 0.68rem; color: var(--muted-on-dark); padding: 0.5rem 0; }
+
+/* ---------- services: list with icons, not cards ---------- */
+.services { background: var(--linen); }
+.service-rows { list-style: none; margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem 2.4rem; max-width: 60em; }
+.service-rows li { display: flex; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--linen-deep); align-items: flex-start; }
+.service-rows__icon { font-size: 1.3rem; flex: none; width: 2rem; }
+.service-rows__body h3 { font-size: 1rem; color: var(--maroon-deep); margin-bottom: 0.25rem; }
+.service-rows__body p { font-size: 0.9rem; color: var(--muted-on-light); }
+.services__note { margin-top: 2rem; font-size: 0.9rem; color: var(--muted-on-light); background: var(--white); border-radius: var(--radius); padding: 1rem 1.3rem; border-left: 4px solid var(--sage); max-width: 60em; }
+.services__note a { color: var(--maroon); font-weight: 700; }
+
+/* ---------- "The Chris difference" about section ---------- */
+.owner { background: var(--white); }
+.owner__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.owner__photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.owner__photo img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.owner__caption { margin-top: 0.55rem; font-size: 0.72rem; color: var(--muted-on-light); }
+.owner__copy p { color: var(--muted-on-light); font-size: 1.02rem; margin-bottom: 1rem; }
+.owner__source { margin-top: 1rem; font-size: 0.84rem; color: var(--muted-on-light); }
+
+/* ---------- Aggie-owned trust strip: diagonal maroon sweep ---------- */
+.trust {
+  position: relative; background: var(--maroon); color: var(--white); overflow: hidden;
+  padding: 2.4rem 0;
+}
+.trust::before {
+  content: ""; position: absolute; top: 0; right: -10%; width: 60%; height: 220%;
+  background: var(--maroon-bright); transform: rotate(-14deg); opacity: 0.35;
+}
+.trust__row { position: relative; display: flex; align-items: center; justify-content: center; gap: 1.4rem; flex-wrap: wrap; text-align: center; }
+.trust__icon { font-size: 1.8rem; }
+.trust__text { font-family: var(--font-display); font-size: 1.15rem; }
+.trust__sub { width: 100%; font-family: var(--font-mono); font-size: 0.74rem; opacity: 0.8; margin-top: 0.4rem; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--linen); }
+.reviews__grid { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.rating-badge { text-align: center; background: var(--maroon); color: var(--white); border-radius: var(--radius); padding: 2.2rem 1.5rem; box-shadow: var(--shadow); }
+.rating-badge__num { font-family: var(--font-display); font-size: 3rem; }
+.rating-badge__stars { color: var(--sage-bright); letter-spacing: 0.14em; font-size: 1.1rem; margin: 0.4rem 0; }
+.rating-badge__count { font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.85; }
+.reviews__copy p { font-size: 1.02rem; color: var(--muted-on-light); margin-bottom: 1rem; }
+.reviews__placeholder { font-style: italic; color: var(--muted-on-light); border-left: 4px solid var(--maroon); padding-left: 1rem; margin: 1.1rem 0 1.3rem; }
+.reviews__source { font-size: 0.82rem; color: var(--muted-on-light); }
+
+/* ---------- service area ---------- */
+.area { background: var(--white); }
+.area__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
+.area__card { background: var(--linen); border-radius: var(--radius); padding: 1.5rem 1.4rem; text-align: center; }
+.area__card h3 { font-size: 0.98rem; color: var(--maroon-deep); }
+
+/* ---------- hours / find us ---------- */
+.hours { background: var(--linen); }
+.hours__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin-top: 2.2rem; }
+.info-card { background: var(--white); border-radius: var(--radius); padding: 1.7rem 1.8rem; border: 1px solid var(--linen-deep); }
+.info-card h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--maroon-deep); }
+.info-card p { margin-bottom: 0.7rem; font-size: 0.98rem; }
+.info-card p a { color: var(--maroon); text-decoration: none; font-weight: 700; }
+.info-card p a:hover { text-decoration: underline; }
+.info-card__muted { font-size: 0.86rem !important; color: var(--muted-on-light); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--maroon-deep); color: var(--white); text-align: center; padding: 4.8rem 0; }
+.contact__title { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+.contact__text { margin: 1.1rem auto 1.8rem; max-width: 34em; color: var(--muted-on-dark); font-size: 1.05rem; }
+.contact__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact__directions { margin-top: 1.6rem; font-size: 0.9rem; }
+.contact__directions a { color: var(--sage-bright); text-decoration: none; font-weight: 700; }
+.contact__directions a:hover { text-decoration: underline; }
+
+/* ---------- footer ---------- */
+.footer { background: var(--maroon-deep); color: var(--muted-on-dark); font-size: 0.85rem; border-top: 1px solid rgba(122,155,126,0.25); }
+.footer__inner { display: flex; flex-direction: column; gap: 0.35rem; align-items: center; text-align: center; padding: 1.8rem 0; }
+.footer a { color: var(--sage-bright); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ---------- floating call button: mobile only, distinct interaction ---------- */
+.float-call {
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 80; display: none;
+  text-align: center; background: var(--maroon); color: var(--white); text-decoration: none;
+  font-weight: 700; padding: 0.95rem; border-radius: 999px; box-shadow: 0 14px 30px -14px rgba(61,15,30,0.6);
+}
+@media (max-width: 700px) { .float-call { display: block; } body { padding-bottom: 4.4rem; } }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .service-rows { grid-template-columns: 1fr; }
+  .owner__grid { grid-template-columns: 1fr; }
+  .owner__photo { max-width: 380px; margin-inline: auto; }
+  .area__grid { grid-template-columns: 1fr; }
+  .hours__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; text-align: center; }
+  .reviews__placeholder { border-left: none; border-top: 4px solid var(--maroon); padding-left: 0; padding-top: 0.9rem; }
+}
+@media (max-width: 640px) {
+  .section { padding: 3.4rem 0; }
+  .hero__actions, .contact__actions { flex-direction: column; align-items: stretch; }
+  .hero__bg { min-height: 480px; }
+}
