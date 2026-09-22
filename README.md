@@ -54,6 +54,11 @@
 | **Soto's Mufflers** demo + pitch | [demos/sotos-mufflers/](https://sites.lewistechservices.com/demos/sotos-mufflers/) |
 | **Exhaust Works LLC** demo + pitch | [demos/exhaust-works/](https://sites.lewistechservices.com/demos/exhaust-works/) |
 | **Allstar Carpet Cleaning & Repair** demo + pitch | [demos/allstar-carpet-cleaning/](https://sites.lewistechservices.com/demos/allstar-carpet-cleaning/) |
+| **A & K Transmission Repair** demo + pitch | [demos/ak-transmission-repair/](https://sites.lewistechservices.com/demos/ak-transmission-repair/) |
+| **Lane's RV Repair: Mobile Service** demo + pitch | [demos/lanes-rv-repair/](https://sites.lewistechservices.com/demos/lanes-rv-repair/) |
+| **Silver Thimble Alterations** demo + pitch | [demos/silver-thimble-alterations/](https://sites.lewistechservices.com/demos/silver-thimble-alterations/) |
+| **Siegert Radiator Shop** demo + pitch | [demos/siegert-radiator-shop/](https://sites.lewistechservices.com/demos/siegert-radiator-shop/) |
+| **A G Plumbing** demo + pitch | [demos/ag-plumbing/](https://sites.lewistechservices.com/demos/ag-plumbing/) |
 | **AI Receptionist** (live worker) | [lewis-digital-receptionist.lewis-digital.workers.dev](https://lewis-digital-receptionist.lewis-digital.workers.dev) |
 
 Archived after the 2026-09-01 cold-call round (pulled from the public gallery, see `business/leads/leads.csv` for status/notes): Bos Garage Auto Repair, Brazos Valley Automotive, Bryan Muffler & Performance, Neff's Majestic Hair Studio, BCS Roofing, Frank Seale Electric, Bernado's Landscaping and Dirtworks, Dean Plumbing & Repair. Demo files remain in `demos/` for a possible retry with the revised pitch.
@@ -103,6 +108,11 @@ Archived after the 2026-09-01 cold-call round (pulled from the public gallery, s
 - `demos/sotos-mufflers/` — Demo site + pitch sheet for Soto's Mufflers (Bryan, TX)
 - `demos/exhaust-works/` — Demo site + pitch sheet for Exhaust Works LLC (Bryan, TX)
 - `demos/allstar-carpet-cleaning/` — Demo site + pitch sheet for Allstar Carpet Cleaning & Repair (College Station, TX)
+- `demos/ak-transmission-repair/` — Demo site + pitch sheet for A & K Transmission Repair (Bryan, TX)
+- `demos/lanes-rv-repair/` — Demo site + pitch sheet for Lane's RV Repair: Mobile Service (College Station, TX)
+- `demos/silver-thimble-alterations/` — Demo site + pitch sheet for Silver Thimble Alterations (Bryan, TX)
+- `demos/siegert-radiator-shop/` — Demo site + pitch sheet for Siegert Radiator Shop (Bryan, TX)
+- `demos/ag-plumbing/` — Demo site + pitch sheet for A G Plumbing (Bryan, TX)
 - `ai-receptionist/` — AI Receptionist (Cloudflare Worker: website chat, SMS, voice, social DMs + per-client encrypted keys, usage ledger, honesty guard)
 
 Each demo folder is self-contained static HTML/CSS (relative asset paths) with its own README listing exactly what is verified vs. placeholder.

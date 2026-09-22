@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Silver Thimble Alterations — client brand system
+   Sourced from real research (Google Business listing + reviews, verified
+   2026-09-21): a tailor/alterations shop in Bryan, TX, 4.5 stars from 124
+   reviews (a very strong count for this campaign) — wedding-dress and
+   bridesmaid-dress alterations are the single most-repeated review theme,
+   with staff member Rodrigo named personally and quick turnaround praised
+   again and again. No business photos exist to extract color from, so the
+   palette below is a designer choice (§1 fallback) — but it deliberately
+   takes its metallic accent directly from the business's own real name
+   ("Silver Thimble"), paired with a dusty-rose/blush that echoes the
+   bridal-alterations theme found in review research, and a deep plum-
+   charcoal ink. First tailor/alterations demo in this repo, so there's no
+   same-trade sibling to differentiate against — distinctness is checked
+   against the batch's other four demos instead (see README).
+   Typography: Bodoni Moda (high-contrast editorial-fashion serif display)
+   + Work Sans (body) + Spline Sans Mono (small labels).
+   Signature motif: a pinking-shears zigzag photo frame and a dashed
+   "stitch line" divider — literal sewing details, not a generic template.
+   This page carries ZERO Lewis Digital branding.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap');
+
+:root {
+  --blush: #e7c9c3;
+  --blush-deep: #cf9f96;
+  --rose: #b6685e;
+  --rose-deep: #8c4a42;
+  --plum: #3a2b30;
+  --plum-deep: #241a1e;
+  --silver: #b9bec2;
+  --silver-bright: #d7dbdd;
+  --silver-deep: #8a9094;
+  --ivory: #fbf6f2;
+  --ivory-deep: #f2e8e2;
+  --white: #fffdfc;
+  --ink: #2f2226;
+  --ink-soft: #6b5a5e;
+
+  --font-display: "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --font-body: "Work Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Spline Sans Mono", "Courier New", monospace;
+
+  --radius: 6px;
+  --shadow: 0 22px 44px -28px rgba(58, 43, 48, 0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: min(1120px, 92%); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.18; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--rose); outline-offset: 2px; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.16em; color: var(--rose-deep);
+  margin-bottom: 0.9rem;
+}
+.eyebrow--ondark { color: var(--silver-bright); }
+.section { padding: 4.8rem 0; }
+.section__title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); max-width: 22em; color: var(--plum); font-style: italic; }
+.section__title--ondark { color: var(--ivory); }
+.section__lede { margin-top: 0.9rem; color: var(--ink-soft); max-width: 46em; font-size: 1.02rem; font-style: normal; }
+.section__lede--ondark { color: var(--silver-bright); }
+
+/* stitch-line divider — signature motif */
+.stitch { height: 24px; display: flex; align-items: center; justify-content: center; }
+.stitch svg { display: block; }
+
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+  padding: 0.85rem 1.7rem; border-radius: var(--radius); font-family: var(--font-body);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
+  border: 2px solid transparent; letter-spacing: 0.01em;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--rose { background: var(--rose); color: var(--ivory); }
+.btn--rose:hover { background: var(--rose-deep); }
+.btn--line { border-color: var(--silver); color: var(--ivory); }
+.btn--line:hover { border-color: var(--silver-bright); color: var(--silver-bright); }
+.btn--line-dark { border-color: var(--plum); color: var(--plum); }
+.btn--line-dark:hover { background: var(--plum); color: var(--ivory); }
+.btn--big { font-size: 1.05rem; padding: 1rem 2.1rem; }
+
+/* ---------- header ---------- */
+.site-header { background: var(--ivory); border-bottom: 1px solid var(--ivory-deep); position: sticky; top: 0; z-index: 60; }
+.header__row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 0.9rem 0; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand__mark {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--plum); color: var(--silver-bright);
+  font-family: var(--font-display); font-size: 1.15rem; display: flex; align-items: center; justify-content: center; flex: none;
+  border: 1px solid var(--silver);
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand__name { font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--plum); }
+.brand__tag { font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rose-deep); }
+.site-nav { display: flex; align-items: center; gap: 1.5rem; }
+.site-nav a:not(.site-nav__cta) { display: none; color: var(--ink-soft); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+.site-nav a:not(.site-nav__cta):hover { color: var(--rose-deep); }
+.site-nav__cta { background: var(--rose); color: var(--ivory) !important; padding: 0.55rem 1.15rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.88rem; white-space: nowrap; }
+.site-nav__cta:hover { background: var(--rose-deep); }
+@media (min-width: 860px) { .site-nav a:not(.site-nav__cta) { display: inline; } }
+
+/* ---------- hero: zigzag pinking-shears photo frame ---------- */
+.hero { background: var(--ivory); }
+.hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.4rem; align-items: center; padding: 3.6rem 0 4rem; }
+.hero__title { color: var(--plum); font-size: clamp(2.1rem, 4vw, 3rem); margin-bottom: 1.1rem; font-style: italic; }
+.hero__title strong { font-style: normal; color: var(--rose-deep); }
+.hero__tagline { max-width: 32em; color: var(--ink-soft); font-size: 1.06rem; margin-bottom: 1.7rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.5rem; }
+.hero__address { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink-soft); }
+
+.zigzag-frame {
+  position: relative; padding: 14px; background: var(--white); box-shadow: var(--shadow);
+  clip-path: polygon(
+    0% 3%, 4% 0%, 8% 3%, 12% 0%, 16% 3%, 20% 0%, 24% 3%, 28% 0%, 32% 3%, 36% 0%, 40% 3%, 44% 0%, 48% 3%, 52% 0%, 56% 3%, 60% 0%, 64% 3%, 68% 0%, 72% 3%, 76% 0%, 80% 3%, 84% 0%, 88% 3%, 92% 0%, 96% 3%, 100% 0%,
+    100% 97%, 96% 100%, 92% 97%, 88% 100%, 84% 97%, 80% 100%, 76% 97%, 72% 100%, 68% 97%, 64% 100%, 60% 97%, 56% 100%, 52% 97%, 48% 100%, 44% 97%, 40% 100%, 36% 97%, 32% 100%, 28% 97%, 24% 100%, 20% 97%, 16% 100%, 12% 97%, 8% 100%, 4% 97%, 0% 100%
+  );
+}
+.zigzag-frame img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
+.photo-caption { margin-top: 1.1rem; font-size: 0.72rem; color: var(--ink-soft); text-align: center; }
+
+/* ---------- brides strip ---------- */
+.trust { background: var(--plum); color: var(--ivory); }
+.trust__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; padding: 2.2rem 0; text-align: center; }
+.trust__item { padding: 0 0.5rem; }
+.trust__value { font-family: var(--font-display); font-style: italic; font-size: 1.7rem; color: var(--silver-bright); }
+.trust__label { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blush); margin-top: 0.35rem; }
+
+/* ---------- services ---------- */
+.services { background: var(--white); }
+.service-grid { list-style: none; margin-top: 2.4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+.service-card { background: var(--ivory); border-radius: var(--radius); padding: 1.7rem 1.6rem; border: 1px solid var(--ivory-deep); position: relative; }
+.service-card::before { content: "\2702"; position: absolute; top: 14px; right: 16px; color: var(--silver-deep); font-size: 0.9rem; }
+.service-card h3 { font-size: 1.02rem; margin-bottom: 0.5rem; color: var(--plum); font-style: italic; }
+.service-card p { font-size: 0.92rem; color: var(--ink-soft); }
+.services__note { margin-top: 2rem; font-size: 0.9rem; color: var(--ink-soft); background: var(--ivory); border-radius: var(--radius); padding: 1rem 1.4rem; border: 1px dashed var(--silver); }
+.services__note a { color: var(--rose-deep); font-weight: 700; }
+
+/* ---------- about ---------- */
+.about { background: var(--ivory); }
+.about__grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3.2rem; align-items: center; margin-top: 2.2rem; }
+.about__copy p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 1rem; }
+.about__source { margin-top: 1rem; font-size: 0.84rem; color: var(--ink-soft); }
+.about__photo .zigzag-frame img { aspect-ratio: 3/4; }
+
+/* ---------- hours / location ---------- */
+.hours { background: var(--white); }
+.hours__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin-top: 2.2rem; }
+.info-card { background: var(--ivory); border-radius: var(--radius); padding: 1.8rem 1.9rem; border: 1px solid var(--ivory-deep); }
+.info-card h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--plum); font-style: italic; }
+.info-card p { margin-bottom: 0.7rem; font-size: 0.98rem; color: var(--ink-soft); }
+.info-card p a { color: var(--rose-deep); text-decoration: none; font-weight: 700; }
+.info-card p a:hover { text-decoration: underline; }
+.info-card__muted { font-size: 0.84rem !important; }
+
+/* ---------- reviews ---------- */
+.reviews { background: var(--plum); color: var(--ivory); }
+.reviews .eyebrow { color: var(--blush); }
+.reviews__grid { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: 3rem; align-items: center; margin-top: 2.2rem; }
+.thimble-badge {
+  text-align: center; background: var(--plum-deep); border: 2px solid var(--silver); border-radius: 50%;
+  width: 180px; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); margin-inline: auto;
+}
+.thimble-badge__num { font-family: var(--font-display); font-style: italic; font-size: 2.6rem; color: var(--silver-bright); }
+.thimble-badge__stars { color: var(--rose); letter-spacing: 0.14em; font-size: 1rem; margin: 0.3rem 0; }
+.thimble-badge__count { font-family: var(--font-mono); font-size: 0.7rem; color: var(--blush); }
+.reviews__copy p { font-size: 1.02rem; color: var(--ivory-deep); margin-bottom: 1rem; }
+.reviews__placeholder { font-style: italic; color: var(--silver-bright); border-left: 4px solid var(--rose); padding-left: 1rem; margin: 1.1rem 0 1.3rem; }
+.reviews__source { font-size: 0.82rem; color: var(--blush); }
+
+/* ---------- contact ---------- */
+.contact { background: var(--ivory-deep); color: var(--plum); text-align: center; padding: 4.8rem 0; }
+.contact__title { color: var(--plum); font-style: italic; font-size: clamp(1.9rem, 3.8vw, 2.5rem); }
+.contact__text { margin: 1.1rem auto 1.8rem; max-width: 34em; color: var(--ink-soft); font-size: 1.05rem; }
+.contact__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact__note { margin-top: 1.6rem; font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---------- footer ---------- */
+.footer { background: var(--plum-deep); color: var(--blush); font-size: 0.85rem; }
+.footer__inner { display: flex; flex-direction: column; gap: 0.35rem; align-items: center; text-align: center; padding: 1.8rem 0; }
+.footer a { color: var(--silver-bright); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__photo { order: -1; max-width: 380px; margin-inline: auto; }
+  .trust__row { grid-template-columns: 1fr; gap: 1.4rem; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .about__grid { grid-template-columns: 1fr; }
+  .about__photo { order: -1; max-width: 340px; margin-inline: auto; }
+  .hours__grid { grid-template-columns: 1fr; }
+  .reviews__grid { grid-template-columns: 1fr; text-align: center; }
+  .reviews__placeholder { border-left: none; border-top: 4px solid var(--rose); padding-left: 0; padding-top: 0.9rem; }
+}
+@media (max-width: 640px) {
+  .section { padding: 3.4rem 0; }
+  .service-grid { grid-template-columns: 1fr; }
+  .hero__actions, .contact__actions { flex-direction: column; align-items: stretch; }
+}
